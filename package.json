@@ -1,0 +1,28 @@
+{
+  "name": "jodiphillips.com",
+  "version": "0.0.1",
+  "description": "A website for the Artist Jodi Phillips written in React.js using the Next.js framework",
+  "main": "server.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesemwallis/jodiphillips.com.git"
+  },
+  "author": "James Wallis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesemwallis/jodiphillips.com/issues"
+  },
+  "homepage": "https://github.com/jamesemwallis/jodiphillips.com#readme",
+  "dependencies": {
+    "next": "^6.1.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "reactstrap": "^6.3.1"
+  }
+}
