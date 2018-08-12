@@ -43,8 +43,7 @@ export default class extends React.Component {
           font-size: ${this.props.styles.general.fontSize + 'px'};
         }
         a:hover {
-          text-transform: none;
-          font-decoration: none;
+          text-decoration: none;
         }
       `}</style>
     </Col>

@@ -5,7 +5,7 @@ class Header extends React.Component {
     return <header>
       <Row className='position-fixed' style={{width: '100%'}}>
         <Col xs='6'>
-          <div className='hamburger-container'>
+          <div id='hamburger-button'>
             <div>
               <div className='hamburger-bar'></div>
               <div className='hamburger-bar'></div>
@@ -24,7 +24,7 @@ class Header extends React.Component {
           position: absolute;
         }
 
-        .hamburger-container {
+        #hamburger-button {
           background-color: rgba(255,255,255,0.7);
           height: 50px;
           width: 50px;

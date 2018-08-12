@@ -1,36 +1,14 @@
-import { Row, Col } from 'reactstrap'
+import { Col } from 'reactstrap'
+import SocialLinks from '../Miscellaneous/SocialLinks'
+import HandMadeAmazon from '../Miscellaneous/HandMadeAmazon'
 
 export default class extends React.Component {
   render() {
     return <Col xs='4' className='column-3'>
       <div style={this.props.styles.div}>
         <h2>Like, follow, buy...</h2>
-        <Row style={{ marginRight: '15px', marginLeft: '15px' }}>
-          <Col xs='4' className='text-center'>
-            <a href='https://www.facebook.com/artistjodi/'>
-              <div>
-                <img src='/static/facebook_logo.png' alt='Facebook logo' />
-              </div>
-              <p>@artistjodi</p>
-            </a>
-          </Col>
-          <Col xs='4' className='text-center'>
-            <a href='https://www.instagram.com/artistjodi/'>
-              <div>
-                <img src='/static/instagram_logo.png' alt='Instagram logo' />
-              </div>
-              <p>@artistjodi</p>
-            </a>
-          </Col>
-          <Col xs='4' className='text-center'>
-            <a href='https://twitter.com/artist_jodi'>
-              <div>
-                <img src='/static/twitter_logo.png' alt='Twitter logo' />
-              </div>
-              <p>@artist_jodi</p>
-            </a>
-          </Col>
-        </Row>
+        <SocialLinks />
+        <HandMadeAmazon />
       </div>
       <style jsx>{`
           h2 {

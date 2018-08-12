@@ -2,6 +2,7 @@ import { Container } from 'reactstrap'
 import Head from './Head'
 import Header from './Header'
 import HeroImage from './HeroImage'
+import Nav from './Navigation/Navigation'
 import Tab from './Tab'
 import Footer from './Footer/Footer'
 
@@ -18,6 +19,7 @@ class Layout extends React.Component {
       <Tab heading={this.props.content.h1}/>
       {this.props.children}
       <Footer />
+      <Nav />
       <style jsx global>{`
         html {
           background: black
@@ -35,8 +37,12 @@ class Layout extends React.Component {
           padding-right: 0px;
           padding-left: 0px;
         }
-        .column-2>div {
+        .column-2>div, .column-2>nav {
           margin: 8px 5px;
+        }
+        .column-2>nav {
+          margin-top: 0;
+          margin-bottom: 0;
         }
         .column-3 {
           padding-right: 0px;
