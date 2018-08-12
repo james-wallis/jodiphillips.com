@@ -62,6 +62,8 @@ class Navigation extends React.Component {
       console.log(navContainer.style.opacity);
       if (navContainer.style.opacity == 0) {
         navContainer.style.height = '0px';
+        // reset scroll
+        navContainer.scrollTop = 0;
       }
     }
     navContainer.addEventListener('webkitTransitionEnd', hideNavigationContainer); 
