@@ -24,8 +24,8 @@ const styles = {
 
 class Footer extends React.Component {
   render() {
-    return <footer>
-      <Row style={{marginRight: 0}}>
+    return <footer className='container-fluid'>
+      <Row>
         <Left styles={styles}/>
         <Center styles={styles}/>
         <Right styles={styles}/>

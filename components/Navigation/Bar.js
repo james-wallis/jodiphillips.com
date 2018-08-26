@@ -36,6 +36,7 @@ class NavigationBar extends React.Component {
         nav {
           height: 100%;
           background-color: rgba(45, 45, 45, 0.9);
+          margin: auto 8px;
         }
         a, div {
           display: block;

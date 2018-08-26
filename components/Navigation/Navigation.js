@@ -19,7 +19,7 @@ const containerStyling = {
 class Navigation extends React.Component {
   render() {
     return <Container id='navigation-container' fluid style={containerStyling}> 
-      <Row style={{ marginRight: 0 }}>
+      <Row>
         <NavBar />
       </Row>
     </Container>

@@ -5,7 +5,7 @@ const layoutProps = {
     title: 'Inside the studio'
   },
   heroImg: {
-    src: 'inside_the_studio_hero.jpg',
+    src: 'inside_the_studio/hero_small.jpg',
     alt: 'Inside the studio'
   },
   content: {

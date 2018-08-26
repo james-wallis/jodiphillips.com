@@ -1,11 +1,12 @@
 import { Row, Col } from 'reactstrap'
+import React from 'react';
 
 class Hero extends React.Component {
   render() {
     return <Row className='no-gutters'>
       <Col xs='12'>
         <div>
-          <img src={'/static/' + this.props.imgSrc} alt={ this.props.imgAlt } />
+          <img src={require(`../images/${this.props.imgSrc}`)} alt={this.props.imgAlt} />
         </div>
       </Col>
       <style jsx>{`

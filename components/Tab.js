@@ -1,39 +1,41 @@
-import { Row, Col } from 'reactstrap'
+import { Container, Row, Col } from 'reactstrap'
 
 class Tab extends React.Component {
   render() {
-    return <Row style={{ marginRight: 0 }}>
-      <Col xs={{ size: 4, offset: 4 }} className='column-2' style={{margin: 'auto'}}>
-        <div id='heading-tab'>
-          <h1>{this.props.heading}</h1>
-          <p>Scroll to view</p>
-        </div>
-      </Col>      
-      <style jsx>{`
-        div {
-          background-color: rgba(45,45,45,0.8);
-          text-align: center;
-          padding: 16px 0;
-          width: 33%;
-          position: fixed;
-          bottom: 40px;
-          z-index: 4;
-        }
-        h1, p {
-          color: white;
-          padding: 0;
-          margin: 0;
-          /* letter-spacing: 1px; */
-        }
-        h1 {
-          font-size: 34px;
-        }
-        p {
-          font-size: 22px;
-        }
-        
-      `}</style>
-    </Row>
+    return <Container fluid>
+      <Row>
+        <Col xs={{ size: 4, offset: 4 }} className='column-2' style={{padding: 0}}>
+          <div id='heading-tab'>
+            <h1>{this.props.heading}</h1>
+            <p>Scroll to view</p>
+          </div>
+        </Col>      
+        <style jsx>{`
+          div {
+            background-color: rgba(45,45,45,0.8);
+            text-align: center;
+            padding: 16px 0;
+            width: 33%;
+            position: fixed;
+            bottom: 40px;
+            z-index: 4;
+          }
+          h1, p {
+            color: white;
+            padding: 0;
+            margin: 0;
+            /* letter-spacing: 1px; */
+          }
+          h1 {
+            font-size: 34px;
+          }
+          p {
+            font-size: 22px;
+          }
+          
+        `}</style>
+      </Row>
+    </Container>
   }
 
   componentDidMount() {

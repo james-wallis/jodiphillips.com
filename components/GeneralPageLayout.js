@@ -6,6 +6,8 @@ import Nav from './Navigation/Navigation'
 import Tab from './Tab'
 import Footer from './Footer/Footer'
 
+import Gallery from './ImageGallery/Gallery';
+
 const containerStyling = {
   padding: '0px'
 }
@@ -18,6 +20,7 @@ class Layout extends React.Component {
       <HeroImage imgSrc={this.props.heroImg.src} imgAlt={this.props.heroImg.alt} />
       <Tab heading={this.props.content.h1}/>
       {this.props.children}
+      <Gallery />
       <Footer />
       <Nav />
       <style jsx global>{`
@@ -27,30 +30,34 @@ class Layout extends React.Component {
         * {
           font-family: 'Roboto', sans-serif;
         }
+        .column-1>div, .column-2>div, .column-3>div {
+          margin: 4px;
+        }
         .column-1 {
           padding-right: 0px;
+          padding-left: 0px;
         }
-        .column-1>div {
-          margin: 8px 2px;
-        }
+        // .column-1>div {
+        //   margin: 8px 2px;
+        // }
         .column-2 {
           padding-right: 0px;
           padding-left: 0px;
         }
-        .column-2>div, .column-2>nav {
-          margin: 8px 5px;
-        }
-        .column-2>nav {
-          margin-top: 0;
-          margin-bottom: 0;
-        }
+        // .column-2>div, .column-2>nav {
+        //   margin: 8px 5px;
+        // }
+        // .column-2>nav {
+        //   margin-top: 0;
+        //   margin-bottom: 0;
+        // }
         .column-3 {
           padding-right: 0px;
           padding-left: 0px;
         }
-        .column-3>div {
-          margin: 8px 2px;
-        }
+        // .column-3>div {
+        //   margin: 8px 2px;
+        // }
       `}</style>
     </Container>
   }
