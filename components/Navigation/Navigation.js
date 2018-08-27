@@ -58,8 +58,6 @@ class Navigation extends React.Component {
     });
 
     function hideNavigationContainer() {
-      console.log('hideNavigation');
-      console.log(navContainer.style.opacity);
       if (navContainer.style.opacity == 0) {
         navContainer.style.height = '0px';
         // reset scroll

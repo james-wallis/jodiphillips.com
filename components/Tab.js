@@ -15,7 +15,7 @@ class Tab extends React.Component {
             background-color: rgba(45,45,45,0.8);
             text-align: center;
             padding: 16px 0;
-            width: 33%;
+            width: 32.5%;
             position: fixed;
             bottom: 40px;
             z-index: 4;
@@ -46,7 +46,7 @@ class Tab extends React.Component {
       const midFooterDiv = midFooter.getElementsByTagName('div')[0];
       const style = midFooterDiv.currentStyle || window.getComputedStyle(midFooterDiv);
       const marginX = parseInt(style.marginLeft) + parseInt(style.marginRight);
-      const tabWidth = (midFooter.clientWidth - marginX) + 'px';
+      const tabWidth = (midFooter.getBoundingClientRect().width - marginX) + 'px';
       tab.style.width = tabWidth;
     }
     updateHeadingTabWidth();

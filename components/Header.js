@@ -3,7 +3,7 @@ import { Row, Col } from 'reactstrap'
 class Header extends React.Component {
   render() {
     return <header>
-      <Row className='position-fixed' style={{width: '100%'}}>
+      <Row>
         <Col xs='6'>
           <div id='hamburger-button'>
             <div>
@@ -29,8 +29,8 @@ class Header extends React.Component {
           height: 50px;
           width: 50px;
           top: 30px;
-          left: 40px;
-          position: absolute;
+          left: 30px;
+          position: fixed;
           display: flex;
           justify-content: center;
           align-items: center; 
@@ -44,7 +44,9 @@ class Header extends React.Component {
         }
 
         img {
-          padding-right: 20px;
+          position: fixed;
+          top: 0;
+          right: 20px;
         }
 
       `}</style>
