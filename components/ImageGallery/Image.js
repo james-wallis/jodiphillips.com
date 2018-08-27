@@ -52,8 +52,11 @@ class Image extends React.Component {
         }
         .image-info-inner {
           width: 100%;
-          position: absolute;
-          bottom: 15%;
+          /* position: absolute;
+          bottom: 15%; */
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
         }
         h3 {
           margin: 0;
