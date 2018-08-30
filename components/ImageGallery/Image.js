@@ -11,7 +11,7 @@ class Image extends React.Component {
     } else {
       amazon_url = 'https://www.amazon.co.uk/s/?me=A3GJWTLLYSC03';
     }
-    return <Col style={{margin: '4px'}}>
+    return <Col className='image-column' xs='12' md>
       <div className='image-container'>
         <img src={require(`../../images/${this.props.src}`)} alt={this.props.name} />
         <div className='image-info'>
@@ -26,6 +26,16 @@ class Image extends React.Component {
           </div>
         </div>
       </div>
+      <style jsx global>{`
+        .image-column {
+          margin: 4px 0;
+        }
+        @media (min-width: 768px) {
+          .image-column {
+            margin: 4px;
+          }
+        }
+      `}</style>
       <style jsx>{`
         .image-container {
           display: inline-block;

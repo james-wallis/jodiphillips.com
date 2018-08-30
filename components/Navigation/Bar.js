@@ -7,7 +7,7 @@ import pageLinks from './links.json'
 
 class NavigationBar extends React.Component {
   render() {
-    return <Col xs={{ size: 4, offset: 4 }} id='navigation-bar' className='column-2' style={{ margin: 'auto', height: '100%' }}>
+    return <Col xs='12' md={{ size: 4, offset: 4 }} id='navigation-bar'>
       <nav>
         <Link href="/">
           <a>Home</a>
@@ -37,13 +37,24 @@ class NavigationBar extends React.Component {
             <HandMadeAmazon />
           </div>
         </Dropdown>
-      </nav>  
+      </nav>
+      <style global jsx>{`
+        #navigation-bar {
+          margin: auto;
+          height: 100%;
+        }
+      `}</style>
       <style jsx>{`
         nav {
           height: 100vh;
           background-color: rgba(45, 45, 45, 0.9);
-          margin: auto 8px;
+          margin: auto;
           overflow: hidden;
+        }
+        @media (min-width: 768px) {
+          nav {
+            margin: auto 4px;
+          }
         }
         a, div {
           display: block;

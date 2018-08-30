@@ -41,8 +41,20 @@ const IMAGE_SET = [
 
 class Gallery extends React.Component {
   render() {
-    return <Container fluid id='image-gallery' style={{padding: 0}}>
+    return <Container fluid id='image-gallery'>
       {IMAGE_SET.map((currentSet, index) => <ImageRow set={currentSet} key={index}/>)}
+      <style global jsx>{`
+        #image-gallery {
+          padding: 0;
+          position: relative;
+          z-index: 10;
+        }
+        @media (min-width: 768px) {
+          #image-gallery {
+            position: static;
+          }
+        }
+      `}</style>
     </Container>
   }
 
@@ -57,7 +69,7 @@ class Gallery extends React.Component {
       const rows = gallery.getElementsByClassName('row');
       for (let i = 0; i < rows.length; i++) {
         const row = rows[i];
-        const cols = row.getElementsByClassName('col');
+        const cols = row.getElementsByClassName('image-column');
         resetImgHeight(cols);
         let imgHeight = getMinImgHeight(cols);
         setImgHeight(cols, imgHeight);

@@ -1,27 +1,28 @@
 import { Container, Row } from 'reactstrap'
 import NavBar from './Bar.js';
 
-const containerStyling = {
-  padding: '0px',
-  position: 'fixed',
-  height: '100%',
-  width: '100vw',
-  top: 0,
-  right: 0,
-  left: 0,
-  bottom: 0,
-  zIndex: 1000,
-  transition: 'opacity 750ms ease-in-out',
-  height: '0px',
-  overflow: 'auto'
-}
-
 class Navigation extends React.Component {
   render() {
-    return <Container id='navigation-container' fluid style={containerStyling}> 
-      <Row>
+    return <Container id='navigation-container' fluid> 
+      <Row className='no-gutters'>
         <NavBar />
       </Row>
+      <style global jsx>{`
+        #navigation-container {
+          padding: 0px;
+          position: fixed;
+          height: 100%;
+          width: 100vw;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          z-index: 1000;
+          transition: opacity 750ms ease-in-out;
+          height: 0px;
+          overflow: auto;
+        }
+      `}</style>
     </Container>
   }
 

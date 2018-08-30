@@ -23,41 +23,13 @@ class Layout extends React.Component {
       <Gallery />
       <Footer />
       <Nav />
-      <style jsx global>{`
+      <style global jsx>{`
         html {
           background: black
         }
         * {
           font-family: 'Roboto', sans-serif;
         }
-        .column-1>div, .column-2>div, .column-3>div {
-          margin: 4px;
-        }
-        .column-1 {
-          padding-right: 0px;
-          padding-left: 0px;
-        }
-        // .column-1>div {
-        //   margin: 8px 2px;
-        // }
-        .column-2 {
-          padding-right: 0px;
-          padding-left: 0px;
-        }
-        // .column-2>div, .column-2>nav {
-        //   margin: 8px 5px;
-        // }
-        // .column-2>nav {
-        //   margin-top: 0;
-        //   margin-bottom: 0;
-        // }
-        .column-3 {
-          padding-right: 0px;
-          padding-left: 0px;
-        }
-        // .column-3>div {
-        //   margin: 8px 2px;
-        // }
       `}</style>
     </Container>
   }
