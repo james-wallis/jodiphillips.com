@@ -35,7 +35,7 @@ class Navigation extends React.Component {
 
     function toggleNavigation() {
       if (navContainer.style.opacity == 0) {
-        navContainer.style.height = 'auto';
+        navContainer.style.height = '100vh';
         navContainer.style.opacity = 1;
         body.style.overflow = 'hidden';
       } else {
@@ -62,6 +62,12 @@ class Navigation extends React.Component {
         navContainer.style.height = '0px';
         // reset scroll
         navContainer.scrollTop = 0;
+        // Close open dropdown menus 
+        const dropdownMenus = document.getElementsByClassName('dropdown-items');
+        for (let index = 0; index < dropdownMenus.length; index++) {
+          const element = dropdownMenus[index];
+          element.style.maxHeight = `0`;
+        }
       }
     }
     navContainer.addEventListener('webkitTransitionEnd', hideNavigationContainer); 

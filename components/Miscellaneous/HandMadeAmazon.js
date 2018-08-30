@@ -19,9 +19,10 @@ export default class extends React.Component {
           }
           img {
             margin-top: 20px;
-            width: 75%;
-            min-width: 40px;
-            max-width: 60px;
+            width: 100%;
+            min-width: 100px;
+            max-width: 200px;
+            padding-right: 2%;
           }
         `}</style>
     </Row>
