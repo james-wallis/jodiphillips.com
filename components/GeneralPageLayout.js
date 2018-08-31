@@ -5,7 +5,6 @@ import HeroImage from './HeroImage'
 import Nav from './Navigation/Navigation'
 import Tab from './Tab'
 import Footer from './Footer/Footer'
-
 import Gallery from './ImageGallery/Gallery';
 
 const containerStyling = {
@@ -20,7 +19,7 @@ class Layout extends React.Component {
       <HeroImage imgSrc={this.props.heroImg.src} imgAlt={this.props.heroImg.alt} />
       <Tab heading={this.props.content.h1}/>
       {this.props.children}
-      <Gallery />
+      <Gallery image_set={this.props.galleryImages} />
       <Footer />
       <Nav />
       <style global jsx>{`

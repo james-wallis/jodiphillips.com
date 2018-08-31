@@ -17,12 +17,19 @@ class Image extends React.Component {
         <div className='image-info'>
           <div className='image-info-inner'>
             <h3>{this.props.name}</h3>
-            <p>{this.props.material}</p>
-            <p>&#163;{this.props.price}</p>
-            <p>Buy on Amazon Handmade</p>
-            <a href={amazon_url} target='_blank'>
-              <img className='amazon-logo' src={require(`../../images/logos/amazon.png`)} />
-            </a>
+            { (this.props.material) ? <p>{this.props.material}</p> : null }
+            { (this.props.price) ? <p>&#163;{this.props.price}</p> : null }
+            {/* 
+            TODO
+            - Evaluate use of something other than price to toggle amazon handmade on and off
+            */}
+            { (this.props.price) ? <div className='amazon-handmade'>
+              <p>Buy on Amazon Handmade</p>
+              <a href={amazon_url} target='_blank'>
+                <img className='amazon-logo' src={require(`../../images/logos/amazon.png`)} />
+              </a>
+            </div>
+            : null }
           </div>
         </div>
       </div>
@@ -89,8 +96,8 @@ class Image extends React.Component {
 
 Image.propTypes = {
   name: PropTypes.string.isRequired,
-  material: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
+  material: PropTypes.string,
+  price: PropTypes.number,
   amazon_url: PropTypes.string,
   src: PropTypes.string.isRequired
 };

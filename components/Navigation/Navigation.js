@@ -47,7 +47,9 @@ class Navigation extends React.Component {
     
     window.onload = function () { 
       const hamburger = document.getElementById('hamburger-button');
+      const hamburgerClose = document.getElementById('hamburger-button-close');
       hamburger.addEventListener('click', toggleNavigation);
+      hamburgerClose.addEventListener('click', toggleNavigation);
     }
 
     // If any space outside of the nav bar is clicked, close it

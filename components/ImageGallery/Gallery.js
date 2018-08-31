@@ -1,48 +1,10 @@
 import { Container } from 'reactstrap'
 import ImageRow from './ImageRow.js'
 
-const IMAGE_SET = [
-  [
-    {
-      name: 'Cuff Bracelet',
-      material: 'Silver Plated',
-      price: 45,
-      amazon_url: 'B07GNWRZYJ',
-      src: 'inside_the_studio/MasterLeft.jpeg',
-    },
-    {
-      name: 'Cuff Bracelet',
-      material: 'Silver Plated',
-      price: 45,
-      src: 'inside_the_studio/Right-Resinblue.jpeg',
-    },
-    {
-      name: 'Cuff Bracelet',
-      material: 'Silver Plated',
-      price: 45,
-      src: 'inside_the_studio/MasterRight.jpeg',
-    }
-  ],
-  [
-    {
-      name: 'Cuff Bracelet',
-      material: 'Silver Plated',
-      price: 45,
-      src: 'inside_the_studio/MasterMiddle.jpeg',
-    },
-    {
-      name: 'Cuff Bracelet',
-      material: 'Silver Plated',
-      price: 45,
-      src: 'inside_the_studio/HalfWidth-Jewellery.jpeg',
-    }
-  ]
-]
-
 class Gallery extends React.Component {
   render() {
     return <Container fluid id='image-gallery'>
-      {IMAGE_SET.map((currentSet, index) => <ImageRow set={currentSet} key={index}/>)}
+      {this.props.image_set.map((currentSet, index) => <ImageRow set={currentSet} key={index}/>)}
       <style global jsx>{`
         #image-gallery {
           padding: 0;
@@ -72,7 +34,14 @@ class Gallery extends React.Component {
         const cols = row.getElementsByClassName('image-column');
         resetImgHeight(cols);
         let imgHeight = getMinImgHeight(cols);
-        setImgHeight(cols, imgHeight);
+        // Only setImgHeight if the height is more than 0 (image loaded)
+        if (imgHeight > 0) {
+          setImgHeight(cols, imgHeight);
+        } else {
+          const timeout = 0.5 * 1000
+          setTimeout(ensureHeightIsEqual, timeout);
+          break;
+        }
       }
 
       // Get the minimum height of all img elements in the row
@@ -82,7 +51,7 @@ class Gallery extends React.Component {
           const col = cols[index];
           const img = col.getElementsByTagName('img')[0];
           const height = img.getBoundingClientRect().height;
-          if (height < minImageHeight || index === 0) minImageHeight = height;
+          if (height > 0 && height < minImageHeight || index === 0) minImageHeight = height;
         }
         return minImageHeight;
       }
