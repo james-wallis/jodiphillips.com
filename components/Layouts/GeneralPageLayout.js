@@ -1,11 +1,11 @@
 import { Container } from 'reactstrap'
-import Head from './Head'
-import Header from './Header'
-import HeroImage from './HeroImage'
-import Nav from './Navigation/Navigation'
-import Tab from './Tab'
-import Footer from './Footer/Footer'
-import Gallery from './ImageGallery/Gallery';
+import Head from '../Head';
+import Header from '../Header';
+import HeroImage from '../HeroImage';
+import Nav from '../Navigation/Navigation';
+import Tab from '../Tab';
+import Footer from '../Footer/Footer';
+import Gallery from '../ImageGallery/Gallery';
 
 const containerStyling = {
   padding: '0px'

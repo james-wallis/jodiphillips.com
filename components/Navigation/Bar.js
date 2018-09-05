@@ -14,7 +14,7 @@ class NavigationBar extends React.Component {
             <Hamburger id='hamburger-button-close' />
           </Col>
           <Col xs='6' md='12'>
-            <Link href="/">
+            <Link href='/'>
               <img src={require(`../../images/icons/home.png`)} alt='Navigate to home page' />
             </Link>
           </Col>
@@ -71,6 +71,7 @@ class NavigationBar extends React.Component {
             border: 0;
             text-align: left;
             height: auto;
+            border-bottom: solid 1px rgba(177,172,164,1);
           }
           #navigation-home-button a {
             padding: 15px 15%;
@@ -123,6 +124,14 @@ class NavigationBar extends React.Component {
           a, div {
             padding: 15px 15%;
             font-size: 22px;
+          }
+          img {
+            height: 50px;
+            margin 10px 0px 10px 10px;
+            float: left;
+          }
+          div.social {
+            padding 15px 0;
           }
 
         }

@@ -1,4 +1,4 @@
-import Layout from '../components/GeneralPageLayout'
+import Layout from '../components/Layouts/TitlePageLayout'
 
 const layoutProps = {
   head: {
@@ -6,6 +6,9 @@ const layoutProps = {
   },
   content: {
     h1: 'A picture says a thousand words'
+  },
+  tab: {
+    fixed: true
   },
   images: {
     directory: 'home',

@@ -1,4 +1,4 @@
-import Layout from '../components/GeneralPageLayout'
+import Layout from '../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
   head: {
@@ -6,6 +6,9 @@ const layoutProps = {
   },
   content: {
     h1: 'Inside the Studio'
+  },
+  tab: {
+    fixed: false
   },
   images: {
     directory: 'inside_the_studio',

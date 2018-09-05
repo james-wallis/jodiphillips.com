@@ -62,6 +62,9 @@ class DropdownNavigation extends React.Component {
           .dropdown-items {
             font-size: 22px;
           }
+          .dropdown-items>a {
+            font-size: 17px;
+          }
 
         }
       `}</style>
