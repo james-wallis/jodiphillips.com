@@ -23,6 +23,7 @@ class DropdownNavigation extends React.Component {
           color: white;
           margin: 0;
           text-transform: capitalize;
+          cursor: pointer;
         }
         .dropdown-items {
           display: block;

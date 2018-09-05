@@ -3,10 +3,12 @@ import React from 'react';
 
 class Hero extends React.Component {
   render() {
+    const desktopSrc = require(`../images/${this.props.imgDir}/desktop/${this.props.imgSrc}`);
+    const mobileSrc = require(`../images/${this.props.imgDir}/mobile/${this.props.imgSrc}`);
     return <Row className='no-gutters'>
       <Col xs='12'>
         <div>
-          <img src={require(`../images/${this.props.imgSrc}`)} alt={this.props.imgAlt} />
+          <img src={mobileSrc} srcSet={`${desktopSrc} 960w`} alt={this.props.imgAlt} />
         </div>
       </Col>
       <style jsx>{`

@@ -3,7 +3,7 @@ import Head from 'next/head'
 export default class extends React.Component {
   render() {
     return <Head>
-      <title>{ this.props.title || 'Artist Jodi' }</title>
+      <title>{ `${this.props.title} | Artist Jodi` || 'Artist Jodi' }</title>
       <meta charSet="utf-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
       <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet"/>

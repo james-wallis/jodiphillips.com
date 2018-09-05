@@ -11,12 +11,16 @@ class Image extends React.Component {
     } else {
       amazon_url = 'https://www.amazon.co.uk/s/?me=A3GJWTLLYSC03';
     }
+    const desktopSrc = require(`../../images/${this.props.dir}/desktop/${this.props.file}`);
+    const mobileSrc = require(`../../images/${this.props.dir}/mobile/${this.props.file}`);
     return <Col className='image-column' xs='12' md>
-      <div className='image-container'>
-        <img src={require(`../../images/${this.props.src}`)} alt={this.props.name} />
+      <Link href={this.props.link || null }>
+      <div className='image-container' style={ (this.props.link) ? { cursor: 'pointer !important' } : { cursor: 'default !important' }} >
+        <img src={mobileSrc} srcSet={`${desktopSrc} 960w`} alt={this.props.name} />
         <div className='image-info'>
           <div className='image-info-inner'>
             <h3>{this.props.name}</h3>
+            { (this.props.desc) ? <p className='desc' >{this.props.desc}</p> : null }
             { (this.props.material) ? <p>{this.props.material}</p> : null }
             { (this.props.price) ? <p>&#163;{this.props.price}</p> : null }
             {/* 
@@ -33,6 +37,7 @@ class Image extends React.Component {
           </div>
         </div>
       </div>
+      </Link>
       <style jsx global>{`
         .image-column {
           margin: 4px 0;
@@ -77,11 +82,15 @@ class Image extends React.Component {
         }
         h3 {
           margin: 0;
-          font-size: 1.9rem;
+          font-size: 40px;
         }
         p {
           margin: 0;
-          font-size: 1rem;
+          font-size: 20px;
+        }
+        p.desc {
+          font-size: 24px;
+          text-transform: lowercase;
         }
         .amazon-logo {
           /* height: 100px; */
@@ -99,7 +108,8 @@ Image.propTypes = {
   material: PropTypes.string,
   price: PropTypes.number,
   amazon_url: PropTypes.string,
-  src: PropTypes.string.isRequired
+  dir: PropTypes.string.isRequired,
+  file: PropTypes.string.isRequired
 };
 
 export default Image

@@ -17,6 +17,7 @@ export default class extends React.Component {
           display: flex;
           justify-content: center;
           align-items: center; 
+          cursor: pointer;
         }
 
         .hamburger-bar {

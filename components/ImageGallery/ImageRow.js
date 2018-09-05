@@ -5,7 +5,7 @@ import Image from './Image.js'
 class ImageRow extends React.Component {
   render() {
     return <Row className='no-gutters'>
-      {this.props.set.map(image => <Image src={image.src} name={image.name} material={image.material} price={image.price} amazon_url={image.amazon_url} key={image.key || image.src}/>)}
+      {this.props.set.map(image => <Image {...image} dir={this.props.dir} key={image.key || `${this.props.dir}/${image.file}`}/>)}
     </Row>
   }
 }

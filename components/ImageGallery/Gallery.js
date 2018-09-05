@@ -4,7 +4,7 @@ import ImageRow from './ImageRow.js'
 class Gallery extends React.Component {
   render() {
     return <Container fluid id='image-gallery'>
-      {this.props.image_set.map((currentSet, index) => <ImageRow set={currentSet} key={index}/>)}
+      {this.props.image_set.map((currentSet, index) => <ImageRow set={currentSet} dir={this.props.image_directory} key={index}/>)}
       <style global jsx>{`
         #image-gallery {
           padding: 0;
