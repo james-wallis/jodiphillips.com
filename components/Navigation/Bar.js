@@ -23,7 +23,7 @@ class NavigationBar extends React.Component {
         <Link href="/">
           <a>About Jodi</a>
         </Link>
-        <Link href="/">
+        <Link href="/inside-the-studio">
           <a>Inside the studio</a>
         </Link>
         <Link href="/">

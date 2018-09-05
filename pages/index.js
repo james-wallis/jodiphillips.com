@@ -100,6 +100,7 @@ const layoutProps = {
           name: 'Exhibition at ExCeL London',
           desc: 'meet Jodi',
           file: 'Row6-Right.jpg',
+          link: 'http://www.homebuildingshow.co.uk/art',
         }
       ],
       [

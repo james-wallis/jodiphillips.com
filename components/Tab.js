@@ -2,7 +2,7 @@ import { Container, Row, Col } from 'reactstrap'
 
 class Tab extends React.Component {
   render() {
-    return <Container fluid>
+    return <Container fluid style={{height: 0}}>
       <Row>
         <Col xs={{ size: 12 }} md={{ size: 4, offset: 4 }} style={{padding: 0}}>
           <div id='heading-tab'>

@@ -8,13 +8,14 @@ class Hero extends React.Component {
     return <Row className='no-gutters'>
       <Col xs='12'>
         <div>
-          <img src={mobileSrc} srcSet={`${desktopSrc} 960w`} alt={this.props.imgAlt} />
+          <img src={mobileSrc} srcSet={`${desktopSrc} 768w`} alt={this.props.imgAlt} />
         </div>
       </Col>
       <style jsx>{`
         div {
           height: 100vh; 
           width: 100vw;
+          margin-bottom: 4px;
         }
         img {
           width: 100%;

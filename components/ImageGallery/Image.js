@@ -11,34 +11,42 @@ class Image extends React.Component {
     } else {
       amazon_url = 'https://www.amazon.co.uk/s/?me=A3GJWTLLYSC03';
     }
+    let linkTarget = null;
+    let linkRel = null;
+    if (this.props.link && this.props.link.startsWith('http')) {
+      linkTarget = '_blank';
+      linkRel = 'noopener';
+    } 
     const desktopSrc = require(`../../images/${this.props.dir}/desktop/${this.props.file}`);
     const mobileSrc = require(`../../images/${this.props.dir}/mobile/${this.props.file}`);
     return <Col className='image-column' xs='12' md>
-      <Link href={this.props.link || null }>
-      <div className='image-container' style={ (this.props.link) ? { cursor: 'pointer !important' } : { cursor: 'default !important' }} >
-        <img src={mobileSrc} srcSet={`${desktopSrc} 960w`} alt={this.props.name} />
-        <div className='image-info'>
-          <div className='image-info-inner'>
-            <h3>{this.props.name}</h3>
-            { (this.props.desc) ? <p className='desc' >{this.props.desc}</p> : null }
-            { (this.props.material) ? <p>{this.props.material}</p> : null }
-            { (this.props.price) ? <p>&#163;{this.props.price}</p> : null }
-            {/* 
-            TODO
-            - Evaluate use of something other than price to toggle amazon handmade on and off
-            */}
-            { (this.props.price) ? <div className='amazon-handmade'>
-              <p>Buy on Amazon Handmade</p>
-              <a href={amazon_url} target='_blank'>
-                <img className='amazon-logo' src={require(`../../images/logos/amazon.png`)} />
-              </a>
+      <Link href={this.props.link || null}>
+        <a target={linkTarget} rel={linkRel}>
+          <div className='image-container' style={ (this.props.link) ? { cursor: 'pointer !important' } : { cursor: 'default !important' }} >
+            <img src={mobileSrc} srcSet={`${desktopSrc} 768w`} alt={this.props.name} />
+            <div className='image-info'>
+              <div className='image-info-inner'>
+                <h3>{this.props.name}</h3>
+                { (this.props.desc) ? <p className='desc' >{this.props.desc}</p> : null }
+                { (this.props.material) ? <p>{this.props.material}</p> : null }
+                { (this.props.price) ? <p>&#163;{this.props.price}</p> : null }
+                {/* 
+                TODO
+                - Evaluate use of something other than price to toggle amazon handmade on and off
+                */}
+                { (this.props.price) ? <div className='amazon-handmade'>
+                  <p>Buy on Amazon Handmade</p>
+                  <a href={amazon_url} rel='noopener' target='_blank'>
+                    <img className='amazon-logo' src={require(`../../images/logos/amazon.png`)} />
+                  </a>
+                </div>
+                : null }
+              </div>
             </div>
-            : null }
           </div>
-        </div>
-      </div>
+        </a>
       </Link>
-      <style jsx global>{`
+      <style global jsx>{`
         .image-column {
           margin: 4px 0;
         }
