@@ -21,6 +21,7 @@ class Navigation extends React.Component {
           transition: opacity 750ms ease-in-out;
           height: 0px;
           overflow: auto;
+          margin: 0;
         }
       `}</style>
     </Container>

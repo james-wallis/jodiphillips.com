@@ -11,8 +11,8 @@ export default class extends React.Component {
         <a href="mailto:mish@artistjodi.com?Subject=Hello">mish@artistjodi.com</a>
         <a href="mailto:jodi@artistjodi.com?Subject=Hello">jodi@artistjodi.com</a>
         <div className='copyright'>
-          <p>&copy;2018 Jodi Phillips</p>
-          <p>Designed by Jodi, Created by <a href='https://james-wallis.com' target='_blank' rel='noopener'>James</a></p>
+          <p>&copy;2018 Designed by Jodi, Created by <a href='https://james-wallis.com' target='_blank' rel='noopener'>James</a></p>
+          <p>Terms and Conditions</p>
         </div>
       </div>
       <style jsx>{`

@@ -9,13 +9,13 @@ class NavigationBar extends React.Component {
   render() {
     return <Col xs='12' md={{ size: 4, offset: 4 }} id='navigation-bar'>
       <nav>
-        <Row id='navigation-home-button'>
+        <Row className='no-gutters' id='navigation-home-button'>
           <Col xs='6' className='d-md-none'>
             <Hamburger id='hamburger-button-close' />
           </Col>
           <Col xs='6' md='12'>
             <Link href="/">
-              <a>Home</a>
+              <img src={require(`../../images/icons/home.png`)} alt='Navigate to home page' />
             </Link>
           </Col>
         </Row>
@@ -87,16 +87,11 @@ class NavigationBar extends React.Component {
           margin: auto;
           overflow: hidden;
         }
-        @media (min-width: 768px) {
-          nav {
-            margin: auto 4px;
-          }
-        }
         a, div {
           display: block;
-          padding: 15px 15%;
+          padding: 10px 15%;
           border-bottom: solid 1px rgba(177,172,164,1);
-          font-size: 22px;
+          font-size: 18px;
           color: white;
         }
         div.social {
@@ -114,6 +109,22 @@ class NavigationBar extends React.Component {
           margin: 0;
           padding: 0;
           font-size: 18px;
+        }
+        img {
+          height: 50px;
+          margin-top: 30px;
+          margin-right: 30px;
+          float: right;
+        }
+        @media (min-width: 768px) {
+          nav {
+            margin: auto 4px;
+          }
+          a, div {
+            padding: 15px 15%;
+            font-size: 22px;
+          }
+
         }
       `}</style>
     </Col>
