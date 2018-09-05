@@ -17,16 +17,24 @@ export default class extends React.Component {
           a {
             display: block;
             color: white;
-            font-size: 20px;
+            font-size: 14px;
           }
           a:hover {
             text-decoration: none;
           }
           img {
-            width: 100%;
+            width: 90%;
             min-width: 100px;
             max-width: 200px;
             padding: 0 5%;
+          }
+          @media (min-width: 768px) {
+            a {
+              font-size: 20px;
+            }
+            .img {
+              width: 100%;
+            }
           }
         `}</style>
     </Row>

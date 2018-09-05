@@ -49,13 +49,13 @@ export default class extends React.Component {
           p {
             margin: 0;
             padding: 0;
-            font-size: 16px;
+            font-size: 14px;
             letter-spacing: 0.5px;
           }
           a {
             display: block;
             color: white;
-            font-size: 20px;
+            font-size: 16px;
             letter-spacing: 0.5px;
             text-align: center;
           }
@@ -66,16 +66,22 @@ export default class extends React.Component {
             display: inline-block;
             vertical-align: middle;
           }
+          img {
+            width: 60%;
+            min-width: 40px;
+            max-width: 60px;
+          }
           @media (min-width: 768px) {
             .social-image-container {
               height: 70px;
               max-height: 70px;
             }
-          }
-          img {
-            /* width: 75%; */
-            min-width: 40px;
-            max-width: 60px;
+            a {
+              font-size: 20px;
+            }
+            img {
+              width: 100%;
+            }
           }
         `}</style>
     </Row>

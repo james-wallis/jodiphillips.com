@@ -109,13 +109,14 @@ class NavigationBar extends React.Component {
           border: 0;
           margin: 0;
           padding: 0;
-          font-size: 18px;
+          font-size: 16px;
         }
         img {
           height: 50px;
           margin-top: 30px;
           margin-right: 30px;
           float: right;
+          cursor: pointer;
         }
         @media (min-width: 768px) {
           nav {
@@ -132,6 +133,9 @@ class NavigationBar extends React.Component {
           }
           div.social {
             padding 15px 0;
+          }
+          .dropdown-contact {
+            font-size: 14px;
           }
 
         }
