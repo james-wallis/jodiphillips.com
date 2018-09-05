@@ -3,9 +3,10 @@ import Link from 'next/link'
 class DropdownNavigation extends React.Component {
   render() {
     return <div className='dropdown-container' onClick={this.toggleDropdown}>
-      <p className='dropdown-button'>
-        {this.props.name}
-      </p>
+      <div className='dropdown-button'>
+        <p>{this.props.name}</p>
+        <img className='dropdown-icon' src={require(`../../images/icons/dropdown.png`)} alt='Drop down menu icon' />
+      </div>
       <div className='dropdown-items'>
         {/* Add the links into the page. If there are no links then use props.children. */}
         {(this.props.links) ? this.props.links.map((currentLink, index) => 
@@ -18,12 +19,23 @@ class DropdownNavigation extends React.Component {
           display: block;
         }
         .dropdown-button {
-          display: block;
+          display: flex;
+          align-items: center;
+        }
+        .dropdown-button p {
+          display: inline-block;
           font-size: 18px;
           color: white;
           margin: 0;
           text-transform: capitalize;
           cursor: pointer;
+        }
+        .dropdown-button img {
+          display: inline-block;
+          height: 10px;
+          float: right;
+          margin-left: auto;
+          transition: transform 0.5s ease;
         }
         .dropdown-items {
           display: block;
@@ -56,7 +68,7 @@ class DropdownNavigation extends React.Component {
           .dropdown-container {
             padding: 15px 15%;
           }
-          .dropdown-button {
+          .dropdown-button p {
            font-size: 22px;
           }
           .dropdown-items {
@@ -74,7 +86,17 @@ class DropdownNavigation extends React.Component {
   toggleDropdown(e) {
     // Only toggle dropdown if its not a link to another page
     if ((e.target.nodeName).toLowerCase() !== 'a') {
-      const element = (e.target.classList.contains('dropdown-container')) ? e.target : e.target.parentNode;
+      let element = undefined;
+      if (e.target.classList.contains('dropdown-container')) {
+        element = e.target;
+      } else if ((e.target.nodeName).toLowerCase() === 'p' || (e.target.nodeName).toLowerCase() === 'img') {
+        element = (e.target.parentNode).parentNode;
+      } else {
+        element = e.target.parentNode;
+      }
+      const dropdownIcon = element.getElementsByClassName('dropdown-icon')[0];
+      console.log(e.target);
+      console.log(e.target.parentNode);
       console.log(element);
       const dropdownMenu = element.getElementsByClassName('dropdown-items')[0];
       // If the height of the dropdown menu is 0, show the dropdown menu.
@@ -82,9 +104,13 @@ class DropdownNavigation extends React.Component {
       if (parseInt(dropdownMenu.style.maxHeight) <= 0 || !dropdownMenu.style.maxHeight) {
         // Close any other dropdown menus
         const otherDropdownMenus = document.getElementsByClassName('dropdown-items');
+        const otherDropdownIcons = document.getElementsByClassName('dropdown-icon');
+        // as many icons as dropdowns = only one for loop
         for (let index = 0; index < otherDropdownMenus.length; index++) {
-          const element = otherDropdownMenus[index];
-          element.style.maxHeight = `0`;
+          const el = otherDropdownMenus[index];
+          const icon = otherDropdownIcons[index];
+          el.style.maxHeight = `0`;
+          icon.style.transform = 'rotate(0deg)';
         }
         const dropdownItems = dropdownMenu.childNodes;
         // Offset for maxHeight
@@ -94,8 +120,10 @@ class DropdownNavigation extends React.Component {
           totalHeight += item.offsetHeight;
         }
         dropdownMenu.style.maxHeight = `${totalHeight}px`;
+        dropdownIcon.style.transform = 'rotate(180deg)';
       } else {
         dropdownMenu.style.maxHeight = `0`;
+        dropdownIcon.style.transform = 'rotate(0deg)';
       }
     }
   }

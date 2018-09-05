@@ -109,7 +109,7 @@ class NavigationBar extends React.Component {
           border: 0;
           margin: 0;
           padding: 0;
-          font-size: 16px;
+          font-size: 14px;
         }
         img {
           height: 50px;
@@ -135,7 +135,7 @@ class NavigationBar extends React.Component {
             padding 15px 0;
           }
           .dropdown-contact {
-            font-size: 14px;
+            font-size: 16px;
           }
 
         }
