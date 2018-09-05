@@ -1,14 +1,12 @@
 import { Col } from 'reactstrap'
-import SocialLinks from '../Miscellaneous/SocialLinks'
-import HandMadeAmazon from '../Miscellaneous/HandMadeAmazon'
+import Social from '../Miscellaneous/Social/Social'
 
 export default class extends React.Component {
   render() {
     return <Col xs='12' md='4' className='footer-column'>
       <div>
         <h2>Like, follow, buy...</h2>
-        <SocialLinks />
-        <HandMadeAmazon />
+        <Social />
       </div>
       <style jsx>{`
           h2 {

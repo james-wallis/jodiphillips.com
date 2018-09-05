@@ -8,25 +8,25 @@ export default class extends React.Component {
       twitter: 'https://twitter.com/artist_jodi',
       youtube: '',
     }
-    return <Row style={{ marginRight: '15px', marginLeft: '15px' }} className='no-gutters'>
+    return <Row className='no-gutters social-links'>
       <Col xs='4'>
         <a href={links.facebook} target='_blank' rel='noopener'>
-          <div className='social-image-container align-middle'>
-            <img src='/static/facebook_logo.png' alt='Facebook logo' />
+          <div className='social-image-container d-flex align-items-center justify-content-center'>
+            <img src={require(`../../../images/logos/facebook.png`)} alt='Facebook logo' />
           </div>
         </a>
       </Col>
       <Col xs='4'>
         <a href={links.instagram} target='_blank' rel='noopener'>
-          <div className='social-image-container align-middle'>
-            <img src='/static/instagram_logo.png' alt='Instagram logo' />
+          <div className='social-image-container d-flex align-items-center justify-content-center'>
+            <img src={require(`../../../images/logos/instagram.png`)} alt='Instagram logo' />
           </div>
         </a>
       </Col>
       <Col xs='4'>
         <a href={links.twitter} target='_blank' rel='noopener'>
-          <div className='social-image-container align-middle'>
-            <img src='/static/twitter_logo.png' alt='Twitter logo' />
+          <div className='social-image-container d-flex align-items-center justify-content-center'>
+            <img src={require(`../../../images/logos/twitter.png`)} alt='Twitter logo' />
           </div>
         </a>
       </Col>
@@ -66,14 +66,14 @@ export default class extends React.Component {
             display: inline-block;
             vertical-align: middle;
           }
-           @media (min-width: 768px) {
-          .social-image-container {
-            height: 70px;
-            max-height: 70px;
+          @media (min-width: 768px) {
+            .social-image-container {
+              height: 70px;
+              max-height: 70px;
+            }
           }
-        }
           img {
-            width: 75%;
+            /* width: 75%; */
             min-width: 40px;
             max-width: 60px;
           }

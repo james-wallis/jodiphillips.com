@@ -2,8 +2,7 @@ import { Row, Col } from 'reactstrap'
 import Link from 'next/link'
 import Dropdown from './Dropdown'
 import Hamburger from '../Miscellaneous/Hamburger'
-import SocialLinks from '../Miscellaneous/SocialLinks'
-import HandMadeAmazon from '../Miscellaneous/HandMadeAmazon'
+import Social from '../Miscellaneous/Social/Social'
 import pageLinks from './links.json'
 
 class NavigationBar extends React.Component {
@@ -40,9 +39,8 @@ class NavigationBar extends React.Component {
           <a className='dropdown-contact' href="mailto:jodi@artistjodi.com?Subject=Hello">jodi@artistjodi.com</a>
         </Dropdown>
         <Dropdown name={'Social'} >
-          <div className='social'>
-            <SocialLinks />
-            <HandMadeAmazon />
+          <div className='social no-padding'>
+            <Social />
           </div>
         </Dropdown>
       </nav>
