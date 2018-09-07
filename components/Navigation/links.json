@@ -16,23 +16,15 @@
   "client_projects": [
     {
       "name": "Garden Art",
-      "href": "/"
+      "href": "/client-projects/garden"
     },
     {
       "name": "Snowboard",
-      "href": "/"
+      "href": "/client-projects/snowboard"
     },
     {
       "name": "Coffee Tables",
-      "href": "/"
-    },
-    {
-      "name": "Kitchen Splashback",
-      "href": "/"
-    },
-    {
-      "name": "Bathroom Splashback",
-      "href": "/"
+      "href": "/client-projects/tables"
     }
   ],
   "resin": [

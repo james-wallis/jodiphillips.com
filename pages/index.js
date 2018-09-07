@@ -59,6 +59,7 @@ const layoutProps = {
           name: 'Snowboard',
           desc: 'Creating an original art piece using an old snowboard',
           file: 'Row3-Left.jpg',
+          link: '/client-projects/snowboard'
         },
         {
           name: 'Kitchen Splashback',
@@ -76,6 +77,7 @@ const layoutProps = {
           name: 'Drum Tables',
           desc: 'upcycled drum storage tables',
           file: 'Row4-middle.jpg',
+          link: '/client-projects/tables'
         },
         {
           name: 'Chopping Boards',
@@ -88,6 +90,7 @@ const layoutProps = {
           name: 'Garden Art',
           desc: 'resin art to hang outdoors',
           file: 'Row5-Left.jpg',
+          link: '/client-projects/garden'
         },
         {
           name: 'Cloakroom Splashback',
