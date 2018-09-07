@@ -41,17 +41,19 @@ const layoutProps = {
           name: 'Resin Art',
           desc: 'original resin works',
           file: 'Row2-Left.jpg',
-          link: '/resin-art'
+          link: '/resin/art'
         },
         {
           name: 'Acrylic Art',
           desc: 'original works',
           file: 'Row2-Middle.jpg',
+          link: '/acrylic'
         },
         {
           name: 'Jewellery',
           desc: 'wearable art',
           file: 'Row2-Right.jpg',
+          link: '/resin/jewellery'
         }
       ],
       [
