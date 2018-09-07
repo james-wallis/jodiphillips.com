@@ -21,61 +21,64 @@ class Gallery extends React.Component {
   }
 
   componentDidMount() {
+    ensureHeightIsEqual();
+    window.addEventListener('resize', ensureHeightIsEqual);
+  }
 
-    /**
+  componentWillUnmount() {
+    window.removeEventListener('resize', ensureHeightIsEqual);
+  }
+}
+
+/**
      * Function to ensure the Height of all the img elements in a row is the same
      * So the page doesn't display rows with images of different heights
      */
-    function ensureHeightIsEqual() {
-      const gallery = document.getElementById('image-gallery');
-      const rows = gallery.getElementsByClassName('row');
-      for (let i = 0; i < rows.length; i++) {
-        const row = rows[i];
-        const cols = row.getElementsByClassName('image-column');
-        resetImgHeight(cols);
-        let imgHeight = getMinImgHeight(cols);
-        // Only setImgHeight if the height is more than 0 (image loaded)
-        if (imgHeight > 0) {
-          setImgHeight(cols, imgHeight);
-        } else {
-          const timeout = 0.5 * 1000
-          setTimeout(ensureHeightIsEqual, timeout);
-          break;
-        }
-      }
-
-      // Get the minimum height of all img elements in the row
-      function getMinImgHeight(cols) {
-        let minImageHeight;
-        for (let index = 0; index < cols.length; index++) {
-          const col = cols[index];
-          const img = col.getElementsByTagName('img')[0];
-          const height = img.getBoundingClientRect().height;
-          if (height > 0 && height < minImageHeight || index === 0) minImageHeight = height;
-        }
-        return minImageHeight;
-      }
-
-      // Set the height of all img elements in the row
-      function setImgHeight(cols, height) {
-        for (let index = 0; index < cols.length; index++) {
-          const col = cols[index];
-          const img = col.getElementsByTagName('img')[0];
-          img.height = height;
-        }
-      }
-
-      function resetImgHeight(cols) {
-        for (let index = 0; index < cols.length; index++) {
-          const col = cols[index];
-          const img = col.getElementsByTagName('img')[0];
-          img.removeAttribute('height');
-        }
-      }
+function ensureHeightIsEqual() {
+  const gallery = document.getElementById('image-gallery');
+  const rows = gallery.getElementsByClassName('row');
+  for (let i = 0; i < rows.length; i++) {
+    const row = rows[i];
+    const cols = row.getElementsByClassName('image-column');
+    resetImgHeight(cols);
+    let imgHeight = getMinImgHeight(cols);
+    // Only setImgHeight if the height is more than 0 (image loaded)
+    if (imgHeight > 30) {
+      setImgHeight(cols, imgHeight);
+    } else {
+      const timeout = 0.5 * 1000
+      setTimeout(ensureHeightIsEqual, timeout);
+      break;
     }
+  }
 
-    ensureHeightIsEqual();
-    window.addEventListener('resize', ensureHeightIsEqual);
+  // Get the minimum height of all img elements in the row
+  function getMinImgHeight(cols) {
+    let minImageHeight;
+    for (let index = 0; index < cols.length; index++) {
+      const col = cols[index];
+      const img = col.getElementsByTagName('img')[0];
+      const height = img.getBoundingClientRect().height;
+      if (height > 0 && height < minImageHeight || index === 0) minImageHeight = height;
+    }
+    return minImageHeight;
+  }
+
+  // Set the height of all img elements in the row
+  function setImgHeight(cols, height) {
+    for (let index = 0; index < cols.length; index++) {
+      const col = cols[index];
+      const img = col.getElementsByTagName('img')[0];
+      img.height = height;
+    }
+  }
+
+  function resetImgHeight(cols) {
+    for (let index = 0; index < cols.length; index++) {
+      const col = cols[index];
+      const img = col.getElementsByTagName('img')[0];
+      img.removeAttribute('height');
+    }
   }
 }
 

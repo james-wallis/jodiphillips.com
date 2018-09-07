@@ -29,53 +29,70 @@ class Navigation extends React.Component {
 
   componentDidMount() {
     const navContainer = document.getElementById('navigation-container');
-    const navBar = document.getElementById('navigation-bar');
-    const body = document.getElementsByTagName('body')[0];
     // Reset navContainer
     navContainer.style.height = '0px';
     navContainer.style.opacity = 0;
-
-    function toggleNavigation() {
-      if (navContainer.style.opacity == 0) {
-        navContainer.style.height = '100vh';
-        navContainer.style.opacity = 1;
-        body.style.overflow = 'hidden';
-      } else {
-        navContainer.style.opacity = 0;
-        body.style.overflow = 'auto';
-      }
-    }
-    
-    const hamburger = document.getElementById('hamburger-button');
-    const hamburgerClose = document.getElementById('hamburger-button-close');
-    hamburger.addEventListener('click', toggleNavigation);
-    hamburgerClose.addEventListener('click', toggleNavigation);
-
-    // If any space outside of the nav bar is clicked, close it
-    navContainer.addEventListener('click', function (event) {
-      const isClickInside = navBar.contains(event.target);
-      if (!isClickInside) {
-        toggleNavigation();
-      }
-    });
-
-    function hideNavigationContainer() {
-      if (navContainer.style.opacity == 0) {
-        navContainer.style.height = '0px';
-        // reset scroll
-        navContainer.scrollTop = 0;
-        // Close open dropdown menus 
-        const dropdownMenus = document.getElementsByClassName('dropdown-items');
-        for (let index = 0; index < dropdownMenus.length; index++) {
-          const element = dropdownMenus[index];
-          element.style.maxHeight = `0`;
-        }
-      }
-    }
     navContainer.addEventListener('webkitTransitionEnd', hideNavigationContainer); 
     navContainer.addEventListener('mozTransitionEnd', hideNavigationContainer);
     navContainer.addEventListener('oTransitionEnd', hideNavigationContainer); 
     navContainer.addEventListener('transitionend', hideNavigationContainer);
+    navContainer.addEventListener('click', closeNavigation);
+
+    const hamburger = document.getElementById('hamburger-button');
+    const hamburgerClose = document.getElementById('hamburger-button-close');
+    hamburger.addEventListener('click', toggleNavigation);
+    hamburgerClose.addEventListener('click', toggleNavigation);
+  }
+
+  componentWillUnmount() {
+    const navContainer = document.getElementById('navigation-container');
+    navContainer.removeEventListener('webkitTransitionEnd', hideNavigationContainer);
+    navContainer.removeEventListener('mozTransitionEnd', hideNavigationContainer);
+    navContainer.removeEventListener('oTransitionEnd', hideNavigationContainer);
+    navContainer.removeEventListener('transitionend', hideNavigationContainer);
+    navContainer.removeEventListener('click', closeNavigation);
+
+    const hamburger = document.getElementById('hamburger-button');
+    const hamburgerClose = document.getElementById('hamburger-button-close');
+    hamburger.removeEventListener('click', toggleNavigation);
+    hamburgerClose.removeEventListener('click', toggleNavigation);
+  }
+}
+
+function toggleNavigation() {
+  const navContainer = document.getElementById('navigation-container');
+  const body = document.getElementsByTagName('body')[0];
+  if (navContainer.style.opacity == 0) {
+    navContainer.style.height = '100vh';
+    navContainer.style.opacity = 1;
+    body.style.overflow = 'hidden';
+  } else {
+    navContainer.style.opacity = 0;
+    body.style.overflow = 'auto';
+  }
+}
+
+// If any space outside of the nav bar is clicked, close it
+function closeNavigation(event) {
+  const navBar = document.getElementById('navigation-bar');
+  const isClickInside = navBar.contains(event.target);
+  if (!isClickInside) {
+    toggleNavigation();
+  }
+}
+
+function hideNavigationContainer() {
+  const navContainer = document.getElementById('navigation-container');
+  if (navContainer.style.opacity == 0) {
+    navContainer.style.height = '0px';
+    // reset scroll
+    navContainer.scrollTop = 0;
+    // Close open dropdown menus 
+    const dropdownMenus = document.getElementsByClassName('dropdown-items');
+    for (let index = 0; index < dropdownMenus.length; index++) {
+      const element = dropdownMenus[index];
+      element.style.maxHeight = `0`;
+    }
   }
 }
 

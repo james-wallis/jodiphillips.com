@@ -60,6 +60,7 @@ class Image extends React.Component {
         .image-container {
           display: inline-block;
           position: relative;
+          width: 100%;
         }
         img {
           width: 100%;
