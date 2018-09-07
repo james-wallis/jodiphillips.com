@@ -32,6 +32,10 @@ class Layout extends React.Component {
       `}</style>
     </Container>
   }
+  componentDidMount() {
+    const body = document.getElementsByTagName('body')[0];
+    body.style.overflow = 'auto';
+  }
 }
 
 export default Layout

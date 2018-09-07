@@ -33,6 +33,7 @@ const layoutProps = {
           name: 'Art in space',
           desc: 'acrylic works',
           file: 'Row1-Right.jpg',
+          link: '/art-in-spaces'
         }
       ],
       [
@@ -40,6 +41,7 @@ const layoutProps = {
           name: 'Resin Art',
           desc: 'original resin works',
           file: 'Row2-Left.jpg',
+          link: '/resin-art'
         },
         {
           name: 'Acrylic Art',

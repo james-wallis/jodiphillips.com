@@ -37,24 +37,12 @@
   ],
   "resin": [
     {
-      "name": "Wall Art",
-      "href": "/"
+      "name": "Art",
+      "href": "/resin/art"
     },
     {
-      "name": "Coasters",
-      "href": "/"
-    },
-    {
-      "name": "Chopping Boards",
-      "href": "/"
-    },
-    {
-      "name": "Gifts",
-      "href": "/"
-    },
-    {
-      "name": "Videos",
-      "href": "/"
+      "name": "Jewellery",
+      "href": "/resin/jewellery"
     }
   ]
 }

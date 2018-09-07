@@ -25,11 +25,16 @@ class NavigationBar extends React.Component {
         <Link href="/inside-the-studio">
           <a>Inside the studio</a>
         </Link>
-        <Link href="/">
+        <Link href="/art-in-spaces">
           <a>Art in Spaces</a>
         </Link>
         <Dropdown name={'Resin'} links={pageLinks.resin} />
-        <Dropdown name={'Acrylic'} links={pageLinks.acrylic} />
+        <Link href="/acrylic">
+          <a>Acrylic</a>
+        </Link>
+        {/* Temp disable resin and acrylic dropdowns */}
+        {/* 
+        <Dropdown name={'Acrylic'} links={pageLinks.acrylic} /> */}
         <Dropdown name={'Client Projects'} links={pageLinks.client_projects} />
         <Dropdown name={'Contact'} >
           <p className='dropdown-contact'>Call, Text or Message</p>

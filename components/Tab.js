@@ -45,40 +45,49 @@ class Tab extends React.Component {
 
   componentDidMount() {
     // Ensure that the heading tab is the right width
-    function updateHeadingTabWidth() {
-      const tab = document.getElementById('heading-tab');
-      const footerCol = document.getElementsByClassName('footer-column')[0];
-      const footerDiv = footerCol.getElementsByTagName('div')[0];
-      const style = footerDiv.currentStyle || window.getComputedStyle(footerDiv);
-      const marginX = parseInt(style.marginLeft) + parseInt(style.marginRight);
-      const tabWidth = (footerCol.getBoundingClientRect().width - marginX) + 'px';
-      tab.style.width = tabWidth;
-    }
     updateHeadingTabWidth();
     window.addEventListener('resize', updateHeadingTabWidth);
 
     // On mobile, hide the heading tab after it passes the first image 
-    function toggleHeadingTabOnScroll() {
-      const viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-      const tab = document.getElementById('heading-tab');
-      if (viewportWidth < 768) {
-        const imageGallery = document.getElementById('image-gallery');
-        const tabScroll = tab.getBoundingClientRect().top;
-        const imageGalleryScroll = imageGallery.getBoundingClientRect().top;
-        // +40 so we are behind the image
-        if (tabScroll && imageGalleryScroll) {
-          if (tabScroll > (imageGalleryScroll + 40) && tab.style.visibility !== 'hidden') {
-            tab.style.visibility = 'hidden';
-          } else if (tabScroll < (imageGalleryScroll + 40)) {
-            tab.style.visibility = 'visible';
-          }
-        }
-      } else {
+    window.addEventListener('scroll', toggleHeadingTabOnScroll);
+    window.addEventListener('resize', toggleHeadingTabOnScroll);
+  }
+
+  componentWillUnmount() {
+    console.log('unmount tab');
+    window.removeEventListener('resize', updateHeadingTabWidth);
+    window.removeEventListener('scroll', toggleHeadingTabOnScroll);
+    window.removeEventListener('resize', toggleHeadingTabOnScroll);
+  }
+}
+
+function updateHeadingTabWidth() {
+  const tab = document.getElementById('heading-tab');
+  const footerCol = document.getElementsByClassName('footer-column')[0];
+  const footerDiv = footerCol.getElementsByTagName('div')[0];
+  const style = footerDiv.currentStyle || window.getComputedStyle(footerDiv);
+  const marginX = parseInt(style.marginLeft) + parseInt(style.marginRight);
+  const tabWidth = (footerCol.getBoundingClientRect().width - marginX) + 'px';
+  tab.style.width = tabWidth;
+}
+
+function toggleHeadingTabOnScroll() {
+  const viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  const tab = document.getElementById('heading-tab');
+  if (viewportWidth < 768) {
+    const imageGallery = document.getElementById('image-gallery');
+    const tabScroll = tab.getBoundingClientRect().top;
+    const imageGalleryScroll = imageGallery.getBoundingClientRect().top;
+    // +40 so we are behind the image
+    if (tabScroll && imageGalleryScroll) {
+      if (tabScroll > (imageGalleryScroll + 40) && tab.style.visibility !== 'hidden') {
+        tab.style.visibility = 'hidden';
+      } else if (tabScroll < (imageGalleryScroll + 40)) {
         tab.style.visibility = 'visible';
       }
     }
-    window.addEventListener('scroll', toggleHeadingTabOnScroll);
-    window.addEventListener('resize', toggleHeadingTabOnScroll);
+  } else {
+    tab.style.visibility = 'visible';
   }
 }
 
