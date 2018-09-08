@@ -1,4 +1,5 @@
 import { Container } from 'reactstrap'
+import NextSeo from 'next-seo';
 import Head from '../Head';
 import Header from '../Header';
 import HeroImage from '../HeroImage';
@@ -14,7 +15,17 @@ const containerStyling = {
 class Layout extends React.Component {
   render() {
     return <Container fluid style={containerStyling}>
-      <Head title={this.props.head.title} />
+      <NextSeo
+      config={{
+        title: `${this.props.head.title} | artistjodi`,
+        description: this.props.head.description,
+        openGraph: {
+          title: `${this.props.head.title} | artistjodi`,
+          description: this.props.head.description,
+          url: this.props.head.url,
+        }
+      }} />
+      <Head />
       <Header />
       <HeroImage imgSrc={this.props.images.hero.src} imgDir={this.props.images.directory} imgAlt={this.props.images.hero.alt} />
       <Heading heading={this.props.content.h1} />

@@ -1,3 +1,4 @@
+import React from 'react'
 import Layout from '../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
@@ -107,7 +108,14 @@ const layoutProps = {
   }
 }
 
-export default () => (
-  <Layout {...layoutProps}>
-  </Layout>
-)
+export default class extends React.Component {
+  static async getInitialProps(context) {
+    const urlPath = context.pathname;
+    return { urlPath }
+  }
+  render() {
+    const url = this.props.websiteAddress + this.props.urlPath;
+    layoutProps.head.url = url;
+    return <Layout {...layoutProps} />
+  }
+}

@@ -3,7 +3,6 @@ import Head from 'next/head'
 export default class extends React.Component {
   render() {
     return <Head>
-      <title>{ `${this.props.title} | Artist Jodi` || 'Artist Jodi' }</title>
       <link rel='shortcut icon' type='image/png' href={ require(`../images/logos/favicon.png`)} />
       <meta charSet='utf-8'/>
       <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'/>
