@@ -12,19 +12,19 @@ export default {
     // Multiple Open Graph images is only available in version `7.0.0-canary.0`+ of next (see note top of README.md)
     images: [
       {
-        url: 'https://www.example.ie/og-image-01.jpg',
+        url: require('./images/home/desktop/Row1-Left.jpg'),
         width: 800,
         height: 600,
         alt: 'Og Image Alt',
       },
       {
-        url: 'https://www.example.ie/og-image-02.jpg',
+        url: require('./images/home/desktop/Row1-Left.jpg'),
         width: 900,
         height: 800,
         alt: 'Og Image Alt',
       },
-      { url: 'https://www.example.ie/og-image-03.jpg' },
-      { url: 'https://www.example.ie/og-image-04.jpg' },
+      { url: require('./images/home/desktop/Row1-Left.jpg') },
+      { url: require('./images/home/desktop/Row1-Left.jpg') },
     ],
     site_name: 'artistjodi.co.uk',
   },
@@ -32,6 +32,7 @@ export default {
     handle: '@artist_jodi',
     site: '@artist_jodi',
     cardType: 'summary_large_image',
+    image: require('./images/home/desktop/Row1-Left.jpg')
   },
   noindex: true
 };
