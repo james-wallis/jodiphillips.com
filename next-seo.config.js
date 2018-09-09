@@ -15,9 +15,9 @@ export default {
     images: [
       {
         url: `${url}/static/images/jodi.jpg`,
-        width: 800,
-        height: 600,
-        alt: 'Og Image Alt',
+        width: 1015,
+        height: 1125,
+        alt: 'Jodi Phillips - Artist Jodi',
       }
     ],
     site_name: 'artistjodi.co.uk',
