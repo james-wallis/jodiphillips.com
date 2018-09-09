@@ -25,8 +25,7 @@ export default {
   twitter: {
     handle: '@artist_jodi',
     site: '@artist_jodi',
-    cardType: 'summary_large_image',
-    image: `${url}/static/images/jodi.jpg`
+    cardType: 'summary'
   },
   noindex: true
 };
