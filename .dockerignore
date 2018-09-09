@@ -6,3 +6,4 @@ node_modules
 .DS_STORE
 Dockerfile
 README.md
+package-lock.json
