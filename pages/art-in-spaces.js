@@ -22,6 +22,9 @@ const layoutProps = {
         {
           name: 'Cuff Bracelet',
           file: 'Row1-Left.jpg',
+          desc: 'A cuff bracelet',
+          // material: 'gold',
+          // price: '67'
         },
         {
           name: 'Cuff Bracelet',

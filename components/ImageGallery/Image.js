@@ -26,10 +26,10 @@ class Image extends React.Component {
             <img src={mobileSrc} srcSet={`${desktopSrc} 768w`} alt={this.props.name} />
             <div className='image-info'>
               <div className='image-info-inner'>
-                <h3>{this.props.name}</h3>
-                { (this.props.desc) ? <p className='desc' >{this.props.desc}</p> : null }
-                { (this.props.material) ? <p>{this.props.material}</p> : null }
-                { (this.props.price) ? <p>&#163;{this.props.price}</p> : null }
+                <h3 className='image-info-text'>{this.props.name}</h3>
+                { (this.props.desc) ? <p className='desc image-info-text' >{this.props.desc}</p> : null }
+                {(this.props.material) ? <p className='image-info-text'>{this.props.material}</p> : null }
+                {(this.props.price) ? <p className='image-info-text'>&#163;{this.props.price}</p> : null }
                 {/* 
                 TODO
                 - Evaluate use of something other than price to toggle amazon handmade on and off
@@ -68,43 +68,78 @@ class Image extends React.Component {
         }
         .image-info {
           position: absolute;
-          height: 100%;
+          height: auto;
           width: 100%;
-          background-color: rgba(45,45,45,0.8);
+          background-color: inherit;
           color: white;
           bottom: 0;
           text-align: center;
-          opacity: 0;
-          transition: opacity 0.4s;
-        }
-        .image-info:hover {
           opacity: 1;
-          transition: opacity 0.4s;
         }
-        .image-info-inner {
-          width: 100%;
-          /* position: absolute;
-          bottom: 15%; */
-          position: relative;
-          top: 50%;
-          transform: translateY(-50%);
+        .image-info-text:first-child {
+          padding-top: 10px;
+        }
+        .image-info-text:last-child {
+          padding-bottom: 10px;
         }
         h3 {
           margin: 0;
-          font-size: 40px;
+          font-size: 30px;
+          background-color: rgba(45,45,45,0.8);
         }
         p {
           margin: 0;
-          font-size: 20px;
+          font-size: 16px;
+          background-color: rgba(45,45,45,0.8);
         }
         p.desc {
-          font-size: 24px;
+          font-size: 20px;
           text-transform: lowercase;
+          background-color: rgba(45,45,45,0.8);
         }
         .amazon-logo {
           /* height: 100px; */
           width: 200px;
           padding-right: 2%;
+        }
+
+        @media (min-width: 768px) {
+          .image-info {
+            opacity: 0;
+            transition: opacity 0.4s;
+            height: 100%;
+            background-color: rgba(45,45,45,0.8);
+          }
+          .image-info:hover {
+            opacity: 1;
+            transition: opacity 0.4s;
+          }
+          .image-info-inner {
+            width: 100%;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+          .image-info-text:first-child {
+            padding-top: 0px;
+          }
+          .image-info-text:last-child {
+            padding-bottom: 0px;
+          }
+          h3 {
+            margin: 0;
+            font-size: 40px;
+            background-color: inherit;
+            }
+          p {
+            margin: 0;
+            font-size: 20px;
+            background-color: inherit;
+          }
+          p.desc {
+            font-size: 24px;
+            background-color: inherit;
+          }
         }
         
       `}</style>
