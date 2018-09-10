@@ -39,6 +39,7 @@ class Layout extends React.Component {
         }
         * {
           font-family: 'Roboto', sans-serif;
+          font-weight: 100 !important;
         }
       `}</style>
     </Container>
