@@ -16,24 +16,33 @@
   "client_projects": [
     {
       "name": "Garden Art",
-      "href": "/client-projects/garden"
+      "href": "/projects/garden"
     },
     {
       "name": "Snowboard",
-      "href": "/client-projects/snowboard"
+      "href": "/projects/snowboard"
     },
     {
       "name": "Coffee Tables",
-      "href": "/client-projects/tables"
+      "href": "/projects/tables"
     }
   ],
   "resin": [
     {
       "name": "Art",
       "href": "/resin/art"
+      
+    },
+    {
+      "name": "Gifts",
+      "href": "/resin/jewellery"
     },
     {
       "name": "Jewellery",
+      "href": "/resin/jewellery"
+    },
+    {
+      "name": "Art Splashbacks",
       "href": "/resin/jewellery"
     }
   ]

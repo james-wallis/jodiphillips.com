@@ -12,17 +12,17 @@ class Heading extends React.Component {
       .heading-container {
         position: absolute;
         z-index: 20;
-        bottom: 10px;
+        bottom: 30px;
         text-align: center;
         color: white;
         
       }
       .heading-container h1 {
-        font-size: 60px;
+        font-size: 50px;
         letter-spacing: 2px;
       }
       .heading-container p {
-        font-size: 40px;
+        font-size: 35px;
         letter-spacing: 2px;
       }
       `}</style>

@@ -246,6 +246,10 @@ class Image extends React.Component {
       mobileInfoIcon[index].addEventListener('transitionend', hideMobileInfoIconAfterTransition);
     }
   }
+
+  componentWillUnmount() {
+    // TODO CANCEL HIDE MOBILE INFO 
+  }
 }
 
 

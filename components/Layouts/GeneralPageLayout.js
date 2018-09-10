@@ -17,10 +17,10 @@ class Layout extends React.Component {
     return <Container fluid style={containerStyling}>
       <NextSeo
       config={{
-        title: `${this.props.head.title} | artistjodi`,
+        title: `${this.props.head.title} @ ArtistJodi`,
         description: this.props.head.description,
         openGraph: {
-          title: `${this.props.head.title} | artistjodi`,
+          title: `${this.props.head.title} @ ArtistJodi`,
           description: this.props.head.description,
           url: this.props.head.url,
         }

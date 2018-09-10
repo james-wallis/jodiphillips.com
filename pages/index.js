@@ -51,7 +51,7 @@ const layoutProps = {
           link: '/acrylic'
         },
         {
-          name: 'Jewellery',
+          name: 'Resin Jewellery',
           desc: 'wearable art',
           file: 'Row2-Right.jpg',
           link: '/resin/jewellery'
@@ -62,7 +62,7 @@ const layoutProps = {
           name: 'Snowboard',
           desc: 'Creating an original art piece using an old snowboard',
           file: 'Row3-Left.jpg',
-          link: '/client-projects/snowboard'
+          link: '/projects/snowboard'
         },
         {
           name: 'Kitchen Splashback',
@@ -72,19 +72,19 @@ const layoutProps = {
       ],
       [
         {
-          name: 'Outdoor Table',
-          desc: 'glass and steel table',
+          name: 'Art Splashbacks',
+          desc: 'Add a splash of wow',
           file: 'Row4-Left.jpg',
         },
         {
-          name: 'Drum Tables',
-          desc: 'upcycled drum storage tables',
+          name: 'Bespoke Tables',
+          desc: 'upcycled tables',
           file: 'Row4-middle.jpg',
-          link: '/client-projects/tables'
+          link: '/projects/tables'
         },
         {
-          name: 'Chopping Boards',
-          desc: 'order in time for Christmas',
+          name: 'Resin Gifts',
+          desc: 'coasters & chopping boards',
           file: 'Row4-right.jpg',
         }
       ],
@@ -93,7 +93,7 @@ const layoutProps = {
           name: 'Garden Art',
           desc: 'resin art to hang outdoors',
           file: 'Row5-Left.jpg',
-          link: '/client-projects/garden'
+          link: '/projects/garden'
         },
         {
           name: 'Cloakroom Splashback',
@@ -116,13 +116,13 @@ const layoutProps = {
       ],
       [
         {
-          name: 'Acrylic Art Gifts',
-          desc: 'boxed works',
+          name: 'Exhibitions',
+          desc: 'shows over the years',
           file: 'Row7-Left.jpg',
         },
         {
-          name: 'Resin Art Gifts',
-          desc: 'corporate & wedding gifts',
+          name: 'Christmas Gifts',
+          desc: 'give the gift of art',
           file: 'Row7-Middle.jpg',
         },
         {
