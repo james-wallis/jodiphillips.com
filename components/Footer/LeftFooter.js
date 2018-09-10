@@ -5,15 +5,15 @@ export default class extends React.Component {
   render() {
     return <Col xs='12' md='4' className='footer-column'>
       <Row>
-        <Col xs={{ size: 9, offset: 3 }}>
-          <h2>Explore the site</h2>
-        </Col>
         <Col xs='3'>
           <Link href='/'>
             <img src={require(`../../images/icons/home.png`)} alt='Navigate to home page' />
           </Link>
         </Col>
         <Col xs='9'>
+          <h2>Explore the site</h2>
+        </Col>
+        <Col xs={{ size: 9, offset: 3 }}>
           <div>
             <ul>
               <li>About Jodi</li>

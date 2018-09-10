@@ -31,6 +31,7 @@ class Footer extends React.Component {
         @media (min-width: 768px) {
           .footer-column>div {
             margin: 4px;
+            margin-bottom: 0;
           }
         }
         .footer-column h2 {

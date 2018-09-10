@@ -180,6 +180,7 @@ class Image extends React.Component {
             transition: opacity 0.4s;
             height: 100%;
             background-color: rgba(45,45,45,0.8);
+            padding: 10px 20px;
           }
           .image-info:hover {
             opacity: 1;
@@ -217,6 +218,7 @@ class Image extends React.Component {
           p.desc {
             font-size: 24px;
             background-color: inherit;
+            line-height: 26px;
           }
           .amazon-handmade, .amazon-handmade * {
             display: block;
