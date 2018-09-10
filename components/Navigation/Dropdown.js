@@ -5,7 +5,7 @@ class DropdownNavigation extends React.Component {
     return <div className='dropdown-container' onClick={this.toggleDropdown}>
       <div className='dropdown-button'>
         <p>{this.props.name}</p>
-        <img className='dropdown-icon' src={require(`../../images/icons/dropdown.png`)} alt='Drop down menu icon' />
+        <img className='dropdown-icon' src={require(`../../images/icons/downarrow.png`)} alt='Drop down menu icon' />
       </div>
       <div className='dropdown-items'>
         {/* Add the links into the page. If there are no links then use props.children. */}
@@ -32,7 +32,7 @@ class DropdownNavigation extends React.Component {
         }
         .dropdown-button img {
           display: inline-block;
-          height: 10px;
+          height: 17px;
           float: right;
           margin-left: auto;
           transition: transform 0.5s ease;
