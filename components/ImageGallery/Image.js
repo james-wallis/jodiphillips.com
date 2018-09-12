@@ -16,10 +16,20 @@ class Image extends React.Component {
     if (this.props.link && this.props.link.startsWith('http')) {
       linkTarget = '_blank';
       linkRel = 'noopener';
+    }
+    let bootstrapCol = '';
+    if (this.props.columns) {
+      if (this.props.columns == 1) {
+        bootstrapCol = '4';
+      } else if (this.props.columns == 2) {
+        bootstrapCol = '8';
+      } else if (this.props.columns == 3) {
+        bootstrapCol = '12';
+      }
     } 
     const desktopSrc = require(`../../images/${this.props.dir}/desktop/${this.props.file}`);
     const mobileSrc = require(`../../images/${this.props.dir}/mobile/${this.props.file}`);
-    return <Col className='image-column' xs='12' md>
+    return <Col className='image-column' xs='12' md={bootstrapCol}>
       <Link href={this.props.link || null}>
         <a target={linkTarget} rel={linkRel}>
           <div className='image-container' style={ (this.props.link) ? { cursor: 'pointer !important' } : { cursor: 'default !important' }} >
@@ -69,11 +79,11 @@ class Image extends React.Component {
       </Link>
       <style global jsx>{`
         .image-column {
-          margin: 4px 0;
+          padding: 4px 0 !important;
         }
         @media (min-width: 768px) {
           .image-column {
-            margin: 4px;
+            padding: 4px !important;
           }
         }
       `}</style>

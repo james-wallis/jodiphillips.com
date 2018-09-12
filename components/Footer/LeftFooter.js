@@ -12,18 +12,14 @@ export default class extends React.Component {
         </Col>
         <Col xs='9'>
           <h2>Explore the site</h2>
-        </Col>
-        <Col xs={{ size: 9, offset: 3 }}>
-          <div>
-            <ul>
-              <li>About Jodi</li>
-              <li>Inside the Studio</li>
-              <li>Art in Spaces</li>
-              <li>Resin</li>
-              <li>Acrylic</li>
-              <li>Client Projects</li>
-            </ul>
-          </div>
+          <ul>
+            <li>About Jodi</li>
+            <li>Inside the Studio</li>
+            <li>Art in Spaces</li>
+            <li>Resin</li>
+            <li>Acrylic</li>
+            <li>Client Projects</li>
+          </ul>
         </Col>
       </Row>
       <style jsx>{`

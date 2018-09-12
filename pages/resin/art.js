@@ -20,87 +20,94 @@ const layoutProps = {
     gallery: [
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Kitchen Splashbacks',
           file: 'Row1-Left.jpg',
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Commissions',
+          desc: 'How to commision work',
           file: 'Row1-Middle.jpg',
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Bathroom Splashback',
           file: 'Row1-Right.jpg',
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Bespoke Tables',
+          desc: 'Upcycled',
           file: 'Row2-Left.jpg',
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Garden Art',
+          desc: 'Enjoy art outside',
           file: 'Row2-Middle.jpg',
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Resin Jewellery',
           file: 'Row2-Right.jpg',
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Coasters & Chopping Boards',
           file: 'Row3-Left.jpg',
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Unique one off pieces',
           file: 'Row3-Right.jpg',
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Resin Art',
           file: 'Row4-Left.jpg',
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Resin Art',
           file: 'Row4-middle.jpg',
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Resin Art',
           file: 'Row4-right.jpg',
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Resin Art',
           file: 'Row5-Left.jpg',
+          columns: 2,
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Resin Art',
           file: 'Row5-Right.jpg',
+          columns: 1,
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Resin Art',
           file: 'Row6-Left.jpg',
+          columns: 1,
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Resin Art',
           file: 'Row6-Right.jpg',
+          columns: 2,
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Resin Art',
           file: 'Row7-Left.jpg',
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Resin Art',
           file: 'Row7-Middle.jpg',
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Resin Art',
           file: 'Row7-Right.jpg',
         }
       ],
