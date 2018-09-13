@@ -3,105 +3,133 @@ import Layout from '../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
   head: {
-    title: 'About Jodi'
+    title: 'Christmas Gifts'
   },
   content: {
-    h1: 'About Jodi'
+    h1: 'Christmas Gifts'
   },
   tab: {
     fixed: false
   },
   images: {
-    directory: 'jodi',
+    directory: 'christmas',
     hero: {
       src: 'hero.jpg',
-      alt: 'Jodi'
+      alt: 'Christmas Gifts'
     },
     gallery: [
       [
         {
-          name: 'Cuff Bracelet',
           file: 'Row1-Left.jpg',
         },
         {
-          name: 'Cuff Bracelet',
           file: 'Row1-Middle.jpg',
         },
         {
-          name: 'Cuff Bracelet',
           file: 'Row1-Right.jpg',
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
           file: 'Row2-Left.jpg',
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Art Gifts',
+          desc: 'Acrylic',
           file: 'Row2-Middle.jpg',
+          amazon: true,
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Stationary',
+          desc: 'Books & Diaries',
+          price: 20,
           file: 'Row2-Right.jpg',
+          amazon: {
+            text: 'Colour choice available to buy on Amazon Handmade',
+          }
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
           file: 'Row3-Left.jpg',
         },
         {
-          name: 'Cuff Bracelet',
           file: 'Row3-Right.jpg',
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
           file: 'Row4-Left.jpg',
         },
         {
-          name: 'Cuff Bracelet',
           file: 'Row4-middle.jpg',
         },
         {
-          name: 'Cuff Bracelet',
           file: 'Row4-right.jpg',
         }
       ],
       [
         {
           name: 'Cuff Bracelet',
+          material: 'Silver Plated',
+          price: 40,
           file: 'Row5-Left.jpg',
+          columns: 2,
+          amazon: true,
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Ring',
+          material: 'Silver Plated',
+          price: 40,
           file: 'Row5-Right.jpg',
+          columns: 1,
+          amazon: true,
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Cufflinks',
+          material: 'Silver Plated & Resin',
+          price: 40,
           file: 'Row6-Left.jpg',
+          columns: 1,
+          amazon: {
+            text: 'Colour choices available to buy at Amazon Handmade',
+          },
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Decorations',
+          desc: 'Set of four',
           file: 'Row6-Right.jpg',
+          columns: 2,
+          amazon: {
+            text: 'Colour choices available to buy on Amazon Handmade',
+          },
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Chopping Boards',
+          material: 'Wood & Resin',
+          price: 40,
           file: 'Row7-Left.jpg',
+          amazon: true,
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Coasters',
+          material: 'Resin',
+          price: 40,
           file: 'Row7-Middle.jpg',
+          amazon: {
+            text: 'Colour choices available to buy on Amazon Handmade',
+          },
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Coasters & Chopping Boards',
+          material: 'Wood & Resin',
+          price: 40,
           file: 'Row7-Right.jpg',
+          amazon: true,
         }
       ],
     ]

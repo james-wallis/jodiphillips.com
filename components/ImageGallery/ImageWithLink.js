@@ -40,6 +40,7 @@ class ImageWithLink extends React.Component {
             display: inline-block;
             position: relative;
             width: 100%;
+            cursor: 'pointer !important'
           }
           img {
             width: 100%;
@@ -78,7 +79,6 @@ class ImageWithLink extends React.Component {
           }
           p.desc {
             font-size: 20px;
-            text-transform: lowercase;
           }
 
           @media (min-width: 768px) {

@@ -35,31 +35,36 @@ class Gallery extends React.Component {
      * So the page doesn't display rows with images of different heights
      */
 function ensureHeightIsEqual() {
-  const gallery = document.getElementById('image-gallery');
-  const rows = gallery.getElementsByClassName('row');
-  for (let i = 0; i < rows.length; i++) {
-    const row = rows[i];
-    const cols = row.getElementsByClassName('image-column');
-    resetImgHeight(cols);
-    let imgHeight = getMinImgHeight(cols);
-    // Only setImgHeight if the height is more than 0 (image loaded)
-    if (imgHeight > 30) {
-      setImgHeight(cols, imgHeight);
-    } else {
-      const timeout = 0.5 * 1000
-      setTimeout(ensureHeightIsEqual, timeout);
-      break;
+  // Only ensure the height if the window width is bootstrap md 
+  if (window.innerWidth >= 768) {
+    const gallery = document.getElementById('image-gallery');
+    const rows = gallery.getElementsByClassName('row');
+    for (let i = 0; i < rows.length; i++) {
+      const row = rows[i];
+      const cols = row.getElementsByClassName('image-column');
+      resetImgHeight(cols);
+      let imgHeight = getMinImgHeight(cols);
+      // Only setImgHeight if the height is more than 0 (image loaded)
+      if (imgHeight > 30) {
+        setImgHeight(cols, imgHeight);
+      } else {
+        const timeout = 0.5 * 1000
+        setTimeout(ensureHeightIsEqual, timeout);
+        break;
+      }
     }
   }
 
   // Get the minimum height of all img elements in the row
   function getMinImgHeight(cols) {
-    let minImageHeight;
+    let minImageHeight = null;
     for (let index = 0; index < cols.length; index++) {
       const col = cols[index];
       const img = col.getElementsByTagName('img')[0];
-      const height = img.getBoundingClientRect().height;
-      if (height > 0 && height < minImageHeight || index === 0) minImageHeight = height;
+      if (img) {
+        const height = img.getBoundingClientRect().height;
+        if (height && height > 0 && height < minImageHeight || minImageHeight === null) minImageHeight = height; 
+      }
     }
     return minImageHeight;
   }
@@ -69,7 +74,7 @@ function ensureHeightIsEqual() {
     for (let index = 0; index < cols.length; index++) {
       const col = cols[index];
       const img = col.getElementsByTagName('img')[0];
-      img.height = height;
+      if(img) img.height = height;
     }
   }
 
@@ -77,7 +82,7 @@ function ensureHeightIsEqual() {
     for (let index = 0; index < cols.length; index++) {
       const col = cols[index];
       const img = col.getElementsByTagName('img')[0];
-      img.removeAttribute('height');
+      if (img) img.removeAttribute('height');
     }
   }
 }

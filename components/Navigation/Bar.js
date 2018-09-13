@@ -19,13 +19,13 @@ class NavigationBar extends React.Component {
             </Link>
           </Col>
         </Row>
-        <Link href="/jodi">
+        <Link href="/aboutjodi">
           <a>About Jodi</a>
         </Link>
-        <Link href="/inside-the-studio">
+        <Link href="/insidethestudio">
           <a>Inside the studio</a>
         </Link>
-        <Link href="/art-in-spaces">
+        <Link href="/artinspaces">
           <a>Art in Spaces</a>
         </Link>
         <Dropdown name={'Resin'} links={pageLinks.resin} />
@@ -37,6 +37,9 @@ class NavigationBar extends React.Component {
           <a className='dropdown-contact' href="tel:+447832 3592096">+44(0)7832 359209</a>
           <a className='dropdown-contact' href="mailto:mish@artistjodi.co.uk?Subject=Hello">mish@artistjodi.co.uk</a>
           <a className='dropdown-contact' href="mailto:jodi@artistjodi.co.uk?Subject=Hello">jodi@artistjodi.co.uk</a>
+          <Link href="/commissions">
+            <a className='dropdown-contact'>Commissions</a>
+          </Link>
         </Dropdown>
         <Dropdown name={'Social'} >
           <div className='social no-padding'>

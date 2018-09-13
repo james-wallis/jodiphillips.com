@@ -23,19 +23,19 @@ const layoutProps = {
           name: 'Artist Jodi',
           desc: 'about',
           file: 'Row1-Left.jpg',
-          link: '/jodi'
+          link: '/aboutjodi'
         },
         {
           name: 'Inside the studio',
           desc: 'see the creativity',
           file: 'Row1-Middle.jpg',
-          link: '/inside-the-studio'
+          link: '/insidethestudio'
         },
         {
           name: 'Art in space',
           desc: 'acrylic works',
           file: 'Row1-Right.jpg',
-          link: '/art-in-spaces'
+          link: '/artinspaces'
         }
       ],
       [
@@ -111,6 +111,7 @@ const layoutProps = {
           name: 'Exhibitions',
           desc: 'shows over the years',
           file: 'Row6-Left.jpg',
+          link: '/exhibitions'
         },
         {
           name: 'Exhibition at ExCeL London',
@@ -123,17 +124,20 @@ const layoutProps = {
         {
           name: 'Videos',
           desc: 'see the resin moving!',
+          link: 'https://www.youtube.com/channel/UC848rsbkuahzKYJMkHVkaiA',
           file: 'Row7-Left.jpg',
         },
         {
           name: 'Christmas Gifts',
           desc: 'give the gift of art',
           file: 'Row7-Middle.jpg',
+          link: '/christmas'
         },
         {
           name: 'Commissions',
           desc: 'see how to commission your own piece',
           file: 'Row7-Right.jpg',
+          link: '/commissions'
         }
       ],
     ]

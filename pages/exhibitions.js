@@ -3,107 +3,124 @@ import Layout from '../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
   head: {
-    title: 'Art in Spaces'
+    title: 'Exhibitions'
   },
   content: {
-    h1: 'Art in Spaces'
+    h1: 'Exhibitions'
   },
   tab: {
     fixed: false
   },
   images: {
-    directory: 'art_in_spaces',
+    directory: 'exhibitions',
     hero: {
       src: 'hero.jpg',
-      alt: 'Art in Spaces'
+      alt: 'Exhibitions'
     },
     gallery: [
       [
         {
-          name: 'Cuff Bracelet',
+          name: '1st Exhibition',
+          desc: 'St Albans, 1997',
           file: 'Row1-Left.jpg',
-          desc: 'A cuff bracelet',
-          material: 'gold',
-          price: 67
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Spring Fair',
+          desc: 'NEC',
           file: 'Row1-Middle.jpg',
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Autumn Fair',
+          desc: 'NEC',
           file: 'Row1-Right.jpg',
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
+          name: '6th Sense',
+          desc: 'ExCel Centre',
           file: 'Row2-Left.jpg',
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Spring Fair',
+          desc: 'NEC',
           file: 'Row2-Middle.jpg',
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Spring Fair',
+          desc: 'NEC',
           file: 'Row2-Right.jpg',
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Harlequin Centre',
+          desc: 'Watford',
           file: 'Row3-Left.jpg',
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Spring Fair',
+          desc: 'NEC',
           file: 'Row3-Right.jpg',
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Royal Berkshire Club',
+          desc: 'Berkshire',
           file: 'Row4-Left.jpg',
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Grand Designs Live',
+          desc: 'ExCel Centre',
           file: 'Row4-middle.jpg',
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Royal Berkshire Club',
+          desc: 'Berkshire',
           file: 'Row4-right.jpg',
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Audio Visual Gallery',
+          desc: 'Hertfordshire',
           file: 'Row5-Left.jpg',
+          columns: 2,
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Grand Designs Live',
+          desc: 'ExCel Centre',
           file: 'Row5-Right.jpg',
+          columns: 1,
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Audio Visual Gallery',
+          desc: 'Hertfordshire',
           file: 'Row6-Left.jpg',
+          columns: 1,
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Harlequin Centre',
+          desc: 'Watford',
           file: 'Row6-Right.jpg',
+          columns: 2,
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Open Studio',
           file: 'Row7-Left.jpg',
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Harlequin Centre',
+          desc: 'Watford',
           file: 'Row7-Middle.jpg',
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Exhibition Gift',
           file: 'Row7-Right.jpg',
         }
       ],

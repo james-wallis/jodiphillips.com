@@ -1,7 +1,9 @@
 import { Row, Col } from 'reactstrap'
 import PropTypes from "prop-types";
-import Image from './Image.js'
+import Image from './Image.js';
+import ImageWithOverlay from './ImageWithOverlay.js'
 import ImageWithLink from './ImageWithLink.js'
+import TextBox from './TextBox.js';
 
 class ImageRow extends React.Component {
   render() {
@@ -21,6 +23,18 @@ class ImageRow extends React.Component {
           return (
           <Col className='image-column' xs='12' md={bootstrapCol} key={image.key || `${this.props.dir}/${image.file}`}>
             <ImageWithLink {...image} dir={this.props.dir}/>
+          </Col>
+          )
+        else if (image.text)
+          return (
+          <Col className='image-column' xs='12' md={bootstrapCol} key={image.key || image.text }>
+            <TextBox {...image} />
+          </Col>
+          )
+        else if (image.name)
+          return (
+          <Col className='image-column' xs='12' md={bootstrapCol} key={image.key || `${this.props.dir}/${image.file}`}>
+            <ImageWithOverlay {...image} dir={this.props.dir} />
           </Col>
           )
         else
