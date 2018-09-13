@@ -20,88 +20,165 @@ const layoutProps = {
     gallery: [
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Drop Earrings',
+          material: 'Silver Plated',
+          price: 45,
           file: 'Row1-Left.jpg',
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Pendant',
+          price: 35,
           file: 'Row1-Middle.jpg',
+          amazon: true,
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Pendant',
+          price: 35,
           file: 'Row1-Right.jpg',
+          amazon: true
         }
       ],
       [
         {
           name: 'Cuff Bracelet',
+          material: 'Silver Plated',
+          price: 35,
           file: 'Row2-Left.jpg',
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Drop Earrings',
+          material: 'Silver Plated',
+          price: 45,
           file: 'Row2-Middle.jpg',
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Stud Earrings',
+          material: '925 Silver',
+          price: 35,
           file: 'Row2-Right.jpg',
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Cufflinks',
+          material: 'Silver Plated',
+          price: 35,
           file: 'Row3-Left.jpg',
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Pendant',
+          material: 'Silver Plated',
+          price: 35,
           file: 'Row3-Right.jpg',
+          amazon: true,
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Pendant',
+          price: 35,
           file: 'Row4-Left.jpg',
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Pendant',
+          price: 35,
           file: 'Row4-middle.jpg',
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Pendant',
+          price: 35,
           file: 'Row4-right.jpg',
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Pendant',
+          material: 'Silver with chain',
+          price: 35,
           file: 'Row5-Left.jpg',
+          columns: 2,
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         },
         {
           name: 'Cuff Bracelet',
+          material: 'Silver with chain',
+          price: 45,
           file: 'Row5-Right.jpg',
+          columns: 1,
+          amazon: true,
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Stud Earrings',
+          material: '925 Silver',
+          price: 35,
           file: 'Row6-Left.jpg',
+          columns: 1,
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         },
         {
           name: 'Cuff Bracelet',
+          material: 'Silver Plated',
+          price: 45,
           file: 'Row6-Right.jpg',
+          columns: 2,
+          amazon: true,
         }
       ],
       [
         {
-          name: 'Cuff Bracelet',
+          name: 'Bracelet',
+          material: 'Silver Plated',
+          price: 35,
           file: 'Row7-Left.jpg',
+          amazon: true,
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Pendant',
+          material: '925 Silver with chain',
+          price: 35,
           file: 'Row7-Middle.jpg',
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         },
         {
-          name: 'Cuff Bracelet',
+          name: 'Pendant',
+          material: '925 Silver with chain',
+          price: 35,
           file: 'Row7-Right.jpg',
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         }
       ],
     ]

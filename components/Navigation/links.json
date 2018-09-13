@@ -1,16 +1,12 @@
 {
   "acrylic": [
     { 
-      "name": "Wall Art",
-      "href": "/"
+      "name": "Art",
+      "href": "/acrylic/art"
     },
     {
       "name": "Gifts",
-      "href": "/"
-    },
-    {
-      "name": "Projects",
-      "href": "/"
+      "href": "/acrylic/gifts"
     }
   ],
   "client_projects": [
@@ -25,6 +21,14 @@
     {
       "name": "Coffee Tables",
       "href": "/projects/tables"
+    },
+    {
+      "name": "Kitchen Splashback",
+      "href": "/projects/kitchen"
+    },
+    {
+      "name": "Cloackroom Splashback",
+      "href": "/projects/cloakroom"
     }
   ],
   "resin": [
@@ -35,14 +39,10 @@
     },
     {
       "name": "Gifts",
-      "href": "/resin/jewellery"
+      "href": "/resin/gifts"
     },
     {
       "name": "Jewellery",
-      "href": "/resin/jewellery"
-    },
-    {
-      "name": "Art Splashbacks",
       "href": "/resin/jewellery"
     }
   ]

@@ -23,6 +23,7 @@ const layoutProps = {
           name: 'Artist Jodi',
           desc: 'about',
           file: 'Row1-Left.jpg',
+          link: '/jodi'
         },
         {
           name: 'Inside the studio',
@@ -48,7 +49,7 @@ const layoutProps = {
           name: 'Acrylic Art',
           desc: 'original works',
           file: 'Row2-Middle.jpg',
-          link: '/acrylic'
+          link: '/acrylic/art'
         },
         {
           name: 'Resin Jewellery',
@@ -68,13 +69,15 @@ const layoutProps = {
           name: 'Kitchen Splashback',
           desc: 'A resin piece to blend not pop',
           file: 'Row3-Right.jpg',
+          link: '/projects/kitchen'
         }
       ],
       [
         {
-          name: 'Art Splashbacks',
-          desc: 'Add a splash of wow',
+          name: 'Acrylic Gifts',
+          desc: '',
           file: 'Row4-Left.jpg',
+          link: '/acrylic/gifts'
         },
         {
           name: 'Bespoke Tables',
@@ -86,6 +89,7 @@ const layoutProps = {
           name: 'Resin Gifts',
           desc: 'coasters & chopping boards',
           file: 'Row4-right.jpg',
+          link: '/resin/gifts'
         }
       ],
       [
@@ -99,12 +103,13 @@ const layoutProps = {
           name: 'Cloakroom Splashback',
           desc: 'modern solution for bathrooms',
           file: 'Row5-Right.jpg',
+          link: '/projects/cloakroom'
         }
       ],
       [
         {
-          name: 'Resin Videos',
-          desc: 'see the resin moving!',
+          name: 'Exhibitions',
+          desc: 'shows over the years',
           file: 'Row6-Left.jpg',
         },
         {
@@ -116,8 +121,8 @@ const layoutProps = {
       ],
       [
         {
-          name: 'Exhibitions',
-          desc: 'shows over the years',
+          name: 'Videos',
+          desc: 'see the resin moving!',
           file: 'Row7-Left.jpg',
         },
         {

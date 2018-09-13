@@ -22,7 +22,13 @@ class ImageWithLink extends React.Component {
     return <Link href={this.props.link}>
       <a target={linkTarget} rel={linkRel}>
         <div className='image-container' onMouseEnter={this.showInformation} onMouseLeave={this.hideInformation} style={ (this.props.link) ? { cursor: 'pointer !important' } : { cursor: 'default !important' }} >
-          <img src={mobileSrc} srcSet={`${desktopSrc} 768w`} alt={this.props.name} /><div className='image-info'>
+          <picture>
+            <source media='(min-width: 768px)' srcSet={`${desktopSrc}?webp`} type='image/webp'/>
+            <source srcSet={`${mobileSrc}?webp`} type='image/webp' />
+            <source media='(min-width: 768px)' srcSet={desktopSrc} type='image/jpeg'/>
+            <img src={mobileSrc} alt={this.props.imgAlt} />
+          </picture>
+          <div className='image-info'>
             <div className='image-info-inner'>
               <h3 className='image-info-text'>{this.props.name}</h3>
               { (this.props.desc) ? <p className='desc image-info-text' >{this.props.desc}</p> : null }
@@ -154,7 +160,6 @@ class ImageWithLink extends React.Component {
 
   hideInformationAfterTransition(e) {
     const info = e.target;
-    console.log(info);
     if (info && info.style && info.style.opacity && info.style.opacity == 0) {
       info.style.height = '';
       info.style.opacity = '';

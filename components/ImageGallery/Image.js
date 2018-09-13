@@ -14,21 +14,25 @@ class Image extends React.Component {
     const mobileSrc = require(`../../images/${this.props.dir}/mobile/${this.props.file}`);
     return <div>
       <div className='image-container' onMouseEnter={this.showInformation} onMouseLeave={this.hideInformation} style={ (this.props.link) ? { cursor: 'pointer !important' } : { cursor: 'default !important' }} >
-        <img src={mobileSrc} srcSet={`${desktopSrc} 768w`} alt={this.props.name} />
+        <picture>
+          <source media='(min-width: 768px)' srcSet={`${desktopSrc}?webp`} type='image/webp'/>
+          <source srcSet={`${mobileSrc}?webp`} type='image/webp' />
+          <source media='(min-width: 768px)' srcSet={desktopSrc} type='image/jpeg'/>
+          <img src={mobileSrc} alt={this.props.imgAlt} />
+        </picture>
         <img className='image-info-icon image-info-icon-open' onClick={this.showInformation} src={require(`../../images/icons/info.png`)} />
         <div className='image-info'>
           <img className='image-info-icon image-info-icon-close' onClick={this.hideInformation} src={require(`../../images/icons/close.png`)} />
           <div className='image-info-inner'>
             <h3 className='image-info-text'>{this.props.name}</h3>
-            { (this.props.desc) ? <p className='desc image-info-text' >{this.props.desc}</p> : null }
+            {(this.props.desc) ? <p className='desc image-info-text' >{this.props.desc}</p> : null }
             {(this.props.material) ? <p className='image-info-text'>{this.props.material}</p> : null }
+            {(this.props.size && this.props.size.height && this.props.size.width) ? 
+                <p className='image-info-text'>{`${this.props.size.height}cm x ${this.props.size.width}cm`}</p> : null }
             {(this.props.price) ? <p className='image-info-text'>&#163;{this.props.price}</p> : null }
-            {/* 
-            TODO
-            - Evaluate use of something other than price to toggle amazon handmade on and off
-            */}
-            { (this.props.price) ? <div className='amazon-handmade'>
-              <p>Buy on Amazon Handmade</p>
+            {(this.props.price === false && this.props.price !== null && this.props.price !== undefined) ? <p className='image-info-text'>Contact for availability</p> : null }
+            {(this.props.amazon) ? <div className='amazon-handmade'>
+              <p>{(this.props.amazon && this.props.amazon.text) ? this.props.amazon.text : 'Buy on Amazon Handmade' }</p>
               <a href={amazon_url} rel='noopener' target='_blank'>
                 <img className='amazon-logo' src={require(`../../images/logos/amazon.png`)} />
               </a>
@@ -202,7 +206,7 @@ class Image extends React.Component {
 Image.propTypes = {
   name: PropTypes.string.isRequired,
   material: PropTypes.string,
-  price: PropTypes.number,
+  price: PropTypes.number || PropTypes.boolean,
   amazon_url: PropTypes.string,
   dir: PropTypes.string.isRequired,
   file: PropTypes.string.isRequired

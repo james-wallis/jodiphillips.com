@@ -8,7 +8,12 @@ class Hero extends React.Component {
     return <Row className='no-gutters'>
       <Col xs='12'>
         <div>
-          <img src={mobileSrc} srcSet={`${desktopSrc} 768w`} alt={this.props.imgAlt} />
+          <picture>
+            <source media='(min-width: 768px)' srcSet={`${desktopSrc}?webp`} type='image/webp'/>
+            <source srcSet={`${mobileSrc}?webp`} type='image/webp' />
+            <source media='(min-width: 768px)' srcSet={desktopSrc} type='image/jpeg'/>
+            <img src={mobileSrc} alt={this.props.imgAlt} />
+          </picture>
         </div>
       </Col>
       <style jsx>{`
@@ -17,7 +22,7 @@ class Hero extends React.Component {
           width: 100vw;
           margin-bottom: 4px;
         }
-        img {
+        img, picture, source {
           width: 100%;
           height: 100%;
           object-fit: cover;

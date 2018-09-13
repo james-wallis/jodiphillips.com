@@ -12,7 +12,7 @@ const layoutProps = {
     fixed: false
   },
   images: {
-    directory: 'resin',
+    directory: 'resin/art',
     hero: {
       src: 'hero.jpg',
       alt: 'Resin'
@@ -63,14 +63,23 @@ const layoutProps = {
         {
           name: 'Resin Art',
           file: 'Row4-Left.jpg',
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         },
         {
           name: 'Resin Art',
           file: 'Row4-middle.jpg',
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         },
         {
           name: 'Resin Art',
           file: 'Row4-right.jpg',
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         }
       ],
       [
@@ -78,11 +87,17 @@ const layoutProps = {
           name: 'Resin Art',
           file: 'Row5-Left.jpg',
           columns: 2,
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         },
         {
           name: 'Resin Art',
           file: 'Row5-Right.jpg',
           columns: 1,
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         }
       ],
       [
@@ -90,25 +105,40 @@ const layoutProps = {
           name: 'Resin Art',
           file: 'Row6-Left.jpg',
           columns: 1,
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         },
         {
           name: 'Resin Art',
           file: 'Row6-Right.jpg',
           columns: 2,
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         }
       ],
       [
         {
           name: 'Resin Art',
           file: 'Row7-Left.jpg',
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         },
         {
           name: 'Resin Art',
           file: 'Row7-Middle.jpg',
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         },
         {
           name: 'Resin Art',
           file: 'Row7-Right.jpg',
+          amazon: {
+            text: 'Colour choices available at Amazon Handmade',
+          },
         }
       ],
     ]

@@ -1,0 +1,121 @@
+import React from 'react'
+import Layout from '../components/Layouts/GeneralPageLayout'
+
+const layoutProps = {
+  head: {
+    title: 'About Jodi'
+  },
+  content: {
+    h1: 'About Jodi'
+  },
+  tab: {
+    fixed: false
+  },
+  images: {
+    directory: 'jodi',
+    hero: {
+      src: 'hero.jpg',
+      alt: 'Jodi'
+    },
+    gallery: [
+      [
+        {
+          name: 'Cuff Bracelet',
+          file: 'Row1-Left.jpg',
+        },
+        {
+          name: 'Cuff Bracelet',
+          file: 'Row1-Middle.jpg',
+        },
+        {
+          name: 'Cuff Bracelet',
+          file: 'Row1-Right.jpg',
+        }
+      ],
+      [
+        {
+          name: 'Cuff Bracelet',
+          file: 'Row2-Left.jpg',
+        },
+        {
+          name: 'Cuff Bracelet',
+          file: 'Row2-Middle.jpg',
+        },
+        {
+          name: 'Cuff Bracelet',
+          file: 'Row2-Right.jpg',
+        }
+      ],
+      [
+        {
+          name: 'Cuff Bracelet',
+          file: 'Row3-Left.jpg',
+        },
+        {
+          name: 'Cuff Bracelet',
+          file: 'Row3-Right.jpg',
+        }
+      ],
+      [
+        {
+          name: 'Cuff Bracelet',
+          file: 'Row4-Left.jpg',
+        },
+        {
+          name: 'Cuff Bracelet',
+          file: 'Row4-middle.jpg',
+        },
+        {
+          name: 'Cuff Bracelet',
+          file: 'Row4-right.jpg',
+        }
+      ],
+      [
+        {
+          name: 'Cuff Bracelet',
+          file: 'Row5-Left.jpg',
+        },
+        {
+          name: 'Cuff Bracelet',
+          file: 'Row5-Right.jpg',
+        }
+      ],
+      [
+        {
+          name: 'Cuff Bracelet',
+          file: 'Row6-Left.jpg',
+        },
+        {
+          name: 'Cuff Bracelet',
+          file: 'Row6-Right.jpg',
+        }
+      ],
+      [
+        {
+          name: 'Cuff Bracelet',
+          file: 'Row7-Left.jpg',
+        },
+        {
+          name: 'Cuff Bracelet',
+          file: 'Row7-Middle.jpg',
+        },
+        {
+          name: 'Cuff Bracelet',
+          file: 'Row7-Right.jpg',
+        }
+      ],
+    ]
+  }
+}
+
+export default class extends React.Component {
+  static async getInitialProps(context) {
+    const urlPath = context.pathname;
+    return { urlPath }
+  }
+  render() {
+    const url = this.props.websiteAddress + this.props.urlPath;
+    layoutProps.head.url = url;
+    return <Layout {...layoutProps} />
+  }
+}
