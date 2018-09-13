@@ -27,7 +27,7 @@ class TextBox extends React.Component {
           bottom: 0;
           text-align: center;
           height: auto;
-          min-height: 200px;
+          min-height: 250px;
         }
 
         .text-box-inner {
@@ -45,7 +45,7 @@ class TextBox extends React.Component {
         }
         p {
           margin: 0;
-          padding: 0 20px;
+          padding: 20px;
           font-size: 16px;
         }
 

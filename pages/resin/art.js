@@ -22,15 +22,18 @@ const layoutProps = {
         {
           name: 'Kitchen Splashbacks',
           file: 'Row1-Left.jpg',
+          link: '/projects/kitchen'
         },
         {
           name: 'Commissions',
           desc: 'How to commision work',
           file: 'Row1-Middle.jpg',
+          link: '/commissions'
         },
         {
-          name: 'Bathroom Splashback',
+          name: 'Cloakroom Splashback',
           file: 'Row1-Right.jpg',
+          link: '/projects/cloakroom'
         }
       ],
       [
@@ -38,15 +41,18 @@ const layoutProps = {
           name: 'Bespoke Tables',
           desc: 'Upcycled',
           file: 'Row2-Left.jpg',
+          link: '/projects/tables'
         },
         {
           name: 'Garden Art',
           desc: 'Enjoy art outside',
           file: 'Row2-Middle.jpg',
+          link: '/projects/garden'
         },
         {
           name: 'Resin Jewellery',
           file: 'Row2-Right.jpg',
+          link: '/resin/jewellery'
         }
       ],
       [

@@ -54,7 +54,6 @@ class Tab extends React.Component {
   }
 
   componentWillUnmount() {
-    console.log('unmount tab');
     window.removeEventListener('resize', updateHeadingTabWidth);
     window.removeEventListener('scroll', toggleHeadingTabOnScroll);
     window.removeEventListener('resize', toggleHeadingTabOnScroll);

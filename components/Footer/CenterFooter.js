@@ -6,8 +6,8 @@ export default class extends React.Component {
       <div>
         <h2>Visit the studio</h2>
         <p>Call, Text or Message</p>
-        <a href="tel:+441442 257226">+44(0)1442 257226</a>
-        <a href="tel:+447832 3592096">+44(0)7832 359209</a>
+        <a href="tel:+441442257226">+44(0)1442 257226</a>
+        <a href="tel:+447832359209">+44(0)7832 359209</a>
         <a href="mailto:mish@artistjodi.co.uk?Subject=Hello">mish@artistjodi.co.uk</a>
         <a href="mailto:jodi@artistjodi.co.uk?Subject=Hello">jodi@artistjodi.co.uk</a>
         <div className='copyright'>

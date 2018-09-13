@@ -37,6 +37,7 @@ const layoutProps = {
         {
           name: 'Christmas 2018',
           file: 'Row2-Left.jpg',
+          link: '/christmas',
         },
         {
           name: 'Original Works',
@@ -46,6 +47,7 @@ const layoutProps = {
           name: 'Commissions',
           desc: 'Unique one off pieces',
           file: 'Row2-Right.jpg',
+          link: '/commissions'
         }
       ],
       [

@@ -95,9 +95,6 @@ class DropdownNavigation extends React.Component {
         element = e.target.parentNode;
       }
       const dropdownIcon = element.getElementsByClassName('dropdown-icon')[0];
-      console.log(e.target);
-      console.log(e.target.parentNode);
-      console.log(element);
       const dropdownMenu = element.getElementsByClassName('dropdown-items')[0];
       // If the height of the dropdown menu is 0, show the dropdown menu.
       // Else hide the dropdown menu

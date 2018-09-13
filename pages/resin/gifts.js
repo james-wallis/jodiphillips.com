@@ -125,6 +125,7 @@ const layoutProps = {
           name: 'Commissions',
           desc: 'Why not commission your own',
           file: 'Row7-Right.jpg',
+          link: '/commissions'
         }
       ],
     ]

@@ -172,7 +172,7 @@ class ImageWithOverlay extends React.Component {
       info.style.height = '100%';
       info.style.opacity = 1;
       const closeIcon = info.getElementsByClassName('image-info-icon-close')[0];
-      closeIcon.style.height = 'auto';
+      if (closeIcon && closeIcon.style) closeIcon.style.height = 'auto';
     }
   }
 
@@ -187,7 +187,7 @@ class ImageWithOverlay extends React.Component {
       const info = container.getElementsByClassName('image-info')[0];
       info.style.opacity = 0;
       const closeIcon = info.getElementsByClassName('image-info-icon-close')[0];
-      closeIcon.style.height = '0';
+      if (closeIcon && closeIcon.style) closeIcon.style.height = '0';
     }
   }
 
@@ -196,7 +196,7 @@ class ImageWithOverlay extends React.Component {
     if (info && info.style && info.style.opacity && info.style.opacity == 0) {
       info.style.height = '0';
       const closeIcon = info.getElementsByClassName('image-info-icon-close')[0];
-      closeIcon.style.height = '0';
+      if (closeIcon && closeIcon.style) closeIcon.style.height = '0';
     }
   }
 }
@@ -206,7 +206,6 @@ class ImageWithOverlay extends React.Component {
 ImageWithOverlay.propTypes = {
   name: PropTypes.string.isRequired,
   material: PropTypes.string,
-  price: PropTypes.number || PropTypes.boolean,
   amazon_url: PropTypes.string,
   dir: PropTypes.string.isRequired,
   file: PropTypes.string.isRequired

@@ -61,13 +61,13 @@ const layoutProps = {
       [
         {
           name: 'Snowboard',
-          desc: 'Creating an original art piece using an old snowboard',
+          desc: 'creating an original art piece using an old snowboard',
           file: 'Row3-Left.jpg',
           link: '/projects/snowboard'
         },
         {
           name: 'Kitchen Splashback',
-          desc: 'A resin piece to blend not pop',
+          desc: 'a resin piece to blend not pop',
           file: 'Row3-Right.jpg',
           link: '/projects/kitchen'
         }
