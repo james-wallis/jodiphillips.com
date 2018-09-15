@@ -19,6 +19,9 @@ app.prepare()
     server.get('/sitemap.xml', (req, res) => {
       app.serveStatic(req, res, path.resolve('./static/sitemap.xml'))
     })
+    server.get('/robots.txt', (req, res) => {
+      app.serveStatic(req, res, path.resolve('./static/robots.txt'))
+    })
     server.get('/browserconfig.xml', (req, res) => {
       app.serveStatic(req, res, path.resolve('./static/browserconfig.xml'))
     })
