@@ -16,6 +16,9 @@ app.prepare()
     server.get('/sw.js', (req, res) => {
       app.serveStatic(req, res, path.resolve('./static/sw.js'))
     })
+    server.get('/sitemap.xml', (req, res) => {
+      app.serveStatic(req, res, path.resolve('./static/sitemap.xml'))
+    })
     server.get('/browserconfig.xml', (req, res) => {
       app.serveStatic(req, res, path.resolve('./static/browserconfig.xml'))
     })
