@@ -17,7 +17,13 @@ app.prepare()
       app.serveStatic(req, res, path.resolve('./static/sw.js'))
     })
     server.get('/browserconfig.xml', (req, res) => {
-      app.serveStatic(req, res, path.resolve('./browserconfig.xml'))
+      app.serveStatic(req, res, path.resolve('./static/browserconfig.xml'))
+    })
+    server.get('/favicon.ico', (req, res) => {
+      app.serveStatic(req, res, path.resolve('./static/favicon.ico'))
+    })
+    server.get('/apple-touch-icon.png', (req, res) => {
+      app.serveStatic(req, res, path.resolve('./static/apple-touch-icon.png'))
     })
     server.get('*', (req, res) => {
       return handle(req, res)
