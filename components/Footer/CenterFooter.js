@@ -31,6 +31,7 @@ export default class extends React.Component {
         }
         a:hover {
           text-decoration: none;
+          color: white;
         }
         .copyright {
           margin: 0;

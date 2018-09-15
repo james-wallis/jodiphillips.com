@@ -13,36 +13,36 @@ export default class extends React.Component {
         <Col xs='9'>
           <h2>Explore the site</h2>
           <ul>
-            <Link href='/aboutjodi'>
-              <a>
-                <li>About Jodi</li>
-              </a>
-            </Link>
-            <Link href='/insidethestudio'>
-              <a>
-                <li>Inside the Studio</li>
-              </a>
-            </Link>
-            <Link href='/artinspaces'>
-              <a>
-                <li>Art in Spaces</li>
-              </a>
-            </Link>
-            <Link href='/resin/art'>
-              <a>
-                <li>Resin</li>
-              </a>
-            </Link>
-            <Link href='/acrylic/art'>
-              <a>
-                <li>Acrylic</li>
-              </a>
-            </Link>
-            <Link href='/commissions'>
-              <a>
-                <li>Commissions</li>
-              </a>
-            </Link>
+            <li>
+              <Link href='/aboutjodi'>
+                <a>About Jodi</a>
+              </Link>
+            </li>
+            <li>
+              <Link href='/insidethestudio'>
+                <a>Inside the Studio</a>
+              </Link>
+            </li>
+            <li>
+              <Link href='/artinspaces'>
+                <a>Art in Spaces</a>
+              </Link>
+            </li>
+            <li>
+              <Link href='/resin/art'>
+                <a>Resin</a>
+              </Link>
+            </li>
+            <li>
+              <Link href='/acrylic/art'>
+                <a>Acrylic</a>
+              </Link>
+            </li>
+            <li>
+              <Link href='/commissions'>
+                <a>Commissions</a>
+              </Link>
+            </li>
           </ul>
         </Col>
       </Row>
@@ -59,9 +59,13 @@ export default class extends React.Component {
         }
         a {
           color: white;
+          height: 100%;
+          width: 100%;
+          display: block;
         }
         a:hover {
           text-decoration: none;
+          color: white;
         }
         li {
           list-style-type: none;

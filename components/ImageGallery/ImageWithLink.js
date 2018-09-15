@@ -26,7 +26,7 @@ class ImageWithLink extends React.Component {
             <source media='(min-width: 768px)' srcSet={`${desktopSrc}?webp`} type='image/webp'/>
             <source srcSet={`${mobileSrc}?webp`} type='image/webp' />
             <source media='(min-width: 768px)' srcSet={desktopSrc} type='image/jpeg'/>
-            <img src={mobileSrc} alt={this.props.imgAlt} />
+            <img src={mobileSrc} alt={this.props.alt} />
           </picture>
           <div className='image-info'>
             <div className='image-info-inner'>
@@ -171,6 +171,7 @@ class ImageWithLink extends React.Component {
 
 ImageWithLink.propTypes = {
   name: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
   material: PropTypes.string,
   price: PropTypes.number,
   amazon_url: PropTypes.string,

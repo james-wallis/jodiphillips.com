@@ -10,7 +10,7 @@ class Image extends React.Component {
           <source media='(min-width: 768px)' srcSet={`${desktopSrc}?webp`} type='image/webp'/>
           <source srcSet={`${mobileSrc}?webp`} type='image/webp' />
           <source media='(min-width: 768px)' srcSet={desktopSrc} type='image/jpeg'/>
-          <img src={mobileSrc} alt={this.props.imgAlt} />
+          <img src={mobileSrc} alt={this.props.alt} />
         </picture>
       <style jsx>{`
         .image-container {
@@ -29,6 +29,7 @@ class Image extends React.Component {
 }
 
 Image.propTypes = {
+  alt: PropTypes.string.isRequired,
   file: PropTypes.string.isRequired
 };
 

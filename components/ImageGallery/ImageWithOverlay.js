@@ -18,7 +18,7 @@ class ImageWithOverlay extends React.Component {
           <source media='(min-width: 768px)' srcSet={`${desktopSrc}?webp`} type='image/webp'/>
           <source srcSet={`${mobileSrc}?webp`} type='image/webp' />
           <source media='(min-width: 768px)' srcSet={desktopSrc} type='image/jpeg'/>
-          <img src={mobileSrc} alt={this.props.imgAlt} />
+          <img src={mobileSrc} alt={this.props.alt} />
         </picture>
         <img className='image-info-icon image-info-icon-open' onClick={this.showInformation} src={require(`../../images/icons/info.png`)} />
         <div className='image-info'>
@@ -205,6 +205,7 @@ class ImageWithOverlay extends React.Component {
 
 ImageWithOverlay.propTypes = {
   name: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
   material: PropTypes.string,
   amazon_url: PropTypes.string,
   dir: PropTypes.string.isRequired,
