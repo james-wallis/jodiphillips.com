@@ -10,12 +10,11 @@ class Heading extends React.Component {
       
       <style global jsx>{`
       .heading-container {
-        position: absolute;
+        position: absolute !important;
         z-index: 20;
         bottom: 30px;
         text-align: center;
         color: white;
-        
       }
       .heading-container h1 {
         font-size: 50px;

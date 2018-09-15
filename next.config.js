@@ -8,12 +8,12 @@ module.exports = withPlugins([
     inlineImageLimit: 8192,
     imagesFolder: 'images',
     imagesName: '[name]-[hash].[ext]',
-    optimizeImagesInDev: false,
+    optimizeImagesInDev: true,
     mozjpeg: {
       quality: 80,
     },
     optipng: {
-      optimizationLevel: 3,
+      optimizationLevel: 4,
     },
     pngquant: false,
     gifsicle: {
@@ -24,8 +24,8 @@ module.exports = withPlugins([
       // enable/disable svgo plugins here
     },
     webp: {
-      preset: 'default',
-      quality: 75,
+      preset: 'picture',
+      quality: 70,
     },
   }],
 ]);

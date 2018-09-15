@@ -8,13 +8,9 @@ import Heading from '../Heading';
 import Footer from '../Footer/Footer';
 import Gallery from '../ImageGallery/Gallery';
 
-const containerStyling = {
-  padding: '0px'
-}
-
 class Layout extends React.Component {
   render() {
-    return <Container fluid style={containerStyling}>
+    return <Container fluid className='container-style'>
       <NextSeo
       config={{
         title: `${this.props.head.title} @ ArtistJodi`,
@@ -25,7 +21,6 @@ class Layout extends React.Component {
           url: this.props.head.url,
         }
       }} />
-      <Head />
       <Header />
       <HeroImage imgSrc={this.props.images.hero.src} imgDir={this.props.images.directory} imgAlt={this.props.images.hero.alt} />
       <Heading heading={this.props.content.h1} />
@@ -40,6 +35,9 @@ class Layout extends React.Component {
         * {
           font-family: 'Roboto', sans-serif;
           font-weight: 100 !important;
+        }
+        .container-style {
+          padding: 0 !important;
         }
       `}</style>
     </Container>
