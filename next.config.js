@@ -8,7 +8,7 @@ module.exports = withPlugins([
     inlineImageLimit: 8192,
     imagesFolder: 'images',
     imagesName: '[name]-[hash].[ext]',
-    optimizeImagesInDev: true,
+    optimizeImagesInDev: false,
     mozjpeg: {
       quality: 80,
     },

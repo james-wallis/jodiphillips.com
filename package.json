@@ -4,9 +4,9 @@
   "description": "A website for the Artist Jodi Phillips written in React.js using the Next.js framework",
   "main": "server.js",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/jamesemwallis/jodiphillips.com#readme",
   "dependencies": {
     "compression": "^1.7.3",
+    "express": "^4.16.3",
     "next": "^6.1.1",
     "next-compose-plugins": "^2.1.1",
     "next-optimized-images": "^1.4.1",
