@@ -21,73 +21,91 @@ const layoutProps = {
       [
         {
           file: 'Row1-Left.jpg',
+          alt: 'Using a heat torch to move Resin'
         },
         {
           file: 'Row1-Middle.jpg',
+          alt: 'A piece of Resin art for the garden'
         },
         {
           file: 'Row1-Right.jpg',
+          alt: 'A piece of Resin art for the garden'
         }
       ],
       [
         {
           file: 'Row2-Left.jpg',
+          alt: 'A piece of Resin art for the garden'
         },
         {
           file: 'Row2-Middle.jpg',
+          alt: 'A piece of Resin art for the garden'
         },
         {
           file: 'Row2-Right.jpg',
+          alt: 'A piece of Resin art for the garden'
         }
       ],
       [
         {
           file: 'Row3-Left.jpg',
+          alt: 'A garden wall with resin art'
         },
         {
           file: 'Row3-Right.jpg',
+          alt: 'A piece of Resin art for the garden'
         }
       ],
       [
         {
           file: 'Row4-Left.jpg',
+          alt: 'A piece of Resin art for the garden'
         },
         {
           file: 'Row4-middle.jpg',
+          alt: 'A piece of Resin art for the garden'
         },
         {
           file: 'Row4-right.jpg',
+          alt: 'A piece of Resin art for the garden'
         }
       ],
       [
         {
           file: 'Row5-Left.jpg',
           columns: 2,
+          alt: 'Resin art in a garden'
         },
         {
           file: 'Row5-Right.jpg',
           columns: 1,
+          alt: 'A piece of Resin art for the garden'
         }
       ],
       [
         {
           file: 'Row6-Left.jpg',
           columns: 1,
+          alt: 'acrylic art in a garden'
         },
         {
           file: 'Row6-Right.jpg',
           columns: 2,
+          alt: 'acrylic art in a garden'
         }
       ],
       [
         {
           file: 'Row7-Left.jpg',
+          alt: 'acrylic art in a garden'
         },
         {
           file: 'Row7-Middle.jpg',
+          alt: 'acrylic art in a garden'
         },
         {
           file: 'Row7-Right.jpg',
+          alt: 'acrylic art in a garden'
         }
       ],
     ]

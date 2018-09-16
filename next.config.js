@@ -1,37 +1,5 @@
 const withPlugins = require('next-compose-plugins');
 const optimizedImages = require('next-optimized-images');
-const path = require('path');
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
-
-const nextConfig = {
-  webpack: (config, {dev}) => {
-    const oldEntry = config.entry
-    config.entry = async () =>  {
-      const entries = await oldEntry();
-      if (entries['main.js']) entries['main.js'].push(path.resolve('./utils/offline'));
-      return entries
-    }
-    if(!dev){
-      config.plugins.push(new SWPrecacheWebpackPlugin({
-        cacheId: 'test-lighthouse',
-        filepath: path.resolve('./static/sw.js'),
-        staticFileGlobs: [
-          'static/**/*'
-        ],
-        minify: true,
-        staticFileGlobsIgnorePatterns: [/\.next\//],
-        runtimeCaching: [{
-          handler: 'fastest',
-          urlPattern: /[.](png|jpg|jpeg|css)/
-        },{
-          handler: 'networkFirst',
-          urlPattern: /^http.*/
-        }]
-      }))
-    }
-    return config
-  }
-}
 
 module.exports = withPlugins([
   [optimizedImages, {
@@ -59,9 +27,8 @@ module.exports = withPlugins([
       preset: 'picture',
       quality: 70,
     },
-  }],
-
-], nextConfig);
+  }]
+]);
 
 
 

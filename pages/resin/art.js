@@ -22,18 +22,21 @@ const layoutProps = {
         {
           name: 'Kitchen Splashbacks',
           file: 'Row1-Left.jpg',
-          link: '/projects/kitchen'
+          link: '/projects/kitchen',
+          alt: 'A Resined kitchen splashback behind a hob'
         },
         {
           name: 'Commissions',
           desc: 'How to commision work',
           file: 'Row1-Middle.jpg',
-          link: '/commissions'
+          link: '/commissions',
+          alt: 'A piece of resin art and a colour scheme'
         },
         {
           name: 'Cloakroom Splashback',
           file: 'Row1-Right.jpg',
-          link: '/projects/cloakroom'
+          link: '/projects/cloakroom',
+          alt: 'A Splashback in a cloakroom'
         }
       ],
       [
@@ -41,28 +44,33 @@ const layoutProps = {
           name: 'Bespoke Tables',
           desc: 'Upcycled',
           file: 'Row2-Left.jpg',
-          link: '/projects/tables'
+          link: '/projects/tables',
+          alt: 'A resined table'
         },
         {
           name: 'Garden Art',
           desc: 'Enjoy art outside',
           file: 'Row2-Middle.jpg',
-          link: '/projects/garden'
+          link: '/projects/garden',
+          alt: 'A piece of resin art in a garden setting'
         },
         {
           name: 'Resin Jewellery',
           file: 'Row2-Right.jpg',
-          link: '/resin/jewellery'
+          link: '/resin/jewellery',
+          alt: 'A piece of resin jewellery'
         }
       ],
       [
         {
           name: 'Coasters & Chopping Boards',
           file: 'Row3-Left.jpg',
+          alt: 'Resin coasters'
         },
         {
           name: 'Unique one off pieces',
           file: 'Row3-Right.jpg',
+          alt: 'Resin cufflinks'
         }
       ],
       [
@@ -72,6 +80,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'A piece of resin art'
         },
         {
           name: 'Resin Art',
@@ -79,6 +88,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'A piece of resin art'
         },
         {
           name: 'Resin Art',
@@ -86,6 +96,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'A piece of resin art'
         }
       ],
       [
@@ -96,6 +107,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'A piece of resin art'
         },
         {
           name: 'Resin Art',
@@ -104,6 +116,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'A piece of resin art'
         }
       ],
       [
@@ -114,6 +127,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'A piece of resin art'
         },
         {
           name: 'Resin Art',
@@ -122,6 +136,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'A piece of resin art'
         }
       ],
       [
@@ -131,6 +146,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'A piece of resin art'
         },
         {
           name: 'Resin Art',
@@ -138,6 +154,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'A piece of resin art'
         },
         {
           name: 'Resin Art',
@@ -145,6 +162,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'A piece of resin art'
         }
       ],
     ]

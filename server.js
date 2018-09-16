@@ -1,8 +1,8 @@
-const { createServer } = require('http')
 const path = require('path')
 const express = require('express')
 const next = require('next')
 const compression = require('compression')
+
 
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
@@ -14,9 +14,6 @@ app.prepare()
     const server = express()
     
     server.use(compression({level: 9}))
-    server.get('/sw.js', (req, res) => {
-      app.serveStatic(req, res, path.resolve('./static/sw.js'))
-    })
     server.get('/sitemap.xml', (req, res) => {
       app.serveStatic(req, res, path.resolve('./static/sitemap.xml'))
     })

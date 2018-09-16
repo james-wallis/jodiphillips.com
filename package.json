@@ -33,7 +33,6 @@
   },
   "devDependencies": {
     "compress-images": "^1.4.2",
-    "eslint": "^5.3.0",
-    "sw-precache-webpack-plugin": "^0.11.5"
+    "eslint": "^5.3.0"
   }
 }

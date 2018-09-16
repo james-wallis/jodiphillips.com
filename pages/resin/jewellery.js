@@ -27,18 +27,21 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Resin earrings'
         },
         {
           name: 'Pendant',
           price: 35,
           file: 'Row1-Middle.jpg',
           amazon: true,
+          alt: 'Resin pendants'
         },
         {
           name: 'Pendant',
           price: 35,
           file: 'Row1-Right.jpg',
-          amazon: true
+          amazon: true,
+          alt: 'Resin pendant'
         }
       ],
       [
@@ -50,6 +53,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Resin Cuff bracelet'
         },
         {
           name: 'Drop Earrings',
@@ -59,6 +63,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Resin drop earrings'
         },
         {
           name: 'Stud Earrings',
@@ -68,6 +73,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Resin stud earrings'
         }
       ],
       [
@@ -79,6 +85,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Resin Cufflinks'
         },
         {
           name: 'Pendant',
@@ -86,6 +93,7 @@ const layoutProps = {
           price: 35,
           file: 'Row3-Right.jpg',
           amazon: true,
+          alt: 'Resin pendant'
         }
       ],
       [
@@ -96,6 +104,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Resin Pendant'
         },
         {
           name: 'Pendant',
@@ -104,6 +113,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Resin Pendant'
         },
         {
           name: 'Pendant',
@@ -112,6 +122,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Resin Pendant'
         }
       ],
       [
@@ -124,6 +135,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Resin Pendant with chain'
         },
         {
           name: 'Cuff Bracelet',
@@ -132,6 +144,7 @@ const layoutProps = {
           file: 'Row5-Right.jpg',
           columns: 1,
           amazon: true,
+          alt: 'Resin cuff bracelet'
         }
       ],
       [
@@ -144,6 +157,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Resin stud earrings'
         },
         {
           name: 'Cuff Bracelet',
@@ -152,6 +166,7 @@ const layoutProps = {
           file: 'Row6-Right.jpg',
           columns: 2,
           amazon: true,
+          alt: 'Resin cuff bracelet'
         }
       ],
       [
@@ -161,6 +176,7 @@ const layoutProps = {
           price: 35,
           file: 'Row7-Left.jpg',
           amazon: true,
+          alt: 'Resin bracelet'
         },
         {
           name: 'Pendant',
@@ -170,6 +186,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Resin pendant'
         },
         {
           name: 'Pendant',
@@ -179,6 +196,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Resin pendant'
         }
       ],
     ]
