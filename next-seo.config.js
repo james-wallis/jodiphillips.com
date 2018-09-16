@@ -14,9 +14,9 @@ export default {
     // Multiple Open Graph images is only available in version `7.0.0-canary.0`+ of next (see note top of README.md)
     images: [
       {
-        url: `${url}/static/images/jodi.jpg`,
-        width: 1015,
-        height: 1125,
+        url: `${url}/static/images/logo-800.jpg`,
+        width: 800,
+        height: 800,
         alt: 'Jodi Phillips - Artist Jodi',
       }
     ],
