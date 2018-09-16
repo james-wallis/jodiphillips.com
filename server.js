@@ -12,6 +12,7 @@ const handle = app.getRequestHandler()
 app.prepare()
   .then(() => {
     const server = express()
+    
     server.use(compression({level: 9}))
     server.get('/sw.js', (req, res) => {
       app.serveStatic(req, res, path.resolve('./static/sw.js'))

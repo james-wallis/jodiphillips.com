@@ -25,10 +25,12 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Acrylic art in a gift box'
         },
         {
           name: 'Certificates and care instructions',
           file: 'Row1-Middle.jpg',
+          alt: 'Jodi Phillips certificate of authentication'
         },
         {
           name: 'Gift Boxed Art',
@@ -36,6 +38,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Acrylic Art'
         }
       ],
       [
@@ -45,6 +48,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Acrylic Art'
         },
         {
           name: 'Gift Boxed Art',
@@ -52,6 +56,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Glitter'
         },
         {
           name: 'Gift Boxed Art',
@@ -59,6 +64,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Acrylic Art'
         }
       ],
       [
@@ -68,6 +74,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Acrylic Art'
         },
         {
           name: 'Gift Boxed Art',
@@ -75,6 +82,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Acrylic Art'
         }
       ],
       [
@@ -84,6 +92,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Acrylic Art'
         },
         {
           name: 'Gift Boxed Art',
@@ -91,6 +100,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Acrylic Art'
         },
         {
           name: 'Gift Boxed Art',
@@ -98,6 +108,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Acrylic Art'
         }
       ],
       [
@@ -108,6 +119,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Acrylic Art'
         },
         {
           name: 'Gift Boxed Art',
@@ -116,6 +128,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Acrylic Art'
         }
       ],
       [
@@ -126,6 +139,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Acrylic Art'
         },
         {
           name: 'Gift Boxed Art',
@@ -134,6 +148,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Acrylic Art'
         }
       ],
       [
@@ -143,6 +158,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Acrylic Art'
         },
         {
           name: 'Gift Boxed Art',
@@ -150,6 +166,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Acrylic Art'
         },
         {
           name: 'Gift Boxed Art',
@@ -157,6 +174,7 @@ const layoutProps = {
           amazon: {
             text: 'Colour choices available at Amazon Handmade',
           },
+          alt: 'Acrylic Art'
         }
       ],
     ]

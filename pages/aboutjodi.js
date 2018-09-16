@@ -27,17 +27,21 @@ const layoutProps = {
         },
         {
           file: 'Row1-Middle.jpg',
+          alt: 'Jodi Phillips'
         },
         {
           file: 'Row1-Right.jpg',
+          alt: 'Jodi mixing some Resin'
         }
       ],
       [
         {
           file: 'Row2-Left.jpg',
+          alt: 'Jodi sanding down some Resin'
         },
         {
           file: 'Row2-Middle.jpg',
+          alt: 'A list of key trade manufacturers including Epson, Canon, Innova, Adobe, Wacom and Daler-Rowney.'
         },
         {
           text: 'The Prince’s Trust aided Jodi by funding and mentoring her through her transition into becoming a professional artist selling her work to trade and public. Jodi was one of the first artists to self-publish and hand embellish digital prints. She has worked closely with key trade manufacturers including Epson, Canon, Innova, Adobe, Wacom and Daler-Rowney.',
@@ -46,9 +50,11 @@ const layoutProps = {
       [
         {
           file: 'Row3-Left.jpg',
+          alt: 'Jodi working on an Acrylic piece'
         },
         {
           file: 'Row3-Right.jpg',
+          alt: 'A hand with paint'
         }
       ],
       [
@@ -57,14 +63,17 @@ const layoutProps = {
         },
         {
           file: 'Row4-middle.jpg',
+          alt: 'Jodi Phillips'
         },
         {
           file: 'Row4-right.jpg',
+          alt: 'Jodi working on a resin piece'
         }
       ],
       [
         {
           file: 'Row5-Left.jpg',
+          alt: 'Denim jeans that Jodi painted',
           columns: 2,
         },
         {
@@ -80,14 +89,17 @@ const layoutProps = {
         {
           file: 'Row6-Right.jpg',
           columns: 2,
+          alt: 'Jodi applying the finishing touches to a piece'
         }
       ],
       [
         {
           file: 'Row7-Left.jpg',
+          alt: 'Applying paint to a brush'
         },
         {
           file: 'Row7-Middle.jpg',
+          alt: 'Jodi Phillips'
         },
         {
           text: 'Be it totally smooth, heavily textured or high gloss resin, her work never fails to impress. There’s nothing quite like a Jodi Phillips piece of art.',

@@ -14,18 +14,18 @@ class NavigationBar extends React.Component {
             <Hamburger id='hamburger-button-close' />
           </Col>
           <Col xs='6' md='12'>
-            <Link href='/'>
+            <Link prefetch href='/'>
               <img src={require(`../../images/icons/home.png`)} alt='Navigate to home page' />
             </Link>
           </Col>
         </Row>
-        <Link href="/aboutjodi">
+        <Link prefetch href="/aboutjodi">
           <a>About Jodi</a>
         </Link>
-        <Link href="/insidethestudio">
+        <Link prefetch href="/insidethestudio">
           <a>Inside the studio</a>
         </Link>
-        <Link href="/artinspaces">
+        <Link prefetch href="/artinspaces">
           <a>Art in Spaces</a>
         </Link>
         <Dropdown name={'Resin'} links={pageLinks.resin} />
@@ -35,9 +35,9 @@ class NavigationBar extends React.Component {
           <p className='dropdown-contact'>Call, Text or Message</p>
           <a className='dropdown-contact' href="tel:+441442 257226">+44(0)1442 257226</a>
           <a className='dropdown-contact' href="tel:+447832 3592096">+44(0)7832 359209</a>
-          <a className='dropdown-contact' href="mailto:mish@artistjodi.co.uk?Subject=Hello">mish@artistjodi.co.uk</a>
-          <a className='dropdown-contact' href="mailto:jodi@artistjodi.co.uk?Subject=Hello">jodi@artistjodi.co.uk</a>
-          <Link href="/commissions">
+          <a className='dropdown-contact' href="mailto:mish@artistjodi.co.uk?Subject=Website%20Enquiry">mish@artistjodi.co.uk</a>
+          <a className='dropdown-contact' href="mailto:jodi@artistjodi.co.uk?Subject=Website%20Enquiry">jodi@artistjodi.co.uk</a>
+          <Link prefetch href="/commissions">
             <a className='dropdown-contact'>Commissions</a>
           </Link>
         </Dropdown>

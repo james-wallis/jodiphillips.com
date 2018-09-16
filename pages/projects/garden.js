@@ -62,17 +62,21 @@ const layoutProps = {
       [
         {
           file: 'Row5-Left.jpg',
+          columns: 2,
         },
         {
           file: 'Row5-Right.jpg',
+          columns: 1,
         }
       ],
       [
         {
           file: 'Row6-Left.jpg',
+          columns: 1,
         },
         {
           file: 'Row6-Right.jpg',
+          columns: 2,
         }
       ],
       [

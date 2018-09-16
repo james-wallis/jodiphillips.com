@@ -26,6 +26,5 @@ export default {
     handle: '@artist_jodi',
     site: '@artist_jodi',
     cardType: 'summary'
-  },
-  noindex: true
+  }
 };
