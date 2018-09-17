@@ -140,8 +140,8 @@ class NavigationBar extends React.Component {
             margin: auto 4px;
           }
           a, div {
-            padding: 15px 15%;
-            font-size: 22px;
+            padding: 10px 15%;
+            font-size: 20px;
           }
           img {
             height: 50px;
@@ -149,7 +149,7 @@ class NavigationBar extends React.Component {
             float: left;
           }
           div.social {
-            padding 15px 0;
+            padding 10px 0;
             padding-top: auto;
           }
           .dropdown-contact {

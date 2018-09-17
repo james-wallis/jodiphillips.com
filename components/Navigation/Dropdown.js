@@ -66,13 +66,13 @@ class DropdownNavigation extends React.Component {
         }
         @media (min-width: 768px) {
           .dropdown-container {
-            padding: 15px 15%;
+            padding: 10px 15%;
           }
           .dropdown-button p {
-           font-size: 22px;
+           font-size: 20px;
           }
           .dropdown-items {
-            font-size: 22px;
+            font-size: 20px;
           }
           .dropdown-items>a {
             font-size: 17px;
