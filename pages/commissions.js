@@ -63,7 +63,7 @@ const layoutProps = {
           alt: 'Drying resin with some jewels'
         },
         {
-          file: 'Row4-Right.jpg',
+          file: 'Row4-right.jpg',
           alt: 'A piece of resin art'
         },
       ],

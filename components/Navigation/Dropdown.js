@@ -15,7 +15,7 @@ class DropdownNavigation extends React.Component {
       <style jsx>{`
         .dropdown-container {
           border-bottom: solid 1px rgba(177,172,164,1);
-          padding: 10px 15%;
+          padding: 5px 15%;
           display: block;
         }
         .dropdown-button {
@@ -24,7 +24,7 @@ class DropdownNavigation extends React.Component {
         }
         .dropdown-button p {
           display: inline-block;
-          font-size: 18px;
+          font-size: 16px;
           color: white;
           margin: 0;
           text-transform: capitalize;
@@ -40,7 +40,7 @@ class DropdownNavigation extends React.Component {
         .dropdown-items {
           display: block;
           padding: 10px 15%;
-          font-size: 18px;
+          font-size: 15px;
           color: white;
           transition: max-height 0.5s ease;
           max-height: 0;
@@ -57,9 +57,9 @@ class DropdownNavigation extends React.Component {
         .dropdown-items>a {
           display: block;
           padding: 0;
-          padding-bottom: 4px;
-          font-size: 14px;
+          font-size: 15px;
           color: white;
+          letter-spacing: 0.3px;
         }
         .dropdown-items>a:last-child {
           padding-bottom: 0;

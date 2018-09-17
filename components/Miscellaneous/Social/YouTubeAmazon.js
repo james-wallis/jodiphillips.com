@@ -2,7 +2,7 @@ import { Row, Col } from 'reactstrap'
 
 export default class extends React.Component {
   render() {
-    return <Row style={{marginTop: '20px'}}className='social-links no-gutters'>
+    return <Row style={{marginTop: '10px'}}className='social-links no-gutters'>
       <Col xs='6' className='d-flex align-items-center'>
         <a href='https://www.youtube.com/channel/UC848rsbkuahzKYJMkHVkaiA' target='_blank' rel='noopener'>
           <img src={require(`../../../images/logos/youtube.png`)} alt='Handmade at Amazon logo' />

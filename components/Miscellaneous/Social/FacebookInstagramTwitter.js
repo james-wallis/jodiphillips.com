@@ -49,7 +49,7 @@ export default class extends React.Component {
           p {
             margin: 0;
             padding: 0;
-            font-size: 14px;
+            font-size: 12px;
             letter-spacing: 0.5px;
           }
           a {
@@ -67,20 +67,25 @@ export default class extends React.Component {
             vertical-align: middle;
           }
           img {
-            width: 60%;
-            min-width: 40px;
-            max-width: 60px;
+            width: 40%;
+            min-width: 30px;
+            max-width: 40px;
           }
           @media (min-width: 768px) {
             .social-image-container {
               height: 70px;
               max-height: 70px;
             }
+            p {
+              font-size: 14px;
+            }
             a {
               font-size: 20px;
             }
             img {
               width: 100%;
+              min-width: 30px;
+              max-width: 50px;
             }
           }
         `}</style>
