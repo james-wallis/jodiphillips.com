@@ -108,7 +108,7 @@ const layoutProps = {
           size: { height: 95, width: 95 },
           price: false,
           columns: 1,
-          file: 'Row4-right.jpg',
+          file: 'Row5-Right.jpg',
           alt: 'An acrylic piece of art called The Souk'
         }
       ],
@@ -124,7 +124,7 @@ const layoutProps = {
         {
           name: 'NYC',
           desc: 'Original on canvas',
-          file: 'Row5-Right.jpg',
+          file: 'Row6-Right.jpg',
           columns: 2,
           alt: 'An acrylic piece of art called NYC'
         }

@@ -14,7 +14,7 @@ const layoutProps = {
   images: {
     directory: 'home',
     hero: {
-      src: 'Top-pic.jpg',
+      src: 'hero.jpg',
       alt: 'Home'
     },
     gallery: [

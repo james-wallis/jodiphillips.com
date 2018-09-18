@@ -56,7 +56,7 @@ const layoutProps = {
       [
         {
           file: 'Row4-Left.jpg',
-          art: 'A paint brush on wood'
+          alt: 'A paint brush on wood'
         },
         {
           file: 'Row4-middle.jpg',

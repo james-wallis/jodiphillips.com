@@ -22,6 +22,9 @@
   "dependencies": {
     "compression": "^1.7.3",
     "express": "^4.16.3",
+    "imagemin": "^6.0.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-pngquant": "^6.0.0",
     "next": "^6.1.1",
     "next-compose-plugins": "^2.1.1",
     "next-optimized-images": "^1.4.1",
@@ -29,10 +32,12 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "reactstrap": "^6.3.1"
+    "reactstrap": "^6.3.1",
+    "recursive-readdir": "^2.2.2"
   },
   "devDependencies": {
     "compress-images": "^1.4.2",
-    "eslint": "^5.3.0"
+    "eslint": "^5.3.0",
+    "fs-extra": "^7.0.0"
   }
 }
