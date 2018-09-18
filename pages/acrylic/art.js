@@ -103,13 +103,12 @@ const layoutProps = {
           alt: 'An acrylic piece of art called Night Reflections'
         },
        {
-          name: 'The Souk',
-          desc: 'Limited edition, hand embellished',
-          size: { height: 95, width: 95 },
+          name: 'Through the Arch',
+          desc: 'Original Abstract Painting',
           price: false,
           columns: 1,
           file: 'Row5-Right.jpg',
-          alt: 'An acrylic piece of art called The Souk'
+          alt: 'An acrylic piece of art called through the arch'
         }
       ],
       [
