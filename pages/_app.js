@@ -24,4 +24,16 @@ export default class MyApp extends App {
       <Component {...pageProps} />
     </Container>
   }
+
+  componentDidMount() {
+    console.log('component did mount');
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { 
+      dataLayer.push(arguments);
+      console.log('gtag called');
+      console.log(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-126215387-2');
+  }
 }
