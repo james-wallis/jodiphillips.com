@@ -3,7 +3,11 @@ import Layout from '../../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
   head: {
-    title: 'Garden Art'
+    title: 'Garden Art',
+    description: 'Artist Jodi\'s garden art. \
+                  Using different techniques Jodi is able to \
+                  create pieces of art which can be placed outside. \
+                  See how Artist Jodi\'s art can complement your garden'
   },
   content: {
     h1: 'Garden Art'

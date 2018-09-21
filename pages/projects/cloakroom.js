@@ -3,7 +3,11 @@ import Layout from '../../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
   head: {
-    title: 'Cloakroom Splashback'
+    title: 'Cloakroom Splashback',
+    description: 'Artist Jodi\'s cloakroom splashback. \
+                  Hired to create a bespoke cloakroom \
+                  splashback which would perfectly suit the home of a client. See \
+                  what ArtistArtistJodiJodi created and how a splashback would liven up your cloakroom.'
   },
   content: {
     h1: 'Cloakroom Splashback'

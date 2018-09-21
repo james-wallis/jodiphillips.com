@@ -3,7 +3,13 @@ import Layout from '../../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
   head: {
-    title: 'Snowboard'
+    title: 'Snowboard',
+    description: 'Artist Jodi\'s resin snowboard. \
+                  An old snowboard given a new life as a \
+                  one of a kind piece of art. \
+                  See how Artist Jodi turned a snowboard \
+                  with years of memories on the French alps \
+                  into a chalet\' centre piece.'
   },
   content: {
     h1: 'Snowboard'

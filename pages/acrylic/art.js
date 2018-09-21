@@ -3,7 +3,11 @@ import Layout from '../../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
   head: {
-    title: 'Acrylic'
+    title: 'Acrylic',
+    description: 'Artist Jodi\'s acrylic art. \
+                  Artist Jodi has been working with acrylics since the late 1990s.  \
+                  Over this 20+ year span she has been able to master her skills using acrylic colours. \
+                  Take a look at different pieces of art that have been created over the years.'
   },
   content: {
     h1: 'Acrylic'

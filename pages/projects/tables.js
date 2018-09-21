@@ -3,7 +3,11 @@ import Layout from '../../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
   head: {
-    title: 'Tables'
+    title: 'Tables',
+    description: 'Artist Jodi\'s bespoke resin tables. \
+                  Artist Jodi has a talent for turning old furniture into \
+                  functional art for your house. \
+                  Come and create your own table.'
   },
   content: {
     h1: 'Tables'

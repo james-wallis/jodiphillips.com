@@ -3,7 +3,12 @@ import Layout from '../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
   head: {
-    title: 'Christmas Gifts'
+    title: 'Christmas Gifts',
+    description: 'Artist Jodi\'s Christmas 2018 selection. \
+                  Artist Jodi has designed and created a variety of gifts, \
+                  decorations and art specially for Christmas 2018. \
+                  Come and find your next gift.'
+
   },
   content: {
     h1: 'Christmas Gifts'

@@ -3,7 +3,11 @@ import Layout from '../../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
   head: {
-    title: 'Acrylic Gifts'
+    title: 'Acrylic Gifts',
+    description: 'Artist Jodi\'s acrylic gifts. \
+                  Artist Jodi has created a selection of acrylic arts perfect as a gift for any occasion. \
+                  Take a look at the acrylic gift range.'
+
   },
   content: {
     h1: 'Acrylic Gifts'

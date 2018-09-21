@@ -3,7 +3,11 @@ import Layout from '../../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
   head: {
-    title: 'Kitchen Splashback'
+    title: 'Kitchen Splashback',
+    description: 'Artist Jodi\'s kitchen splashback. \
+                  Hired to create a splashback for a kitchen \
+                  to provide inspiration when cooking speciality dishes. \
+                  Take a look at Artist Jodi\'s art in a rejuvinated kitchen'
   },
   content: {
     h1: 'Kitchen Splashback'
