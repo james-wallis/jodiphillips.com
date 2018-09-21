@@ -1,9 +1,12 @@
 import App, { Container } from 'next/app'
 import React from 'react'
+import Router from 'next/router'
 import NextSeo from 'next-seo';
 import SEO from '../next-seo.config';
 
 const websiteAddress = 'https://artistjodi.co.uk';
+
+Router.events.on('routeChangeComplete', url => gtag.pageview(url))
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
@@ -23,17 +26,5 @@ export default class MyApp extends App {
       <NextSeo config={SEO} />
       <Component {...pageProps} />
     </Container>
-  }
-
-  componentDidMount() {
-    console.log('component did mount');
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { 
-      dataLayer.push(arguments);
-      console.log('gtag called');
-      console.log(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'UA-126215387-2');
   }
 }
