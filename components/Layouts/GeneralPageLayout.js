@@ -1,5 +1,7 @@
 import { Container } from 'reactstrap';
+import Router from 'next/router'
 import NextSeo from 'next-seo';
+import * as gtag from '../../lib/gtag';
 import Head from '../Head';
 import Header from '../Header';
 import HeroImage from '../HeroImage';
@@ -8,6 +10,8 @@ import Nav from '../Navigation/Navigation';
 import Tab from '../Tab';
 import Footer from '../Footer/Footer';
 import Gallery from '../ImageGallery/Gallery';
+
+Router.onRouteChangeComplete = url => gtag.pageview(url);
 
 class Layout extends React.Component {
   render() {

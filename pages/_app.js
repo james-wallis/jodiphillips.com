@@ -1,12 +1,9 @@
 import App, { Container } from 'next/app'
 import React from 'react'
-import Router from 'next/router'
 import NextSeo from 'next-seo';
 import SEO from '../next-seo.config';
 
 const websiteAddress = 'https://artistjodi.co.uk';
-
-Router.events.on('routeChangeComplete', url => gtag.pageview(url))
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
