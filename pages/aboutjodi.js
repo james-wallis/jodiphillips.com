@@ -3,7 +3,12 @@ import Layout from '../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
   head: {
-    title: 'About Jodi'
+    title: 'About Jodi',
+    description: 'Jodi Phillips is a British artist \
+                  who has worked closely with key trade \
+                  manufacturers. Be it resin, acrylic or \
+                  graphic design, Jodi, and her work, leave \
+                  people feeling inspired.'
   },
   content: {
     h1: 'About Jodi',

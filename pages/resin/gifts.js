@@ -3,7 +3,10 @@ import Layout from '../../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
   head: {
-    title: 'Resin Gifts'
+    title: 'Resin Gifts',
+    description: 'Discover gifts made using Artist Jodi\'s new technique. \
+                  Find the perfect gift for anything from a small family occassion \
+                  to a close friends birthday'
   },
   content: {
     h1: 'Resin Gifts'

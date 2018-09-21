@@ -20,9 +20,9 @@ class ImageWithOverlay extends React.Component {
           <source media='(min-width: 768px)' srcSet={desktopSrc} type='image/jpeg'/>
           <img src={mobileSrc} alt={this.props.alt} />
         </picture>
-        <img className='image-info-icon image-info-icon-open' onClick={this.showInformation} src={require(`../../images/icons/info.png`)} />
+        <img className='image-info-icon image-info-icon-open' onClick={this.showInformation} src={require(`../../images/icons/info.png`)} alt='Open information icon' />
         <div className='image-info'>
-          <img className='image-info-icon image-info-icon-close' onClick={this.hideInformation} src={require(`../../images/icons/close.png`)} />
+          <img className='image-info-icon image-info-icon-close' onClick={this.hideInformation} src={require(`../../images/icons/close.png`)} alt='Close information icon' />
           <div className='image-info-inner'>
             <h3 className='image-info-text'>{this.props.name}</h3>
             {(this.props.desc) ? <p className='desc image-info-text' >{this.props.desc}</p> : null }
@@ -34,7 +34,7 @@ class ImageWithOverlay extends React.Component {
             {(this.props.amazon) ? <div className='amazon-handmade'>
               <p>{(this.props.amazon && this.props.amazon.text) ? this.props.amazon.text : 'Buy on Amazon Handmade' }</p>
               <a href={amazon_url} rel='noopener' target='_blank'>
-                <img className='amazon-logo' src={require(`../../images/logos/amazon.png`)} />
+                <img className='amazon-logo' src={require(`../../images/logos/amazon.png`)} alt='Amazon Handmade Logo'/>
               </a>
             </div>
             : null }

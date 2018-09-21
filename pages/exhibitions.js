@@ -3,7 +3,14 @@ import Layout from '../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
   head: {
-    title: 'Exhibitions'
+    title: 'Exhibitions',
+    descriptions: 'Jodi Phillips has participated in \
+                  many exhibitions in the twenty years \
+                  she has been an artist. Her most recent \
+                  has been the Home Show at the ExCel Centre \
+                  in London. She has shown her acrylic works \
+                  for years, but has only recently released \
+                  her line of resin works.'
   },
   content: {
     h1: 'Exhibitions'

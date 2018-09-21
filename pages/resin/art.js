@@ -3,7 +3,10 @@ import Layout from '../../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
   head: {
-    title: 'Resin'
+    title: 'Resin',
+    description: 'Resin is a new technique Artist Jodi is exploring. \
+                  She has fully embraced the medium through creating \
+                  splash backs, tables and even resin jewellery.'
   },
   content: {
     h1: 'Resin'

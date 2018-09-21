@@ -22,6 +22,8 @@ export default class MyDocument extends Document {
           <link rel='manifest' href='/static/manifest.json' />
           <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet'/>
           <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossOrigin='anonymous' />
+          {/* Global site tag (gtag.js) - Google Analytics */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126215387-2"></script>
         </Head>
         <body>
           <Main />
@@ -29,5 +31,12 @@ export default class MyDocument extends Document {
         </body>
       </html>
     )
+  }
+
+  componentDidMount() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-126215387-2');
   }
 }

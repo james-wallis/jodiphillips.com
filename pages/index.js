@@ -3,7 +3,10 @@ import Layout from '../components/Layouts/TitlePageLayout'
 
 const layoutProps = {
   head: {
-    title: 'Home'
+    title: 'Home',
+    description: 'Artist Jodi is a British artist who creates pieces for the home, \
+                  jewellery and gifts through acrylic paint and resin. There’s nothing \
+                  quite like a Jodi Phillips piece of art to add a wow factor to your home.'
   },
   content: {
     h1: 'A picture says a thousand words'

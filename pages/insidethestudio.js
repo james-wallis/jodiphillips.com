@@ -3,7 +3,11 @@ import Layout from '../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
   head: {
-    title: 'Inside the studio'
+    title: 'Inside the studio',
+    description: 'Take a look inside the studio! Artist Jodi \
+                  shares the messy process behind each piece \
+                  of artwork including resin pours, sprinkles \
+                  of glitter and vibrant paints.'
   },
   content: {
     h1: 'Inside the Studio'

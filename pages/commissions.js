@@ -3,7 +3,13 @@ import Layout from '../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
   head: {
-    title: 'Commissions'
+    title: 'Commissions',
+    description: 'When it comes to your commissions, \
+                  Jodi Phillips will stay true to your \
+                  vision whilst still adding her flare \
+                  and unique style to a piece. There is \
+                  a 14-28 day process for both resin and acrylic works. \
+                  Each piece comes with a certificate of authenticity.'
   },
   content: {
     h1: 'Commissions'

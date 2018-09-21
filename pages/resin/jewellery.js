@@ -3,10 +3,14 @@ import Layout from '../../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
   head: {
-    title: 'Resin - Jewellery'
+    title: 'Resin Jewellery',
+    description: 'Jewellery created using Resin. \
+                  Artist Jodi has created a huge range of \
+                  jewellery from cufflinks to earrings. \
+                  Perfect for any special occassion.'
   },
   content: {
-    h1: 'Resin - Jewellery'
+    h1: 'Resin Jewellery'
   },
   tab: {
     fixed: false
@@ -15,7 +19,7 @@ const layoutProps = {
     directory: 'resin/jewellery',
     hero: {
       src: 'hero.jpg',
-      alt: 'Resin - Jewellery'
+      alt: 'Resin Jewellery'
     },
     gallery: [
       [

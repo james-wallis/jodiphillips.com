@@ -3,7 +3,10 @@ import Layout from '../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
   head: {
-    title: 'Art in Spaces'
+    title: 'Art in Spaces',
+    description: 'Artist Jodi\'s art in spaces. \
+                  A chance to see a selection of art in different scenes \
+                  giving a feel of how Jodi\'s art would look in your home'
   },
   content: {
     h1: 'Art in Spaces'
