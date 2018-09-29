@@ -78,7 +78,10 @@ async function renameFolder(folder) {
       folderToRenameTo = 'client_projects/cloakroom';
       break;
     case 'row6left-exhibitions':
-      folderToRenameTo = 'exhibitions';
+      folderToRenameTo = 'exhibitions/home';
+      break;
+    case 'row6right-homebuilding&renovationshow':
+      folderToRenameTo = 'exhibitions/homebuildingshow';
       break;
     case 'row7left-videos':
       folderToRenameTo = 'videos';

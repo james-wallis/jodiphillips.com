@@ -45,5 +45,15 @@
       "name": "Jewellery",
       "href": "/resin/jewellery"
     }
+  ],
+  "exhibitions": [
+    {
+      "name": "Home",
+      "href": "/exhibitions"
+    },
+    {
+      "name": "Homebuilding & Renovation Show",
+      "href": "/exhibitions/homebuilding"
+    }
   ]
 }

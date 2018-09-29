@@ -19,7 +19,7 @@ const layoutProps = {
     fixed: false
   },
   images: {
-    directory: 'exhibitions',
+    directory: 'exhibitions/home',
     hero: {
       src: 'hero.jpg',
       alt: 'Exhibitions'

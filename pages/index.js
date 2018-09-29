@@ -127,14 +127,14 @@ const layoutProps = {
           name: 'Exhibitions',
           desc: 'shows over the years',
           file: 'Row6-Left.jpg',
-          link: '/exhibitions',
+          link: '/exhibitions/home',
           alt: 'Jodi\'s art on display in an exhibition'
         },
         {
           name: 'Exhibition at ExCeL London',
-          desc: 'meet Jodi',
+          desc: 'ArtistJodi\'s latest show',
           file: 'Row6-Right.jpg',
-          link: 'http://www.homebuildingshow.co.uk/art',
+          link: '/exhibitions/homebuilding',
           alt: 'Banner for the Exhibition at ExCeL London'
         }
       ],
