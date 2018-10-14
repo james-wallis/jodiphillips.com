@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
-import Layout from '../components/Layouts/ArtSplashbackHomeLayout'
+import Layout from '../components/Layouts/ArtSplashbacks/HomeLayout'
 
 const layoutProps = {
   head: {

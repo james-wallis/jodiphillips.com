@@ -18,7 +18,7 @@ class ArtSplashbackNavigation extends React.Component {
       </Row>
       <Row className='no-gutters navigation-icons'>
         <Col xs='4' md='2'>
-          <Link preload href='/artsplashbacks/kitchen'>
+          <Link prefetch href='/artsplashbacks/kitchen'>
             <a className='navigation-icon'>
               <img src={require(`../../images/artsplashbacks/icons/grey/kitchen.png`)} alt='Kitchen icon representing navigation to the kitchen splashbacks page' />
               <p>Kitchens</p>
@@ -26,7 +26,7 @@ class ArtSplashbackNavigation extends React.Component {
           </Link>
         </Col>
         <Col xs='4' md='2'>
-          <Link preload href='/artsplashbacks/bathroom'>
+          <Link prefetch href='/artsplashbacks/bathroom'>
             <a className='navigation-icon'>
               <img src={require(`../../images/artsplashbacks/icons/grey/shower.png`)} alt='Kitchen icon representing navigation to the kitchen splashbacks page' />
               <p>Bathrooms</p>
@@ -34,7 +34,7 @@ class ArtSplashbackNavigation extends React.Component {
           </Link>
         </Col>
         <Col xs='4' md='2'>
-          <Link preload href='/artsplashbacks/table'>
+          <Link prefetch href='/artsplashbacks/table'>
             <a className='navigation-icon'>
               <img src={require(`../../images/artsplashbacks/icons/grey/table.png`)} alt='Kitchen icon representing navigation to the kitchen splashbacks page' />
               <p>Table</p>
@@ -42,7 +42,7 @@ class ArtSplashbackNavigation extends React.Component {
           </Link>
         </Col>
         <Col xs='4' md='2'>
-          <Link preload href='/artsplashbacks/accessories'>
+          <Link prefetch href='/artsplashbacks/accessories'>
             <a className='navigation-icon'>
               <img src={require(`../../images/artsplashbacks/icons/grey/accessories.png`)} alt='Kitchen icon representing navigation to the kitchen splashbacks page' />
               <p>Accessories</p>
@@ -50,7 +50,7 @@ class ArtSplashbackNavigation extends React.Component {
           </Link>
         </Col>
         <Col xs='4' md='2'>
-          <Link preload href='/artsplashbacks/design'>
+          <Link prefetch href='/artsplashbacks/design'>
             <a className='navigation-icon'>
               <img src={require(`../../images/artsplashbacks/icons/grey/design.png`)} alt='Kitchen icon representing navigation to the kitchen splashbacks page' />
               <p>Design</p>
@@ -58,7 +58,7 @@ class ArtSplashbackNavigation extends React.Component {
           </Link>
         </Col>
         <Col xs='4' md='2'>
-          <Link preload href='/artsplashbacks/buy'>
+          <Link prefetch href='/artsplashbacks/buy'>
             <a className='navigation-icon'>
               <img src={require(`../../images/artsplashbacks/icons/grey/cart.png`)} alt='Kitchen icon representing navigation to the kitchen splashbacks page' />
               <p>Buy</p>

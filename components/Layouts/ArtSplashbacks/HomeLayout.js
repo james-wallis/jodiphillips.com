@@ -1,12 +1,12 @@
 import { Container } from 'reactstrap';
 import Router from 'next/router'
 import NextSeo from 'next-seo';
-import * as gtag from '../../lib/gtag';
-import Header from '../Header';
-import HeroImage from '../HeroImage';
-import Nav from '../Navigation/Navigation';
-import ArtSplashbacksNavigation from '../ArtSplashbacks/Navigation';
-import ArtSplashbackLogos from '../ArtSplashbacks/Logos'
+import * as gtag from '../../../lib/gtag';
+import Header from '../../Header';
+import HeroImage from '../../HeroImage';
+import Nav from '../../Navigation/Navigation';
+import ArtSplashbacksNavigation from '../../ArtSplashbacks/Navigation';
+import ArtSplashbackLogos from '../../ArtSplashbacks/Logos'
 
 Router.onRouteChangeComplete = url => gtag.pageview(url);
 
