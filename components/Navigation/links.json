@@ -68,12 +68,33 @@
   ],
   "art_splashbacks": [
     {
+      "name": "Buy",
+      "href": "/artsplashbacks/buy"
+    },
+    {
+      "name": "Table",
+      "href": "/artsplashbacks/table"
+    },
+    {
       "name": "Home",
       "href": "/artsplashbacks"
     },
     {
+      "name": "Design",
+      "href": "/artsplashbacks/design"
+    },
+    {
       "name": "Kitchen",
       "href": "/artsplashbacks/kitchen"
+    },
+    {
+      "name": "Bathroom",
+      "href": "/artsplashbacks/bathroom"
+    },
+    {
+      "name": "Accessories",
+      "href": "/artsplashbacks/accessories"
     }
+
   ]
 }
