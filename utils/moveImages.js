@@ -15,8 +15,7 @@ async function copyFiles() {
     await fs.copy(dropboxDir, tempDir);
     const tempFolders = await fs.readdir(tempDir);
     for (var i = 0; i < tempFolders.length; i++) {
-      if ((tempFolders[i].charAt(0) !== 'R') && (['home', 'logos', 'icons'].indexOf(tempFolders[i]) == -1)) {
-        console.log(tempFolders[i]);
+      if ((tempFolders[i].charAt(0) !== 'R' && tempFolders[i] !== 'Art Splashbacks') && (['home', 'logos', 'icons'].indexOf(tempFolders[i]) == -1)) {
         await fs.unlink(path.join(tempDir, tempFolders[i]));
       } else {
         let formattedString = tempFolders[i].toLowerCase();
@@ -92,6 +91,9 @@ async function renameFolder(folder) {
     case 'row7right-commissions':
       folderToRenameTo = 'commissions';
       break;
+    case 'artsplashbacks':
+      folderToRenameTo = 'artsplashbacks';
+      break;
     default:
       // console.log('case not matched', folder);
       folderToRenameTo = folder;
@@ -104,9 +106,25 @@ async function renameFolder(folder) {
   await fs.ensureDir(path.join(tempDir, folderToRenameTo));
   await fs.rename(path.join(tempDir, folder), path.join(tempDir, folderToRenameTo));
   if (folder !== 'icons' && folder !== 'logos') {
-    await fs.rename(path.join(tempDir, folderToRenameTo, 'Web'), path.join(tempDir, folderToRenameTo, 'desktop'));
-    await fs.rename(path.join(tempDir, folderToRenameTo, 'Mobile'), path.join(tempDir, folderToRenameTo, 'mobile'));
-    await renameHero([path.join(tempDir, folderToRenameTo, 'desktop'), path.join(tempDir, folderToRenameTo, 'mobile')]);
+    if (folder === 'artsplashbacks') {
+      const artsplashbacksDir = await fs.readdir(path.join(tempDir, folderToRenameTo));
+      for (let l = 0; l < artsplashbacksDir.length; l++) {
+        if (artsplashbacksDir[l].charAt(0) !== '.') {
+          let formattedString = artsplashbacksDir[l].toLowerCase();
+          formattedString = formattedString.replace(/\s/g, '');
+          formattedString = formattedString.substring(formattedString.indexOf('-') + 1);
+          await fs.rename(path.join(tempDir, folderToRenameTo, artsplashbacksDir[l]), path.join(tempDir, folderToRenameTo, formattedString));
+          if (formattedString !== 'icons' && formattedString !== 'logos') {
+            await fs.rename(path.join(tempDir, folderToRenameTo, formattedString, 'Web'), path.join(tempDir, folderToRenameTo, formattedString, 'desktop'));
+            await renameHero([path.join(tempDir, folderToRenameTo, formattedString, 'desktop')]);
+          }
+        }
+      }
+    } else {
+      await fs.rename(path.join(tempDir, folderToRenameTo, 'Web'), path.join(tempDir, folderToRenameTo, 'desktop'));
+      await fs.rename(path.join(tempDir, folderToRenameTo, 'Mobile'), path.join(tempDir, folderToRenameTo, 'mobile'));
+      await renameHero([path.join(tempDir, folderToRenameTo, 'desktop'), path.join(tempDir, folderToRenameTo, 'mobile')]);
+    }
   }
 }
 

@@ -19,12 +19,7 @@ class NavigationBar extends React.Component {
             </Link>
           </Col>
         </Row>
-        <Link prefetch href="/aboutjodi">
-          <a>About Jodi</a>
-        </Link>
-        <Link prefetch href="/insidethestudio">
-          <a>Inside the studio</a>
-        </Link>
+        <Dropdown name={'Meet ArtistJodi'} links={pageLinks.meet_artistjodi} />
         <Link prefetch href="/artinspaces">
           <a>Art in Spaces</a>
         </Link>
@@ -35,6 +30,7 @@ class NavigationBar extends React.Component {
         <Dropdown name={'Resin'} links={pageLinks.resin} />
         <Dropdown name={'Acrylic'} links={pageLinks.acrylic} />
         <Dropdown name={'Client Projects'} links={pageLinks.client_projects} />
+        <Dropdown name={'Art Splashbacks'} links={pageLinks.art_splashbacks} />
         <Link prefetch href="/commissions">
           <a>Commissions</a>
         </Link>

@@ -3,8 +3,15 @@ import React from 'react';
 
 class Hero extends React.Component {
   render() {
+    // Desktop images should be the default to what is available
     const desktopSrc = require(`../images/${this.props.imgDir}/desktop/${this.props.imgSrc}`);
-    const mobileSrc = require(`../images/${this.props.imgDir}/mobile/${this.props.imgSrc}`);
+    let mobileSrc = desktopSrc;
+    try {
+      mobileSrc = require(`../images/${this.props.imgDir}/mobile/${this.props.imgSrc}`);
+    } catch (err) {
+      console.log('No mobile image detected, defaulting to desktop images for mobile devices');
+    }
+    
     return <Row className='no-gutters'>
       <Col xs='12'>
         <div>

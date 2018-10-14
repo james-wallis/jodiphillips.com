@@ -55,5 +55,25 @@
       "name": "Homebuilding & Renovation Show",
       "href": "/exhibitions/homebuilding"
     }
+  ],
+  "meet_artistjodi": [
+    {
+      "name": "About Jodi",
+      "href": "/aboutjodi"
+    },
+    {
+      "name": "Inside the Studio",
+      "href": "/insidethestudio"
+    }
+  ],
+  "art_splashbacks": [
+    {
+      "name": "Home",
+      "href": "/artsplashbacks"
+    },
+    {
+      "name": "Kitchen",
+      "href": "/artsplashbacks/kitchen"
+    }
   ]
 }
