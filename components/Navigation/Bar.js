@@ -24,8 +24,8 @@ class NavigationBar extends React.Component {
           <a>Art in Spaces</a>
         </Link>
         <Dropdown name={'Exhibitions'} links={pageLinks.exhibitions} />
-        <Link prefetch href="/christmas">
-          <a>Christmas 2018</a>
+        <Link href="https://store.artistjodi.com/">
+          <a>Visit Store</a>
         </Link>
         <Dropdown name={'Resin'} links={pageLinks.resin} />
         <Dropdown name={'Acrylic'} links={pageLinks.acrylic} />
