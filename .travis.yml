@@ -5,6 +5,7 @@ services:
 
 script: 
   - docker login -u jamesemwallis -p $PASSWORD
-  - travis_wait 30 cd utils && ./serverBuild.sh
+  - cd utils
+  - travis_wait 30 ./serverBuild.sh
   - docker tag artistjodi jamesemwallis/artistjodi:latest
   - docker push jamesemwallis/artistjodi:latest
