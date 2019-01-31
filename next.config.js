@@ -27,6 +27,9 @@ module.exports = withPlugins([
       preset: 'picture',
       quality: 70,
     },
+    responsive: {
+      disable: true
+    }
   }]
 ]);
 

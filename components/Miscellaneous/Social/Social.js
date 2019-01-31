@@ -1,11 +1,11 @@
 import SocialLinks from './FacebookInstagramTwitter'
-import HandMadeAmazon from './YouTubeAmazon'
+import YouTubeShop from './YouTubeShop'
 
 export default class extends React.Component {
   render() {
     return <div>
       <SocialLinks />
-      <HandMadeAmazon />
+      <YouTubeShop />
       <style global jsx>{`
           .no-padding .social-links {
             padding-left: 0 !important;

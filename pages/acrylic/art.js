@@ -24,37 +24,33 @@ const layoutProps = {
     gallery: [
       [
         {
-          name: 'Art Gifts',
-          desc: 'Small boxed gifts',
-          file: 'Row1-Left.jpg',
-          alt: 'Small boxed gifts',
+          file: 'Row2-Middle.jpg',
+          alt: 'An acrylic piece of art',
         },
         {
-          name: 'Art Jeans',
           file: 'Row1-Middle.jpg',
           alt: 'Jeans patched with acrylic',
         },
         {
-          name: 'Bespoke Radio Commission',
           file: 'Row1-Right.jpg',
           alt: 'A radio with a acrylic finish',
         }
       ],
       [
         {
-          name: 'Christmas 2018',
+          name: 'Christmas',
           file: 'Row2-Left.jpg',
           link: '/christmas',
           alt: 'acrylic gift bag',
         },
         {
-          name: 'Original Works',
-          file: 'Row2-Middle.jpg',
-          alt: 'An acrylic piece of art',
+          name: 'Acrylic Gifts',
+          file: 'Row1-Left.jpg',
+          alt: 'Small boxed gifts',
+          link: '/acrylic/gifts'
         },
         {
           name: 'Commissions',
-          desc: 'Unique one off pieces',
           file: 'Row2-Right.jpg',
           link: '/commissions',
           alt: 'An acrylic piece of art',
@@ -69,7 +65,7 @@ const layoutProps = {
         },
         {
           name: 'Sunset Golfer',
-          desc: 'Orignal acrylic on canvas',
+          desc: 'Orignal on canvas',
           size: '50cm x 60cm',
           file: 'Row3-Right.jpg',
           alt: 'An acrylic piece of art called Sunset Golfer',

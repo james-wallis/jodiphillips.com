@@ -23,6 +23,9 @@ class Navigation extends React.Component {
           overflow: auto;
           margin: 0;
         }
+        #navigation-container * {
+          font-weight: 100 !important;
+        }
       `}</style>
     </Container>
   }

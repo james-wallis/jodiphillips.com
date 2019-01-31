@@ -15,7 +15,7 @@ class DropdownNavigation extends React.Component {
       <style jsx>{`
         .dropdown-container {
           border-bottom: solid 1px rgba(177,172,164,1);
-          padding: 5px 15%;
+          padding: 8px 15%;
           display: block;
         }
         .dropdown-button {
@@ -24,7 +24,7 @@ class DropdownNavigation extends React.Component {
         }
         .dropdown-button p {
           display: inline-block;
-          font-size: 16px;
+          font-size: 20px;
           color: white;
           margin: 0;
           text-transform: capitalize;

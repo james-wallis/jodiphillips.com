@@ -9,11 +9,12 @@ class Gallery extends React.Component {
         #image-gallery {
           padding: 0;
           position: relative;
-          z-index: 10;
+          z-index: 104;
         }
         @media (min-width: 768px) {
           #image-gallery {
             position: static;
+            z-index: 10;
           }
         }
       `}</style>

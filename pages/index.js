@@ -9,36 +9,137 @@ const layoutProps = {
                   quite like a Jodi Phillips piece of art to add a wow factor to your home.'
   },
   content: {
-    h1: 'A picture says a thousand words'
+    h1: 'My passion is to create'
   },
   tab: {
     fixed: true
   },
   images: {
     directory: 'home',
-    hero: {
-      src: 'hero.jpg',
-      alt: 'Home'
-    },
+    carousel: [
+      {
+        src: 'carousel/Top-Pic.jpg',
+        altText: 'Slide 1',
+      },
+      {
+        src: 'carousel/glasstop.jpg',
+        altText: 'Slide 2',
+      },
+      {
+        src: 'carousel/acaciatop.jpg',
+        altText: 'Slide 3',
+      },
+      {
+        src: 'carousel/splashbacktop.jpg',
+        altText: 'Slide 3',
+      }
+    ],
     gallery: [
       [
         {
-          name: 'Artist Jodi',
-          desc: 'about',
+          name: 'See the latest available works',
+          file: 'bag.jpg',
+          shop: true,
+          link: '/',
+          alt: 'Visit the shop',
+        },
+        {
+          name: 'Valentines Gifts',
+          file: 'valentine.jpg',
+          shop: true,
+          link: '/categories/valentines-gifts',
+          alt: 'Valentines gifts',
+        },
+        {
+          name: 'Gift Vouchers',
+          file: 'giftvoucher.jpg',
+          shop: true,
+          link: '/',
+          alt: 'Gift Vouchers',
+        },
+        {
+          name: 'Glass Chopping Boards',
+          file: 'glasschoppingboard.jpg',
+          shop: true,
+          link: '/categories/boards/glass-chopping-boards',
+          alt: 'Glass chopping boards',
+        }
+      ],
+      [
+        {
+          name: 'Acacia Boards',
+          file: 'acacia.jpg',
+          shop: true,
+          link: '/categories/boards/acacia-wood-boards',
+          alt: 'Acacia Boards',
+        },
+        {
+          name: 'Bamboo Boards',
+          file: 'bamboo.jpg',
+          shop: true,
+          link: '/categories/boards/bamboo-chopping-boards',
+          alt: 'Bamboo chopping boards',
+        },
+        {
+          name: 'Olive Serving Boards',
+          file: 'olive.jpg',
+          shop: true,
+          link: '/categories/boards/olive-wood',
+          alt: 'Olive serving boards',
+        },
+        {
+          name: 'Tableware',
+          file: 'tableware.jpg',
+          shop: true,
+          link: '/categories/tableware',
+          alt: 'Tableware',
+        }
+      ],
+      [
+        {
+          name: 'Coasters',
+          file: 'coasters.jpg',
+          shop: true,
+          link: '/categories/tableware/coasters',
+          alt: 'Coasters',
+        },
+        {
+          name: 'Bracelets',
+          file: 'bracelets.jpg',
+          shop: true,
+          link: '/categories/jewellery/bracelets',
+          alt: 'Bracelets',
+        },
+        {
+          name: 'Earrings',
+          file: 'earrings.jpg',
+          shop: true,
+          link: '/categories/jewellery/earrings',
+          alt: 'Earrings',
+        },
+        {
+          name: 'Pendants',
+          file: 'pendants.jpg',
+          shop: true,
+          link: '/categories/jewellery/pendants',
+          alt: 'Pendants',
+        }
+      ],
+      [
+        {
+          name: 'About Jodi',
           file: 'Row1-Left.jpg',
           link: '/aboutjodi',
           alt: 'Jodi Phillips',
         },
         {
           name: 'Inside the studio',
-          desc: 'see the creativity',
           file: 'Row1-Middle.jpg',
           link: '/insidethestudio',
           alt: 'Inside Jodi\'s studio',
         },
         {
-          name: 'Art in space',
-          desc: 'acrylic works',
+          name: 'Art in spaces',
           file: 'Row1-Right.jpg',
           link: '/artinspaces',
           alt: 'Art shown in rooms',
@@ -46,116 +147,53 @@ const layoutProps = {
       ],
       [
         {
-          name: 'Resin Art',
-          desc: 'original resin works',
+          name: 'Resin',
           file: 'Row2-Left.jpg',
           link: '/resin/art',
           alt: 'Resin Art'
         },
         {
-          name: 'Acrylic Art',
-          desc: 'original works',
+          name: 'Acrylic',
           file: 'Row2-Middle.jpg',
           link: '/acrylic/art',
           alt: 'Jodi working on Acrylic art'
         },
         {
-          name: 'Resin Jewellery',
-          desc: 'wearable art',
-          file: 'Row2-Right.jpg',
-          link: '/resin/jewellery',
-          alt: 'Resin Jewellery'
+          name: 'Exhibitions',
+          file: 'Row6-Left.jpg',
+          link: '/exhibitions',
+          alt: 'Jodi\'s art on display in an exhibition'
         }
       ],
       [
         {
-          name: 'Snowboard',
-          desc: 'creating an original art piece using an old snowboard',
+          name: 'Client Projects',
           file: 'Row3-Left.jpg',
-          link: '/projects/snowboard',
-          alt: 'Snowboard with a Resin finish'
-        },
-        {
-          name: 'Kitchen Splashback',
-          desc: 'a resin piece to blend not pop',
-          file: 'Row3-Right.jpg',
-          link: '/projects/kitchen',
-          alt: 'A Kitchen Splashback made from Resin'
-        }
-      ],
-      [
-        {
-          name: 'Acrylic Gifts',
-          desc: '',
-          file: 'Row4-Left.jpg',
-          link: '/acrylic/gifts',
-          alt: 'An Acrylic Gift combined with Jodi\'s certificate of authenticity'
-        },
-        {
-          name: 'Bespoke Tables',
-          desc: 'upcycled tables',
-          file: 'Row4-middle.jpg',
-          link: '/projects/tables',
-          alt: 'A Table with a bespoke resin finish'
-        },
-        {
-          name: 'Resin Gifts',
-          desc: 'coasters & chopping boards',
-          file: 'Row4-right.jpg',
-          link: '/resin/gifts',
-          alt: 'A Resin chopping board'
-        }
-      ],
-      [
-        {
-          name: 'Garden Art',
-          desc: 'resin art to hang outdoors',
-          file: 'Row5-Left.jpg',
           link: '/projects/garden',
           alt: 'A garden with Jodi\'s art in it'
         },
         {
-          name: 'Cloakroom Splashback',
-          desc: 'modern solution for bathrooms',
-          file: 'Row5-Right.jpg',
+          name: 'Art Splashbacks',
+          file: 'Row3-Right.jpg',
           link: '/projects/cloakroom',
           alt: 'A Splashback in a cloakroom'
         }
       ],
       [
         {
-          name: 'Exhibitions',
-          desc: 'shows over the years',
-          file: 'Row6-Left.jpg',
-          link: '/exhibitions/home',
-          alt: 'Jodi\'s art on display in an exhibition'
-        },
-        {
-          name: 'Exhibition at ExCeL London',
-          desc: 'ArtistJodi\'s latest show',
-          file: 'Row6-Right.jpg',
-          link: '/exhibitions/homebuilding',
-          alt: 'Banner for the Exhibition at ExCeL London'
-        }
-      ],
-      [
-        {
-          name: 'Videos',
-          desc: 'see the resin moving!',
+          name: 'YouTube',
           link: 'https://www.youtube.com/channel/UC848rsbkuahzKYJMkHVkaiA',
           file: 'Row7-Left.jpg',
           alt: 'A still from a video of Jodi resining some art'
         },
         {
-          name: 'Christmas Gifts',
-          desc: 'give the gift of art',
-          file: 'Row7-Middle.jpg',
-          link: '/christmas',
-          alt: 'A Jodi Phillips Bauble'
+          name: 'Blog',
+          link: 'https://store.artistjodi.com/blog',
+          file: 'blog.jpg',
+          alt: 'Resin art'
         },
         {
           name: 'Commissions',
-          desc: 'see how to commission your own piece',
           file: 'Row7-Right.jpg',
           link: '/commissions',
           alt: 'Resin art and a colour palette'
@@ -173,6 +211,6 @@ export default class extends React.Component {
   render() {
     const url = this.props.websiteAddress + this.props.urlPath;
     layoutProps.head.url = url;
-    return <Layout {...layoutProps} />
+    return <Layout {...layoutProps}/>
   }
 }

@@ -1,51 +1,4 @@
 {
-  "acrylic": [
-    { 
-      "name": "Art",
-      "href": "/acrylic/art"
-    },
-    {
-      "name": "Gifts",
-      "href": "/acrylic/gifts"
-    }
-  ],
-  "client_projects": [
-    {
-      "name": "Garden Art",
-      "href": "/projects/garden"
-    },
-    {
-      "name": "Snowboard",
-      "href": "/projects/snowboard"
-    },
-    {
-      "name": "Bespoke Tables",
-      "href": "/projects/tables"
-    },
-    {
-      "name": "Kitchen Splashback",
-      "href": "/projects/kitchen"
-    },
-    {
-      "name": "Cloackroom Splashback",
-      "href": "/projects/cloakroom"
-    }
-  ],
-  "resin": [
-    {
-      "name": "Art",
-      "href": "/resin/art"
-      
-    },
-    {
-      "name": "Gifts",
-      "href": "/resin/gifts"
-    },
-    {
-      "name": "Jewellery",
-      "href": "/resin/jewellery"
-    }
-  ],
   "exhibitions": [
     {
       "name": "Home",
@@ -55,46 +8,5 @@
       "name": "Homebuilding & Renovation Show",
       "href": "/exhibitions/homebuilding"
     }
-  ],
-  "meet_artistjodi": [
-    {
-      "name": "About Jodi",
-      "href": "/aboutjodi"
-    },
-    {
-      "name": "Inside the Studio",
-      "href": "/insidethestudio"
-    }
-  ],
-  "art_splashbacks": [
-    {
-      "name": "Buy",
-      "href": "/artsplashbacks/buy"
-    },
-    {
-      "name": "Table",
-      "href": "/artsplashbacks/table"
-    },
-    {
-      "name": "Home",
-      "href": "/artsplashbacks"
-    },
-    {
-      "name": "Design",
-      "href": "/artsplashbacks/design"
-    },
-    {
-      "name": "Kitchen",
-      "href": "/artsplashbacks/kitchen"
-    },
-    {
-      "name": "Bathroom",
-      "href": "/artsplashbacks/bathroom"
-    },
-    {
-      "name": "Accessories",
-      "href": "/artsplashbacks/accessories"
-    }
-
   ]
 }

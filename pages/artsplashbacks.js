@@ -34,10 +34,10 @@ export default class extends React.Component {
     return <Layout {...layoutProps} >
       <Row className='no-gutters'>
         <Col xs='12' md='6'>
-          <img className='artsplashbackHomeImages' src={require(`../images/artsplashbacks/mainpage/desktop/Bottom-Left.jpg`)} alt='An ArtistJodi resin splashback in the cloakroom' />
+          <img className='artsplashbackHomeImages' src={require(`../images/artsplashbacks/mainpage/Bottom-Left.jpg`)} alt='An ArtistJodi resin splashback in the cloakroom' />
         </Col>
         <Col xs='12' md='6'>
-          <img className='artsplashbackHomeImages' src={require(`../images/artsplashbacks/mainpage/desktop/Bottom-Right.jpg`)} alt='Close up of an ArtistJodi resin splashback' />
+          <img className='artsplashbackHomeImages' src={require(`../images/artsplashbacks/mainpage/Bottom-Right.jpg`)} alt='Close up of an ArtistJodi resin splashback' />
         </Col>
       </Row>
       <style jsx>{`

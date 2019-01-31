@@ -4,17 +4,17 @@ import React from 'react';
 class Hero extends React.Component {
   render() {
     // Desktop images should be the default to what is available
-    const desktopSrc = require(`../images/${this.props.imgDir}/desktop/${this.props.imgSrc}`);
+    const desktopSrc = require(`../images/${this.props.imgDir}/${this.props.imgSrc}`);
     let mobileSrc = desktopSrc;
     try {
-      mobileSrc = require(`../images/${this.props.imgDir}/mobile/${this.props.imgSrc}`);
+      mobileSrc = require(`../images/${this.props.imgDir}/${this.props.imgSrc}`);
     } catch (err) {
       console.log('No mobile image detected, defaulting to desktop images for mobile devices');
     }
     
     return <Row className='no-gutters'>
       <Col xs='12'>
-        <div>
+        <div id='hero-image'>
           <picture>
             <source media='(min-width: 768px)' srcSet={`${desktopSrc}?webp`} type='image/webp'/>
             <source srcSet={`${mobileSrc}?webp`} type='image/webp' />
@@ -36,6 +36,38 @@ class Hero extends React.Component {
         }
       `}</style>
     </Row>
+  }
+
+  componentDidMount() {
+    updateHeroHeight();
+    window.addEventListener('resize', updateHeroHeight);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', updateHeroHeight);
+  }
+}
+
+function updateHeroHeight() {
+  console.log('width', window.innerWidth);
+  const div = document.getElementById('hero-image');
+  if (window.innerWidth < 768) {
+    if (div.style.height) {
+      const currentHeight = div.clientHeight;
+      const viewHeight = window.innerHeight;
+      const diff = Math.abs(viewHeight - currentHeight);
+      console.log(diff);
+      if (diff > 100) {
+        div.style.height = `${viewHeight}px`;
+      }
+      console.log(currentHeight);
+      console.log(viewHeight);
+    } else {
+      const viewHeight = window.innerHeight;
+      div.style.height = `${viewHeight}px`;
+    }
+  } else {
+    div.style.height = '';
   }
 }
 

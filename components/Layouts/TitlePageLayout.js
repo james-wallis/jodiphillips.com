@@ -4,7 +4,7 @@ import NextSeo from 'next-seo';
 import * as gtag from '../../lib/gtag';
 import Head from '../Head';
 import Header from '../Header';
-import HeroImage from '../HeroImage';
+import HeroCarousel from '../HeroCarousel';
 import Nav from '../Navigation/Navigation';
 import Heading from '../Heading';
 import Footer from '../Footer/Footer';
@@ -26,7 +26,7 @@ class Layout extends React.Component {
         }
       }} />
       <Header />
-      <HeroImage imgSrc={this.props.images.hero.src} imgDir={this.props.images.directory} imgAlt={this.props.images.hero.alt} />
+      <HeroCarousel carousel={this.props.images.carousel} imgDir={this.props.images.directory} />
       <Heading heading={this.props.content.h1} />
       {this.props.children}
       <Gallery image_set={this.props.images.gallery} image_directory={this.props.images.directory} />
@@ -38,7 +38,7 @@ class Layout extends React.Component {
         }
         * {
           font-family: 'Roboto', sans-serif;
-          font-weight: 100 !important;
+          font-weight: 400 !important;
         }
         .container-style {
           padding: 0 !important;

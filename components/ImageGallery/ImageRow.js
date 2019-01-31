@@ -1,8 +1,9 @@
 import { Row, Col } from 'reactstrap'
 import PropTypes from "prop-types";
 import Image from './Image.js';
-import ImageWithOverlay from './ImageWithOverlay.js'
+import ImageWithOverlay from './ImageWithText.js'
 import ImageWithLink from './ImageWithLink.js'
+import ImageForShop from './ImageForShop'
 import TextBox from './TextBox.js';
 
 class ImageRow extends React.Component {
@@ -19,7 +20,13 @@ class ImageRow extends React.Component {
             bootstrapCol = '12';
           }
         } 
-        if (image.link)
+        if (image.shop)
+          return (
+            <Col className='image-column image-shop-column' xs='12' md={bootstrapCol} key={image.key || `${this.props.dir}/${image.file}`}>
+              <ImageForShop {...image} dir={this.props.dir} />
+            </Col>
+          )
+        else if (image.link)
           return (
           <Col className='image-column' xs='12' md={bootstrapCol} key={image.key || `${this.props.dir}/${image.file}`}>
             <ImageWithLink {...image} dir={this.props.dir}/>

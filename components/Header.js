@@ -9,7 +9,7 @@ class Header extends React.Component {
           <Hamburger id='hamburger-button' />
         </Col>
         <Col xs='6' className='text-right'>
-          <img src={require(`../images/logos/jodi.png`)} alt='Logo' />
+          <img src={require(`../images/logos/round-logo.png`)} alt='Logo' />
         </Col>
       </Row>
       <style jsx>{`
@@ -21,13 +21,15 @@ class Header extends React.Component {
 
         img {
           position: fixed;
-          top: 0;
-          right: 10px;
+          top: 10px;
+          right: 15px;
           height: 90px;
         }
         @media (min-width: 768px) {
           img {
             height: 115px;
+            top: 20px;
+            right: 20px;
           }
         }
 

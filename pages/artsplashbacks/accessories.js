@@ -45,12 +45,12 @@ export default class extends React.Component {
           <Col xs='12' md='8' className='p-0'>
             <Container fluid>
               <Row>
-                <Image relativeSrc='accessories/desktop/hero.jpg' />
-                <Image relativeSrc='accessories/desktop/2nd-Pic.jpg' />
+                <Image relativeSrc='accessories/hero.jpg' />
+                <Image relativeSrc='accessories/2nd-Pic.jpg' />
               </Row>
               <Row>
-                <Image relativeSrc='accessories/desktop/3rd-Pic.jpg' />
-                <Image relativeSrc='accessories/desktop/4th-Pic.jpg' />
+                <Image relativeSrc='accessories/3rd-Pic.jpg' />
+                <Image relativeSrc='accessories/4th-Pic.jpg' />
               </Row>
             </Container>
           </Col>

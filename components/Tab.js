@@ -17,14 +17,17 @@ class Tab extends React.Component {
             padding: 16px 0;
             width: 100vw;
             position: fixed;
-            bottom: 40px;
-            z-index: 4;
+            // bottom: 40px;
+            top: 75%;
+            z-index: 102;
           }
           @media (min-width: 768px) {
           div {
             margin-left: 4px;
             width: 32.5%;
-            }
+            top: unset;
+            bottom: 60px;
+           }
           }
           h1, p {
             color: white;

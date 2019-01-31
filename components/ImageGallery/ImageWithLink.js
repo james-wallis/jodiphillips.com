@@ -4,29 +4,21 @@ import Link from 'next/link';
 
 class ImageWithLink extends React.Component {
   render() {
-    // If the product doesn't have a amazon_url then send customer to store front
-    let amazon_url = '';
-    if (this.props.amazon_url) {
-      amazon_url = `https://amazon.co.uk/dp/${this.props.amazon_url}`;
-    } else {
-      amazon_url = 'https://www.amazon.co.uk/s/?me=A3GJWTLLYSC03';
-    }
     let linkTarget = null;
     let linkRel = null;
     if (this.props.link && this.props.link.startsWith('http')) {
       linkTarget = '_blank';
       linkRel = 'noopener';
     }
-    const desktopSrc = require(`../../images/${this.props.dir}/desktop/${this.props.file}`);
-    const mobileSrc = require(`../../images/${this.props.dir}/mobile/${this.props.file}`);
+    const desktopSrc = require(`../../images/${this.props.dir}/${this.props.file}?resize&size=800`);
+    const mobileSrc = require(`../../images/${this.props.dir}/${this.props.file}?resize&size=500`);
     return <Link href={this.props.link}>
       <a target={linkTarget} rel={linkRel}>
-        <div className='image-container' onMouseEnter={this.showInformation} onMouseLeave={this.hideInformation} style={ (this.props.link) ? { cursor: 'pointer !important' } : { cursor: 'default !important' }} >
+        <div className='image-container' style={ (this.props.link) ? { cursor: 'pointer !important' } : { cursor: 'default !important' }} >
           <picture>
-            <source media='(min-width: 768px)' srcSet={`${desktopSrc}?webp`} type='image/webp'/>
-            <source srcSet={`${mobileSrc}?webp`} type='image/webp' />
-            <source media='(min-width: 768px)' srcSet={desktopSrc} type='image/jpeg'/>
-            <img src={mobileSrc} alt={this.props.alt} />
+            <source media='(max-width: 400px)' srcSet={`${mobileSrc}`} type='image/jpeg'/>
+            <source media='(min-width: 768px)' srcSet={`${desktopSrc}`} type='image/jpeg' />
+            <img src={desktopSrc} alt={this.props.alt} />
           </picture>
           <div className='image-info'>
             <div className='image-info-inner'>
@@ -51,15 +43,19 @@ class ImageWithLink extends React.Component {
             width: 100%;
             color: white;
             bottom: 0;
-            text-align: center;
+            text-align: left;
             opacity: 1;
-            height: auto;
-            background-color: rgba(45,45,45,0.8);
-            transition: opacity 0.4s;
+            height: 40%;
             z-index: 12;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #222 100%);
           }
           .image-info-inner {
             width: 100%;
+            bottom: 0px;
+            left: 0px;
+            padding-bottom: 10px;
+            padding-left: 16px;
+            position: absolute;
           }
 
           .image-info-text:first-child {
@@ -72,10 +68,12 @@ class ImageWithLink extends React.Component {
           h3 {
             margin: 0;
             font-size: 30px;
+            text-transform: lowercase;
           }
           p {
             margin: 0;
-            font-size: 16px;
+            font-size: 20px;
+            text-transform: lowercase;
           }
           p.desc {
             font-size: 20px;
@@ -84,13 +82,6 @@ class ImageWithLink extends React.Component {
           @media (min-width: 768px) {
             .image-info {
               padding: 10px 20px;
-              opacity: 0;
-              height: 0;
-            }
-            .image-info-inner {
-              position: relative;
-              top: 50%;
-              transform: translateY(-50%);
             }
             .image-info-text:first-child {
               padding-top: 0px;
@@ -100,14 +91,14 @@ class ImageWithLink extends React.Component {
             }
             h3 {
               margin: 0;
-              font-size: 40px;
+              font-size: 30px;
             }
             p {
               margin: 0;
-              font-size: 20px;
+              font-size: 18px;
             }
             p.desc {
-              font-size: 24px;
+              font-size: 18px;
               line-height: 26px;
             }
           }
@@ -115,55 +106,6 @@ class ImageWithLink extends React.Component {
         `}</style>
       </a>
     </Link>
-  }
-
-  componentDidMount() {
-    const info = document.getElementsByClassName('image-info');
-    const hideInformationAfterTransition = this.hideInformationAfterTransition;
-    for (let index = 0; index < info.length; index++) {
-      info[index].addEventListener('webkitTransitionEnd', hideInformationAfterTransition);
-      info[index].addEventListener('mozTransitionEnd', hideInformationAfterTransition);
-      info[index].addEventListener('oTransitionEnd', hideInformationAfterTransition);
-      info[index].addEventListener('transitionend', hideInformationAfterTransition);
-    }
-  }
-
-  componentWillUnmount() {
-    const info = document.getElementsByClassName('image-info');
-    const hideInformationAfterTransition = this.hideInformationAfterTransition;
-    for (let index = 0; index < info.length; index++) {
-      info[index].removeEventListener('webkitTransitionEnd', hideInformationAfterTransition);
-      info[index].removeEventListener('mozTransitionEnd', hideInformationAfterTransition);
-      info[index].removeEventListener('oTransitionEnd', hideInformationAfterTransition);
-      info[index].removeEventListener('transitionend', hideInformationAfterTransition);
-    }
-  }
-
-  showInformation(e) {
-    if (window.innerWidth >= 768 && e.type === 'mouseenter') {
-      const container = e.currentTarget;
-      const info = container.getElementsByClassName('image-info')[0];
-      info.style.height = '100%';
-      info.style.opacity = 1;
-    }
-    
-  }
-
-  hideInformation(e) {
-    if (window.innerWidth >= 768 && e.type === 'mouseleave') {
-      const container = e.currentTarget;
-      const info = container.getElementsByClassName('image-info')[0];
-      info.style.opacity = '0';
-    }
-    
-  }
-
-  hideInformationAfterTransition(e) {
-    const info = e.target;
-    if (info && info.style && info.style.opacity && info.style.opacity == 0) {
-      info.style.height = '';
-      info.style.opacity = '';
-    }
   }
 }
 
@@ -173,8 +115,6 @@ ImageWithLink.propTypes = {
   name: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
   material: PropTypes.string,
-  price: PropTypes.number,
-  amazon_url: PropTypes.string,
   dir: PropTypes.string.isRequired,
   file: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired

@@ -19,20 +19,23 @@ class NavigationBar extends React.Component {
             </Link>
           </Col>
         </Row>
-        <Dropdown name={'Meet ArtistJodi'} links={pageLinks.meet_artistjodi} />
-        <Link prefetch href="/artinspaces">
-          <a>Art in Spaces</a>
-        </Link>
-        <Dropdown name={'Exhibitions'} links={pageLinks.exhibitions} />
         <Link href="https://store.artistjodi.com/">
-          <a>Visit Store</a>
+          <a>Online Store</a>
         </Link>
-        <Dropdown name={'Resin'} links={pageLinks.resin} />
-        <Dropdown name={'Acrylic'} links={pageLinks.acrylic} />
-        <Dropdown name={'Client Projects'} links={pageLinks.client_projects} />
-        <Dropdown name={'Art Splashbacks'} links={pageLinks.art_splashbacks} />
-        <Link prefetch href="/commissions">
-          <a>Commissions</a>
+        <Link prefetch href="/artsplashbacks">
+          <a>Art Splashbacks</a>
+        </Link>
+        <Link prefetch href="/resin/art">
+          <a>Resin</a>
+        </Link>
+        <Link prefetch href="/acrylic/art">
+          <a>Acrylic</a>
+        </Link>
+        <Link prefetch href="/aboutjodi">
+          <a>About Artist Jodi</a>
+        </Link>
+        <Link prefetch href="/projects">
+          <a>Client Projects</a>
         </Link>
         <Dropdown name={'Contact'} >
           <p className='dropdown-contact'>Call, Text or Message</p>
@@ -98,9 +101,9 @@ class NavigationBar extends React.Component {
         }
         a, div {
           display: block;
-          padding: 5px 15%;
+          padding: 8px 15%;
           border-bottom: solid 1px rgba(177,172,164,1);
-          font-size: 17px;
+          font-size: 20px;
           color: white;
         }
         div.social {

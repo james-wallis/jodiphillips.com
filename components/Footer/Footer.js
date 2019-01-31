@@ -20,13 +20,16 @@ class Footer extends React.Component {
       <style global jsx>{`
         .footer-column>div {
           background-color: rgb(45,45,45);
-          padding: 20px 0;
+          padding: 40px 0;
           color: white;
-          height: 280px;
+          height: 320px;
           margin: 4px 0;
           margin-bottom: 0;
-          z-index: 100;
+          z-index: 104;
           position: relative;
+        }
+        .footer-column * {
+          font-weight: 100 !important;
         }
         @media (min-width: 768px) {
           .footer-column>div {

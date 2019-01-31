@@ -30,7 +30,6 @@ const layoutProps = {
         },
         {
           name: 'Commissions',
-          desc: 'How to commision work',
           file: 'Row1-Middle.jpg',
           link: '/commissions',
           alt: 'A piece of resin art and a colour scheme'
@@ -45,126 +44,84 @@ const layoutProps = {
       [
         {
           name: 'Bespoke Tables',
-          desc: 'Upcycled',
           file: 'Row2-Left.jpg',
           link: '/projects/tables',
           alt: 'A resined table'
         },
         {
           name: 'Garden Art',
-          desc: 'Enjoy art outside',
           file: 'Row2-Middle.jpg',
           link: '/projects/garden',
           alt: 'A piece of resin art in a garden setting'
         },
         {
-          name: 'Resin Jewellery',
+          name: 'Resin Gifts',
           file: 'Row2-Right.jpg',
-          link: '/resin/jewellery',
+          link: '/resin/gifts',
           alt: 'A piece of resin jewellery'
         }
       ],
       [
         {
-          name: 'Coasters & Chopping Boards',
           file: 'Row3-Left.jpg',
           alt: 'Resin coasters'
         },
         {
-          name: 'Unique one off pieces',
+          name: 'Resin Jewellery',
           file: 'Row3-Right.jpg',
-          alt: 'Resin cufflinks'
+          alt: 'Resin cufflinks',
+          link: '/resin/jewellery'
         }
       ],
       [
         {
-          name: 'Resin Art',
           file: 'Row4-Left.jpg',
-          amazon: {
-            text: 'Colour choices available at Amazon Handmade',
-          },
           alt: 'A piece of resin art'
         },
         {
-          name: 'Resin Art',
           file: 'Row4-middle.jpg',
-          amazon: {
-            text: 'Colour choices available at Amazon Handmade',
-          },
           alt: 'A piece of resin art'
         },
         {
-          name: 'Resin Art',
           file: 'Row4-right.jpg',
-          amazon: {
-            text: 'Colour choices available at Amazon Handmade',
-          },
           alt: 'A piece of resin art'
         }
       ],
       [
         {
-          name: 'Resin Art',
           file: 'Row5-Left.jpg',
           columns: 2,
-          amazon: {
-            text: 'Colour choices available at Amazon Handmade',
-          },
           alt: 'A piece of resin art'
         },
         {
-          name: 'Resin Art',
           file: 'Row5-Right.jpg',
           columns: 1,
-          amazon: {
-            text: 'Colour choices available at Amazon Handmade',
-          },
           alt: 'A piece of resin art'
         }
       ],
       [
         {
-          name: 'Resin Art',
           file: 'Row6-Left.jpg',
           columns: 1,
-          amazon: {
-            text: 'Colour choices available at Amazon Handmade',
-          },
           alt: 'A piece of resin art'
         },
         {
-          name: 'Resin Art',
           file: 'Row6-Right.jpg',
           columns: 2,
-          amazon: {
-            text: 'Colour choices available at Amazon Handmade',
-          },
           alt: 'A piece of resin art'
         }
       ],
       [
         {
-          name: 'Resin Art',
           file: 'Row7-Left.jpg',
-          amazon: {
-            text: 'Colour choices available at Amazon Handmade',
-          },
           alt: 'A piece of resin art'
         },
         {
-          name: 'Resin Art',
           file: 'Row7-Middle.jpg',
-          amazon: {
-            text: 'Colour choices available at Amazon Handmade',
-          },
           alt: 'A piece of resin art'
         },
         {
-          name: 'Resin Art',
           file: 'Row7-Right.jpg',
-          amazon: {
-            text: 'Colour choices available at Amazon Handmade',
-          },
           alt: 'A piece of resin art'
         }
       ],

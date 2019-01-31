@@ -3,15 +3,14 @@ import PropTypes from 'prop-types';
 
 class Image extends React.Component {
   render() {
-    const desktopSrc = require(`../../images/${this.props.dir}/desktop/${this.props.file}`);
-    const mobileSrc = require(`../../images/${this.props.dir}/mobile/${this.props.file}`);
+    const desktopSrc = require(`../../images/${this.props.dir}/${this.props.file}?resize&size=800`);
+    const mobileSrc = require(`../../images/${this.props.dir}/${this.props.file}?resize&size=500`);
     return <div className='image-container'>
-        <picture>
-          <source media='(min-width: 768px)' srcSet={`${desktopSrc}?webp`} type='image/webp'/>
-          <source srcSet={`${mobileSrc}?webp`} type='image/webp' />
-          <source media='(min-width: 768px)' srcSet={desktopSrc} type='image/jpeg'/>
-          <img src={mobileSrc} alt={this.props.alt} />
-        </picture>
+      <picture>
+        <source media='(max-width: 400px)' srcSet={`${mobileSrc}`} type='image/jpeg' />
+        <source media='(min-width: 768px)' srcSet={`${desktopSrc}`} type='image/jpeg' />
+        <img src={desktopSrc} alt={this.props.alt} />
+      </picture>
       <style jsx>{`
         .image-container {
           display: inline-block;
