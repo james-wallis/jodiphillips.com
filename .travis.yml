@@ -11,11 +11,11 @@ script:
   # Killing background sleep loop
   # - kill %1
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-      echo 'master'
-      docker tag artistjodi jamesemwallis/artistjodi:latest
-      docker push jamesemwallis/artistjodi:latest
+      echo 'master';
+      docker tag artistjodi jamesemwallis/artistjodi:latest;
+      docker push jamesemwallis/artistjodi:latest;
     else
-      echo 'other'
-      docker tag artistjodi jamesemwallis/artistjodi:next
-      docker push jamesemwallis/artistjodi:next
+      echo 'other';
+      docker tag artistjodi jamesemwallis/artistjodi:next;
+      docker push jamesemwallis/artistjodi:next;
     fi
