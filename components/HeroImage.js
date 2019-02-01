@@ -49,19 +49,16 @@ class Hero extends React.Component {
 }
 
 function updateHeroHeight() {
-  console.log('width', window.innerWidth);
   const div = document.getElementById('hero-image');
   if (window.innerWidth < 768) {
     if (div.style.height) {
       const currentHeight = div.clientHeight;
       const viewHeight = window.innerHeight;
-      const diff = Math.abs(viewHeight - currentHeight);
-      console.log(diff);
-      if (diff > 100) {
+      // const diff = Math.abs(viewHeight - currentHeight);
+      const diff = viewHeight - currentHeight;
+      if (diff > 100 || diff < 0) {
         div.style.height = `${viewHeight}px`;
       }
-      console.log(currentHeight);
-      console.log(viewHeight);
     } else {
       const viewHeight = window.innerHeight;
       div.style.height = `${viewHeight}px`;

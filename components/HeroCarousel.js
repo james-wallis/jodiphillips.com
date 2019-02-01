@@ -115,7 +115,6 @@ class HeroCarousel extends React.Component {
 }
 
 function updateHeroHeight() {
-  console.log('width', window.innerWidth);
   const carousel = document.getElementsByClassName('hero-carousel')[0];
   const heading = document.getElementsByClassName('heading-container')[0];
   const tab = document.getElementById('heading-tab');
@@ -123,15 +122,14 @@ function updateHeroHeight() {
     if (carousel.style.height) {
       const currentHeight = carousel.clientHeight;
       const viewHeight = window.innerHeight;
-      const diff = Math.abs(viewHeight - currentHeight);
-      console.log(diff);
-      if (diff > 100) {
+      // const diff = Math.abs(viewHeight - currentHeight);
+      const diff = viewHeight - currentHeight;
+      console.log('diff', diff);
+      if (diff > 100 || diff < 0) {
         carousel.style.height = `${viewHeight}px`;
         if (heading) heading.style.height = `${viewHeight}px`;
         if (tab) tab.style.top = `${viewHeight * 0.75}px`;
       }
-      console.log(currentHeight);
-      console.log(viewHeight);
     } else {
       const viewHeight = window.innerHeight;
       carousel.style.height = `${viewHeight}px`;
