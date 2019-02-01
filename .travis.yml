@@ -6,9 +6,16 @@ services:
 script: 
   - docker login -u jamesemwallis -p $PASSWORD
   # Output something every 10 minutes or Travis kills the job
-  - while sleep 5m; do echo "=====[ $SECONDS seconds still running ]====="; done &
-  - docker build -t artistjodi . 
+  # - while sleep 5m; do echo "=====[ $SECONDS seconds still running ]====="; done &
+  # - docker build -t artistjodi . 
   # Killing background sleep loop
-  - kill %1
-  - docker tag artistjodi jamesemwallis/artistjodi:latest
-  - docker push jamesemwallis/artistjodi:latest
+  # - kill %1
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+      echo 'master'
+      docker tag artistjodi jamesemwallis/artistjodi:latest
+      docker push jamesemwallis/artistjodi:latest
+    else
+      echo 'other'
+      docker tag artistjodi jamesemwallis/artistjodi:next
+      docker push jamesemwallis/artistjodi:next
+    fi
