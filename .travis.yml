@@ -10,12 +10,4 @@ script:
   # - docker build -t artistjodi . 
   # Killing background sleep loop
   # - kill %1
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
-      echo 'master';
-      docker tag artistjodi jamesemwallis/artistjodi:latest;
-      docker push jamesemwallis/artistjodi:latest;
-    else
-      echo 'other';
-      docker tag artistjodi jamesemwallis/artistjodi:next;
-      docker push jamesemwallis/artistjodi:next;
-    fi
+  - ./utils/travis/buildAndPush.sh
