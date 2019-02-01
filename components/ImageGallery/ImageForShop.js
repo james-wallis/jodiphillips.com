@@ -11,8 +11,7 @@ class ImageForShop extends React.Component {
       <a>
         <div className='image-container' style={(this.props.link) ? { cursor: 'pointer !important' } : { cursor: 'default !important' }} >
           <picture>
-            <source media='(max-width: 400px)' srcSet={`${mobileSrc}`} type='image/jpeg' />
-            <source media='(min-width: 768px)' srcSet={`${desktopSrc}`} type='image/jpeg' />
+            <source media='(max-width: 767px)' srcSet={`${mobileSrc}`} type='image/jpeg' />
             <img src={desktopSrc} alt={this.props.alt} />
           </picture>
         </div>

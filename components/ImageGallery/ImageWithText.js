@@ -8,8 +8,7 @@ class ImageWithText extends React.Component {
     return <div>
       <div className='image-container' onMouseEnter={this.showInformation} onMouseLeave={this.hideInformation} >
         <picture>
-          <source media='(max-width: 400px)' srcSet={`${mobileSrc}`} type='image/jpeg' />
-          <source media='(min-width: 768px)' srcSet={`${desktopSrc}`} type='image/jpeg' />
+          <source media='(max-width: 767px)' srcSet={`${mobileSrc}`} type='image/jpeg' />
           <img src={desktopSrc} alt={this.props.alt} />
         </picture>
         <div className='image-info'>

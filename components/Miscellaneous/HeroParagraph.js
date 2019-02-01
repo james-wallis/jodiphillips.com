@@ -25,7 +25,7 @@ class HeroParagraph extends React.Component {
           padding: 0 10%;
         }
         p {
-          font-size: 26px;
+          font-size: 23px;
           text-align: center;
           font-style: italic;
         }

@@ -28,7 +28,7 @@ module.exports = withPlugins([
       quality: 70,
     },
     responsive: {
-      disable: false
+      disable: true
     }
   }]
 ]);
