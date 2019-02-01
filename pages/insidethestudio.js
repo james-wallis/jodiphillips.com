@@ -19,6 +19,7 @@ const layoutProps = {
     directory: 'inside_the_studio',
     hero: {
       src: 'hero.jpg',
+      mobile: 'hero-mobile.jpg',
       alt: 'Inside the studio'
     },
     gallery: [
