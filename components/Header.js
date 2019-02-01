@@ -15,7 +15,7 @@ class Header extends React.Component {
       <style jsx>{`
 
         header {
-          z-index: 102;
+          z-index: 1000;
           position: absolute;
         }
 
