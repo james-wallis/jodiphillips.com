@@ -7,6 +7,6 @@ if ["$TRAVIS_BRANCH" == "master"]; then
 else
   echo 'Tagging image as artistjodi:next'
   docker tag artistjodi jamesemwallis/artistjodi:next;
-  echo 'Pushing artistjodi:latest'
+  echo 'Pushing artistjodi:next'
   docker push jamesemwallis/artistjodi:next;
 fi
