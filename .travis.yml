@@ -5,8 +5,11 @@ node_js:
 services:
   - docker
 
-script: 
+before_script:
+  - npm install -g glob
   - docker login -u jamesemwallis -p $PASSWORD
+
+script: 
   # Build sitemap
   - node ./utils/buildSitemap.js
   # Output something every 10 minutes or Travis kills the job
@@ -14,4 +17,6 @@ script:
   - docker build -t artistjodi . 
   # Killing background sleep loop
   - kill %1
+
+after_success:
   - ./utils/travis/buildAndPush.sh
