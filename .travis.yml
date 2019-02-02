@@ -10,7 +10,6 @@ before_script:
   - docker login -u jamesemwallis -p $PASSWORD
 
 script: 
-  - ./utils/travis/buildAndPush.sh
   # Build sitemap
   - node ./utils/buildSitemap.js
   # Output something every 10 minutes or Travis kills the job
