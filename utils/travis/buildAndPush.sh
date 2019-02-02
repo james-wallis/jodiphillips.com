@@ -1,5 +1,6 @@
 #!/bin/bash
-if ["$TRAVIS_BRANCH" == "master"]; then
+echo "Branch: $TRAVIS_BRANCH"
+if [ "$TRAVIS_BRANCH" = "master" ]; then
   echo 'Tagging image as artistjodi:latest'
   docker tag artistjodi jamesemwallis/artistjodi:latest;
   echo 'Pushing artistjodi:latest'
