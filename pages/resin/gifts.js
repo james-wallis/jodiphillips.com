@@ -18,6 +18,7 @@ const layoutProps = {
     directory: 'resin/gifts',
     hero: {
       src: 'hero.jpg',
+      mobile: 'hero-mobile.jpg',
       alt: 'Resin Gifts'
     },
     gallery: [

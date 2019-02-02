@@ -6,20 +6,14 @@ class Hero extends React.Component {
     // Desktop images should be the default to what is available
     const desktopSrc = require(`../images/${this.props.imgDir}/${this.props.imgSrc}`);
     let mobileSrc = desktopSrc;
-    try {
-      mobileSrc = require(`../images/${this.props.imgDir}/${this.props.imgSrc}`);
-    } catch (err) {
-      console.log('No mobile image detected, defaulting to desktop images for mobile devices');
-    }
-    
+    if (this.props.imgMobileSrc && this.props.imgMobileSrc != '')
+      mobileSrc = require(`../images/${this.props.imgDir}/${this.props.imgMobileSrc}`);
     return <Row className='no-gutters'>
       <Col xs='12'>
         <div id='hero-image'>
           <picture>
-            <source media='(min-width: 768px)' srcSet={`${desktopSrc}?webp`} type='image/webp'/>
-            <source srcSet={`${mobileSrc}?webp`} type='image/webp' />
-            <source media='(min-width: 768px)' srcSet={desktopSrc} type='image/jpeg'/>
-            <img src={mobileSrc} alt={this.props.imgAlt} />
+            <source media='(max-width: 767px)' srcSet={mobileSrc} type='image/jpeg' />
+            <img src={desktopSrc} alt={this.props.imgSrc} />
           </picture>
         </div>
       </Col>

@@ -22,7 +22,7 @@ class Footer extends React.Component {
           background-color: rgb(45,45,45);
           padding: 40px 0;
           color: white;
-          height: 320px;
+          height: 350px;
           margin: 4px 0;
           margin-bottom: 0;
           z-index: 104;

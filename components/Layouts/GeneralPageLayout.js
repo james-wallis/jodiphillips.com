@@ -28,9 +28,13 @@ class Layout extends React.Component {
       }} />
       <Header />
       {
-        (this.props.images.hero) 
-        ? <HeroImage imgSrc={this.props.images.hero.src} imgDir={this.props.images.directory} imgAlt={this.props.images.hero.alt} />
-        : <HeroCarousel carousel={this.props.images.carousel} imgDir={this.props.images.directory} />
+        (this.props.images.hero)
+          ? <HeroImage
+            imgSrc={this.props.images.hero.src}
+            imgMobileSrc={(this.props.images.hero.mobile) ? this.props.images.hero.mobile : null}
+            imgDir={this.props.images.directory}
+            imgAlt={this.props.images.hero.alt} />
+          : <HeroCarousel carousel={this.props.images.carousel} imgDir={this.props.images.directory} />
       }
       
        {(this.props.content.introduction) ? <HeroParagraph introduction={this.props.content.introduction} /> : null }

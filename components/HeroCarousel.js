@@ -51,12 +51,18 @@ class HeroCarousel extends React.Component {
   }
   render() {
     const { activeIndex } = this.state;
-    
-
     const slides = this.items.map((item) => {
       return (
         <CarouselItem tag='div' key={item.id} onExiting={this.onExiting} onExited={this.onExited}>
-          <img src={require(`../images/${this.props.imgDir}/${item.src}`)} alt={this.props.imgAlt} />
+          {/* <img src={require(`../images/${this.props.imgDir}/${item.src}`)} alt={this.props.imgAlt} /> */}
+          <picture>
+            <source media='(max-width: 767px)' srcSet={
+              (item.mobileSrc && item.mobileSrc != '')
+                ? require(`../images/${this.props.imgDir}/${item.mobileSrc}`)
+                : require(`../images/${this.props.imgDir}/${item.src}`)
+              } type='image/jpeg' />
+            <img src={require(`../images/${this.props.imgDir}/${item.src}`)} alt={this.props.imgAlt} />
+          </picture>
         </CarouselItem>
       );
     });

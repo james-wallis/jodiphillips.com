@@ -18,6 +18,7 @@ const layoutProps = {
     directory: 'art_in_spaces',
     hero: {
       src: 'hero.jpg',
+      mobile: 'hero-mobile.jpg',
       alt: 'Art in Spaces'
     },
     gallery: [

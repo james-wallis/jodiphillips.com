@@ -1,13 +1,22 @@
 sudo: required
-
+language: node_js
+node_js:
+  - "10"
 services:
   - docker
 
-script: 
+before_script:
+  - npm install -g glob
   - docker login -u jamesemwallis -p $PASSWORD
+
+script: 
+  # Build sitemap
+  - node ./utils/buildSitemap.js
   # Output something every 10 minutes or Travis kills the job
   - while sleep 5m; do echo "=====[ $SECONDS seconds still running ]====="; done &
   - docker build -t artistjodi . 
   # Killing background sleep loop
   - kill %1
+
+after_success:
   - ./utils/travis/buildAndPush.sh

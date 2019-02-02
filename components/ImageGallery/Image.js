@@ -7,8 +7,7 @@ class Image extends React.Component {
     const mobileSrc = require(`../../images/${this.props.dir}/${this.props.file}?resize&size=500`);
     return <div className='image-container'>
       <picture>
-        <source media='(max-width: 400px)' srcSet={`${mobileSrc}`} type='image/jpeg' />
-        <source media='(min-width: 768px)' srcSet={`${desktopSrc}`} type='image/jpeg' />
+        <source media='(max-width: 767px)' srcSet={`${mobileSrc}`} type='image/jpeg' />
         <img src={desktopSrc} alt={this.props.alt} />
       </picture>
       <style jsx>{`

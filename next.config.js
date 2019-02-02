@@ -1,6 +1,8 @@
 const withPlugins = require('next-compose-plugins');
 const optimizedImages = require('next-optimized-images');
-
+const dev = process.env.NODE_ENV !== 'production';
+if (dev) console.log('Development mode, not optimizing images');
+if (!dev) console.log('Production mode, optimizing images');
 module.exports = withPlugins([
   [optimizedImages, {
     // these are the default values so you don't have to provide them if they are good enough for your use-case.
@@ -28,7 +30,7 @@ module.exports = withPlugins([
       quality: 70,
     },
     responsive: {
-      disable: false
+      disable: dev
     }
   }]
 ]);

@@ -19,6 +19,7 @@ const layoutProps = {
     directory: 'acrylic/gifts',
     hero: {
       src: 'hero.jpg',
+      mobile: 'hero-mobile.jpg',
       alt: 'Acrylic Gifts'
     },
     gallery: [
