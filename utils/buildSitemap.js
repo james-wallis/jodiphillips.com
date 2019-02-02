@@ -3,7 +3,7 @@ const path = require('path')
 const glob = require('glob')
 const fs = require('fs')
 
-const SITE_ROOT = process.env.SITE_ROOT || 'https://artistjodi.co.uk'
+const SITE_ROOT = process.env.SITE_ROOT || 'https://artistjodi.com'
 const SOURCE = process.env.SOURCE || path.join(__dirname, '..', 'pages', '/**/!(_*).js')
 const DESTINATION = process.env.DESTINATION || path.join(__dirname, '..', 'static', 'sitemap.xml')
 

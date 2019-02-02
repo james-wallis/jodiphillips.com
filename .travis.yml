@@ -5,6 +5,8 @@ services:
 
 script: 
   - docker login -u jamesemwallis -p $PASSWORD
+  # Build sitemap
+  - node ./utils/buildSitemap.js
   # Output something every 10 minutes or Travis kills the job
   - while sleep 5m; do echo "=====[ $SECONDS seconds still running ]====="; done &
   - docker build -t artistjodi . 

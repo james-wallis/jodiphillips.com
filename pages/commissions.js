@@ -21,6 +21,7 @@ const layoutProps = {
     directory: 'commissions',
     hero: {
       src: 'hero.jpg',
+      mobile: 'hero-mobile.jpg',
       alt: 'Commissions'
     },
     gallery: [

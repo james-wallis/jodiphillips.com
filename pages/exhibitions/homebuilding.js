@@ -19,6 +19,7 @@ const layoutProps = {
     directory: 'exhibitions/homebuildingshow',
     hero: {
       src: 'hero.jpg',
+      mobile: 'hero-mobile.jpg',
       alt: 'Homebuilding & Renovation Show hero picture'
     },
     gallery: [

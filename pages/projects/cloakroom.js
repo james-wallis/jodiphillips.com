@@ -19,6 +19,7 @@ const layoutProps = {
     directory: 'client_projects/cloakroom',
     hero: {
       src: 'hero.jpg',
+      mobile: 'hero-mobile.jpg',
       alt: 'Cloakroom Splashback'
     },
     gallery: [

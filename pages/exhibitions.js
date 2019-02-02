@@ -22,6 +22,7 @@ const layoutProps = {
     directory: 'exhibitions/home',
     hero: {
       src: 'hero.jpg',
+      mobile: 'hero-mobile.jpg',
       alt: 'Exhibitions'
     },
     gallery: [

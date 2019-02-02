@@ -19,6 +19,7 @@ const layoutProps = {
     directory: 'client_projects/garden',
     hero: {
       src: 'hero.jpg',
+      mobile: 'hero-mobile.jpg',
       alt: 'Garden Art'
     },
     gallery: [
