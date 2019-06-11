@@ -16,6 +16,7 @@ const layoutProps = {
   },
   images: {
     directory: 'home',
+    shopDiv: 'bag.jpg',
     carousel: [
       {
         src: 'carousel/Top-Pic.jpg',
@@ -35,96 +36,96 @@ const layoutProps = {
       }
     ],
     gallery: [
-      [
-        {
-          name: 'See the latest available works',
-          file: 'bag.jpg',
-          shop: true,
-          link: '/',
-          alt: 'Visit the shop',
-        },
-        {
-          name: 'Valentines Gifts',
-          file: 'valentine.jpg',
-          shop: true,
-          link: '/categories/valentines-gifts',
-          alt: 'Valentines gifts',
-        },
-        {
-          name: 'Gift Vouchers',
-          file: 'giftvoucher.jpg',
-          shop: true,
-          link: '/',
-          alt: 'Gift Vouchers',
-        },
-        {
-          name: 'Glass Chopping Boards',
-          file: 'glasschoppingboard.jpg',
-          shop: true,
-          link: '/categories/boards/glass-chopping-boards',
-          alt: 'Glass chopping boards',
-        }
-      ],
-      [
-        {
-          name: 'Acacia Boards',
-          file: 'acacia.jpg',
-          shop: true,
-          link: '/categories/boards/acacia-wood-boards',
-          alt: 'Acacia Boards',
-        },
-        {
-          name: 'Bamboo Boards',
-          file: 'bamboo.jpg',
-          shop: true,
-          link: '/categories/boards/bamboo-chopping-boards',
-          alt: 'Bamboo chopping boards',
-        },
-        {
-          name: 'Olive Serving Boards',
-          file: 'olive.jpg',
-          shop: true,
-          link: '/categories/boards/olive-wood',
-          alt: 'Olive serving boards',
-        },
-        {
-          name: 'Tableware',
-          file: 'tableware.jpg',
-          shop: true,
-          link: '/categories/tableware',
-          alt: 'Tableware',
-        }
-      ],
-      [
-        {
-          name: 'Coasters',
-          file: 'coasters.jpg',
-          shop: true,
-          link: '/categories/tableware/coasters',
-          alt: 'Coasters',
-        },
-        {
-          name: 'Bracelets',
-          file: 'bracelets.jpg',
-          shop: true,
-          link: '/categories/jewellery/bracelets',
-          alt: 'Bracelets',
-        },
-        {
-          name: 'Earrings',
-          file: 'earrings.jpg',
-          shop: true,
-          link: '/categories/jewellery/earrings',
-          alt: 'Earrings',
-        },
-        {
-          name: 'Pendants',
-          file: 'pendants.jpg',
-          shop: true,
-          link: '/categories/jewellery/pendants',
-          alt: 'Pendants',
-        }
-      ],
+      // [
+      //   {
+      //     name: 'See the latest available works',
+      //     file: 'bag.jpg',
+      //     shop: true,
+      //     link: '/',
+      //     alt: 'Visit the shop',
+      //   },
+      //   {
+      //     name: 'Valentines Gifts',
+      //     file: 'valentine.jpg',
+      //     shop: true,
+      //     link: '/categories/valentines-gifts',
+      //     alt: 'Valentines gifts',
+      //   },
+      //   {
+      //     name: 'Gift Vouchers',
+      //     file: 'giftvoucher.jpg',
+      //     shop: true,
+      //     link: '/',
+      //     alt: 'Gift Vouchers',
+      //   },
+      //   {
+      //     name: 'Glass Chopping Boards',
+      //     file: 'glasschoppingboard.jpg',
+      //     shop: true,
+      //     link: '/categories/boards/glass-chopping-boards',
+      //     alt: 'Glass chopping boards',
+      //   }
+      // ],
+      // [
+      //   {
+      //     name: 'Acacia Boards',
+      //     file: 'acacia.jpg',
+      //     shop: true,
+      //     link: '/categories/boards/acacia-wood-boards',
+      //     alt: 'Acacia Boards',
+      //   },
+      //   {
+      //     name: 'Bamboo Boards',
+      //     file: 'bamboo.jpg',
+      //     shop: true,
+      //     link: '/categories/boards/bamboo-chopping-boards',
+      //     alt: 'Bamboo chopping boards',
+      //   },
+      //   {
+      //     name: 'Olive Serving Boards',
+      //     file: 'olive.jpg',
+      //     shop: true,
+      //     link: '/categories/boards/olive-wood',
+      //     alt: 'Olive serving boards',
+      //   },
+      //   {
+      //     name: 'Tableware',
+      //     file: 'tableware.jpg',
+      //     shop: true,
+      //     link: '/categories/tableware',
+      //     alt: 'Tableware',
+      //   }
+      // ],
+      // [
+      //   {
+      //     name: 'Coasters',
+      //     file: 'coasters.jpg',
+      //     shop: true,
+      //     link: '/categories/tableware/coasters',
+      //     alt: 'Coasters',
+      //   },
+      //   {
+      //     name: 'Bracelets',
+      //     file: 'bracelets.jpg',
+      //     shop: true,
+      //     link: '/categories/jewellery/bracelets',
+      //     alt: 'Bracelets',
+      //   },
+      //   {
+      //     name: 'Earrings',
+      //     file: 'earrings.jpg',
+      //     shop: true,
+      //     link: '/categories/jewellery/earrings',
+      //     alt: 'Earrings',
+      //   },
+      //   {
+      //     name: 'Pendants',
+      //     file: 'pendants.jpg',
+      //     shop: true,
+      //     link: '/categories/jewellery/pendants',
+      //     alt: 'Pendants',
+      //   }
+      // ],
       [
         {
           name: 'About Jodi',
@@ -211,6 +212,40 @@ export default class extends React.Component {
   render() {
     const url = this.props.websiteAddress + this.props.urlPath;
     layoutProps.head.url = url;
-    return <Layout {...layoutProps}/>
+    return <Layout {...layoutProps}>
+      <div>
+        <p>British artist Jodi Phillips lives in Leverstock Green, Hertfordshire.</p>
+        <p>
+          She has worked professionally as an artist for 21 years using acrylic paint
+          and reproducing her own limited edition, hand embellished giclée prints.
+        </p>
+        <p>
+          Just over a year ago she began using epoxy resin and is now producing
+          functional resin art works, from chopping boards and tableware to
+          jewellery and splashbacks for kitchens and bathrooms.
+        </p>
+        <p>
+          Each piece is unique and can be custom made by commissioning
+          Jodi to produce a bespoke piece in your choice of colour.
+        </p>
+        <p>To see available works for sale pease visit the shop.</p>
+      </div>
+      <style jsx>{`
+        div {
+          margin: 30px;
+        }
+        p {
+          text-align: center;
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        @media (min-width: 768px) {
+          p {
+            width: 60%;
+          }
+        }
+      `}</style>
+    </Layout>
   }
 }
