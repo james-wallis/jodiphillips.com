@@ -21,7 +21,7 @@ class Heading extends React.Component {
       .to-shop {
         max-height: 300px;
       }
-      .to-shop a {
+      .to-shop a, .to-shop a:hover {
         text-decoration: none;
         color: inherit;
       }
