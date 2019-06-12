@@ -1,19 +1,16 @@
 import { Col } from 'reactstrap';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import Img from './Img';
 
 class ImageForShop extends React.Component {
   render() {
-    const link = `https://store.artistjodi.com${this.props.link}`
-    const desktopSrc = require(`../../images/${this.props.dir}/${this.props.file}?resize&size=800`);
-    const mobileSrc = require(`../../images/${this.props.dir}/${this.props.file}?resize&size=500`);
+    const { dir, file, alt } = this.props;
+    const link = `https://store.artistjodi.com${this.props.link}`;
     return <Link href={link}>
       <a>
         <div className='image-container' style={(this.props.link) ? { cursor: 'pointer !important' } : { cursor: 'default !important' }} >
-          <picture>
-            <source media='(max-width: 767px)' srcSet={`${mobileSrc}`} type='image/jpeg' />
-            <img src={desktopSrc} alt={this.props.alt} />
-          </picture>
+          <Img dir={dir} file={file} alt={alt} />
         </div>
         <div className='image-info'>
           <div className='image-info-inner'>
@@ -27,11 +24,6 @@ class ImageForShop extends React.Component {
             position: relative;
             width: 100%;
             cursor: 'pointer !important'
-          }
-          img {
-            width: 100%;
-            object-fit: cover;
-            padding: 0 15px;
           }
           .image-info {
             // position: absolute;
