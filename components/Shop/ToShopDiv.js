@@ -6,7 +6,7 @@ class Heading extends React.Component {
     const { imgFolder, imgFile } = this.props;
     const img = require(`../../images/${imgFolder}/${imgFile}?resize&sizes[]=500&sizes[]=800`);
     return <Row className='no-gutters'>
-      <Col xs={12} md={{span: 4, offset: 4 }} className='to-shop'>
+      <Col xs={{ size: 12, offset: 0 }} md={{size: 4, offset: 4 }} className='to-shop'>
         <div>
           <img srcSet={img.srcSet} src={img.src} />
         </div>
