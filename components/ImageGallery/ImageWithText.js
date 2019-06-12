@@ -1,16 +1,13 @@
 import { Col } from 'reactstrap'
 import PropTypes from 'prop-types';
+import Img from './Img';
 
 class ImageWithText extends React.Component {
   render() {
-    const desktopSrc = require(`../../images/${this.props.dir}/${this.props.file}?resize&size=800`);
-    const mobileSrc = require(`../../images/${this.props.dir}/${this.props.file}?resize&size=500`);
+    const { dir, file, alt } = this.props;
     return <div>
       <div className='image-container' onMouseEnter={this.showInformation} onMouseLeave={this.hideInformation} >
-        <picture>
-          <source media='(max-width: 767px)' srcSet={`${mobileSrc}`} type='image/jpeg' />
-          <img src={desktopSrc} alt={this.props.alt} />
-        </picture>
+        <Img dir={dir} file={file} alt={alt} />
         <div className='image-info'>
           <div className='image-info-inner'>
             <h3 className='image-info-text'>{this.props.name}</h3>
@@ -27,10 +24,6 @@ class ImageWithText extends React.Component {
           position: relative;
           width: 100%;
           cursor: 'default !important'
-        }
-        img {
-          width: 100%;
-          object-fit: cover;
         }
         .image-info {
           position: absolute;
