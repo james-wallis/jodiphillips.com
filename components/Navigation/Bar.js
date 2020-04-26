@@ -14,27 +14,25 @@ class NavigationBar extends React.Component {
             <Hamburger id='hamburger-button-close' />
           </Col>
           <Col xs='6' md='12'>
-            <Link prefetch href='/'>
+            <Link href='/'>
               <img src={require(`../../images/icons/home.png`)} alt='Navigate to home page' />
             </Link>
           </Col>
         </Row>
-        <Link href="https://store.artistjodi.com/">
-          <a>Online Store</a>
-        </Link>
-        <Link prefetch href="/artsplashbacks">
+        <a href="https://store.artistjodi.com/">Online Store</a>
+        <Link href="/artsplashbacks">
           <a>Art Splashbacks</a>
         </Link>
-        <Link prefetch href="/resin/art">
+        <Link href="/resin/art">
           <a>Resin</a>
         </Link>
-        <Link prefetch href="/acrylic/art">
+        <Link href="/acrylic/art">
           <a>Acrylic</a>
         </Link>
-        <Link prefetch href="/aboutjodi">
+        <Link href="/aboutjodi">
           <a>About Artist Jodi</a>
         </Link>
-        <Link prefetch href="/projects">
+        <Link href="/projects">
           <a>Client Projects</a>
         </Link>
         <Dropdown name={'Contact'} >

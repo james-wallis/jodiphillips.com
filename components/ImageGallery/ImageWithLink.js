@@ -6,14 +6,7 @@ import Img from './Img';
 class ImageWithLink extends React.Component {
   render() {
     const { dir, file, alt, link } = this.props;
-    let linkTarget = null;
-    let linkRel = null;
-    if (link && link.startsWith('http')) {
-      linkTarget = '_blank';
-      linkRel = 'noopener';
-    }
-    return <Link href={link}>
-      <a target={linkTarget} rel={linkRel}>
+    return <LinkWrapper link={link}>
         <div className='image-container' style={ (link) ? { cursor: 'pointer !important' } : { cursor: 'default !important' }} >
           <Img dir={dir} file={file} alt={alt} />
           <div className='image-info'>
@@ -96,12 +89,36 @@ class ImageWithLink extends React.Component {
           }
           
         `}</style>
-      </a>
-    </Link>
+    </LinkWrapper>
   }
 }
 
+const LinkWrapper = (props) => {
+  const { link } = props;
+  if (link && link.startsWith('http')) {
+    return <ExternalLink {...props} />
+  } else {
+    return <InternalLink {...props} />
+  }
+}
 
+const InternalLink = ({ link, children }) => {
+  return (
+    <Link href={link}>
+      <a>
+        {children}
+      </a>
+    </Link>
+  )
+}
+
+const ExternalLink = ({ link, children }) => {
+  return (
+    <a target='_blank' rel='noopener' href={link}>
+      {children}
+    </a>
+  )
+}
 
 ImageWithLink.propTypes = {
   name: PropTypes.string.isRequired,

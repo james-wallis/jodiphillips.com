@@ -1,7 +1,7 @@
 import { Container } from 'reactstrap';
 import Router from 'next/router'
-import NextSeo from 'next-seo';
-import * as gtag from '../../lib/gtag';
+import { NextSeo } from 'next-seo';
+import * as gtag from '../../config/gtag';
 import Header from '../Header';
 import HeroImage from '../HeroImage';
 import HeroCarousel from '../HeroCarousel';

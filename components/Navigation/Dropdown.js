@@ -10,7 +10,7 @@ class DropdownNavigation extends React.Component {
       <div className='dropdown-items'>
         {/* Add the links into the page. If there are no links then use props.children. */}
         {(this.props.links) ? this.props.links.map((currentLink, index) => 
-            <Link prefetch href={currentLink.href || '/'} key={index}><a>{currentLink.name}</a></Link>) : this.props.children }
+            <Link href={currentLink.href || '/'} key={index}><a>{currentLink.name}</a></Link>) : this.props.children }
       </div>
       <style jsx>{`
         .dropdown-container {
