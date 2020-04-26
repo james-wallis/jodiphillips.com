@@ -1,25 +1,19 @@
-FROM node:8 as build
-ENV NODE_ENV production
-RUN apt-get update
-RUN apt-get install -y automake autoconf libtool dpkg nasm libpng-dev
-WORKDIR /
-RUN mkdir /app
+FROM node:12 as build
+RUN apt-get update && \
+    apt-get install -y automake autoconf libtool dpkg nasm libpng-dev
+
 WORKDIR /app
-ADD package.json /app
+COPY package.json package-lock.json ./
 RUN npm install
 COPY . /app
 RUN npm run build
-EXPOSE 3000
-# RUN rm -r /app/images
-CMD ["npm", "run", "start"]
 
-FROM node:8
-WORKDIR /production
-COPY --from=build /app/package.json /production/package.json
-# RUN yarn install
-RUN npm install express next compression
-COPY --from=build /app/server.js /production/server.js
-COPY --from=build /app/.next /production/.next
-RUN rm -rf /app
+FROM node:12
+ENV NODE_ENV production
+WORKDIR /app
+COPY --from=build /app/package.json /app/package-lock.json /app/
+RUN npm install
+COPY --from=build /app/public /app/public
+COPY --from=build /app/.next /app/.next
 EXPOSE 3000
 CMD ["npm", "run", "start"]
