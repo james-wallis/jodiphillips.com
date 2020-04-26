@@ -42,8 +42,6 @@
     "webp-loader": "^0.4.0"
   },
   "devDependencies": {
-    "compress-images": "^1.5.8",
-    "eslint": "^5.16.0",
-    "fs-extra": "^7.0.0"
+    "eslint": "^6.8.0"
   }
 }
