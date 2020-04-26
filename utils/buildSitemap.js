@@ -5,7 +5,7 @@ const fs = require('fs')
 
 const SITE_ROOT = process.env.SITE_ROOT || 'https://artistjodi.com'
 const SOURCE = process.env.SOURCE || path.join(__dirname, '..', 'pages', '/**/!(_*).js')
-const DESTINATION = process.env.DESTINATION || path.join(__dirname, '..', 'static', 'sitemap.xml')
+const DESTINATION = process.env.DESTINATION || path.join(__dirname, '..', 'public', 'sitemap.xml')
 
 let diskPages = glob.sync(SOURCE)
 

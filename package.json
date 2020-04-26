@@ -4,10 +4,9 @@
   "description": "A website for the Artist Jodi Phillips written in React.js using the Next.js framework",
   "main": "server.js",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next",
     "build": "NODE_ENV=production next build",
-    "start": "NODE_ENV=production node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=production next start"
   },
   "repository": {
     "type": "git",
@@ -20,12 +19,8 @@
   },
   "homepage": "https://github.com/jamesemwallis/jodiphillips.com#readme",
   "dependencies": {
-    "compression": "^1.7.4",
-    "express": "^4.17.1",
-    "imagemin-gifsicle": "^7.0.0",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.1.0",
-    "imagemin-svgo": "^7.1.0",
     "lqip-loader": "^2.2.0",
     "next": "^9.3.5",
     "next-compose-plugins": "^2.2.0",
@@ -35,11 +30,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "reactstrap": "^8.4.1",
-    "recursive-readdir": "^2.2.2",
     "responsive-loader": "^1.2.0",
-    "sharp": "^0.25.2",
-    "svg-sprite-loader": "^4.2.6",
-    "webp-loader": "^0.6.0"
+    "sharp": "^0.25.2"
   },
   "devDependencies": {
     "eslint": "^6.8.0"
