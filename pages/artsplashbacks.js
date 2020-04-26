@@ -1,12 +1,9 @@
 import React from 'react'
+import { NextSeo } from 'next-seo'
 import { Row, Col } from 'reactstrap'
 import Layout from '../components/Layouts/ArtSplashbacks/HomeLayout'
 
 const layoutProps = {
-  head: {
-    title: 'Art Splashbacks',
-    description: ''
-  },
   content: {
     h1: 'Art Splashbacks'
   },
@@ -24,14 +21,22 @@ const layoutProps = {
 }
 
 export default class extends React.Component {
-  static async getInitialProps(context) {
-    const urlPath = context.pathname;
-    return { urlPath }
-  }
   render() {
-    const url = this.props.websiteAddress + this.props.urlPath;
-    layoutProps.head.url = url;
-    return <Layout {...layoutProps} >
+    const title = 'Art Splashbacks @ ArtistJodi';
+    const description = '';
+    const url = this.props.websiteAddress + '/artsplashbacks';
+    return <>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          title,
+          description,
+          url,
+        }}
+      />
+      <Layout {...layoutProps} />
       <Row className='no-gutters'>
         <Col xs='12' md='6'>
           <img className='artsplashbackHomeImages' src={require(`../images/artsplashbacks/mainpage/Bottom-Left.jpg`)} alt='An ArtistJodi resin splashback in the cloakroom' />
@@ -46,7 +51,7 @@ export default class extends React.Component {
         object-fit: cover;
       }
       `}</style>
-    </Layout>
+    </>
   }
 
   componentDidMount() {

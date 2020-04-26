@@ -1,4 +1,5 @@
 import React from 'react'
+import { NextSeo } from 'next-seo'
 import { Container, Row, Col } from 'reactstrap'
 import Layout from '../../components/Layouts/ArtSplashbacks/GeneralPageLayout'
 import Image from '../../components/ArtSplashbacks/Image'
@@ -6,10 +7,6 @@ import Text from '../../components/ArtSplashbacks/Text'
 import BackToHome from '../../components/ArtSplashbacks/BackToHome'
 
 const layoutProps = {
-  head: {
-    title: 'Design - Art Splashbacks',
-    description: ''
-  },
   content: {
     h1: 'Design Splashbacks'
   },
@@ -30,33 +27,42 @@ const paragraphs = [
 
 
 export default class extends React.Component {
-  static async getInitialProps(context) {
-    const urlPath = context.pathname;
-    return { urlPath }
-  }
   render() {
-    const url = this.props.websiteAddress + this.props.urlPath;
-    layoutProps.head.url = url;
-    return <Layout {...layoutProps} >
-      <Container fluid>
-        <Row>
-          <Text h1='Design' paragraphs={paragraphs}>
-          </Text>
-          <Col xs='12' md='8' className='p-0'>
-            <Container fluid>
-              <Row>
-                <Image relativeSrc='design/hero.jpg' />
-                <Image relativeSrc='design/2nd-Pic.jpg' />
-              </Row>
-              <Row>
-                <Image relativeSrc='design/3rd-Pic.jpg' />
-                <Image relativeSrc='design/4th-Pic.jpg' />
-              </Row>
-            </Container>
-          </Col>
-        </Row>
-        <BackToHome />
-      </Container>
-    </Layout>
+    const title = 'Design - Art Splashbacks @ ArtistJodi';
+    const description = '';
+    const url = this.props.websiteAddress + '/artsplashbacks/design';
+    return <>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          title,
+          description,
+          url,
+        }}
+      />
+      <Layout {...layoutProps}>
+        <Container fluid>
+          <Row>
+            <Text h1='Design' paragraphs={paragraphs}>
+            </Text>
+            <Col xs='12' md='8' className='p-0'>
+              <Container fluid>
+                <Row>
+                  <Image relativeSrc='design/hero.jpg' />
+                  <Image relativeSrc='design/2nd-Pic.jpg' />
+                </Row>
+                <Row>
+                  <Image relativeSrc='design/3rd-Pic.jpg' />
+                  <Image relativeSrc='design/4th-Pic.jpg' />
+                </Row>
+              </Container>
+            </Col>
+          </Row>
+          <BackToHome />
+        </Container>
+      </Layout>
+    </>
   }
 }

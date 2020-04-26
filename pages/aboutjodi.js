@@ -1,15 +1,8 @@
 import React from 'react'
+import { NextSeo } from 'next-seo'
 import Layout from '../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
-  head: {
-    title: 'About Jodi',
-    description: 'Jodi Phillips is a British artist \
-                  who has worked closely with key trade \
-                  manufacturers. Be it resin, acrylic or \
-                  graphic design, Jodi, and her work, leave \
-                  people feeling inspired.'
-  },
   content: {
     h1: 'About Jodi',
     introduction: 'I feel the need to create, so I do. Whether it’s paint, resin, digital tools or getting my hands dirty, I love expressing myself through art. \
@@ -116,13 +109,26 @@ const layoutProps = {
 }
 
 export default class extends React.Component {
-  static async getInitialProps(context) {
-    const urlPath = context.pathname;
-    return { urlPath }
-  }
   render() {
-    const url = this.props.websiteAddress + this.props.urlPath;
-    layoutProps.head.url = url;
-    return <Layout {...layoutProps} />
+    const title = 'About Jodi @ ArtistJodi';
+    const description = 'Jodi Phillips is a British artist \
+      who has worked closely with key trade \
+      manufacturers. Be it resin, acrylic or \
+      graphic design, Jodi, and her work, leave \
+      people feeling inspired.';
+    const url = this.props.websiteAddress + '/aboutjodi';
+    return <>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          title,
+          description,
+          url,
+        }}
+      />
+      <Layout {...layoutProps} />
+    </>
   }
 }

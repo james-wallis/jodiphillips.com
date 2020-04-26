@@ -1,14 +1,8 @@
 import React from 'react'
+import { NextSeo } from 'next-seo'
 import Layout from '../../components/Layouts/GeneralPageLayout'
 
 const layoutProps = {
-  head: {
-    title: 'Homebuilding & Renovation Show',
-    descriptions: 'ArtistJodi held a stand at the Homebuilding & Renovation Show in the ExCeL centre London \
-                  from the 21st to the 23rd of September 2018. On display was her \
-                  resin splashbacks perfect for the kitchen or bathroom and her resin \
-                  art which looks great anywhere inside and outside of the home.'
-  },
   content: {
     h1: 'Homebuilding & Renovation Show'
   },
@@ -118,13 +112,25 @@ const layoutProps = {
 }
 
 export default class extends React.Component {
-  static async getInitialProps(context) {
-    const urlPath = context.pathname;
-    return { urlPath }
-  }
   render() {
-    const url = this.props.websiteAddress + this.props.urlPath;
-    layoutProps.head.url = url;
-    return <Layout {...layoutProps} />
+    const title = 'Homebuilding & Renovation Show @ ArtistJodi';
+    const description = 'ArtistJodi held a stand at the Homebuilding & Renovation Show in the ExCeL centre London \
+      from the 21st to the 23rd of September 2018. On display was her \
+      resin splashbacks perfect for the kitchen or bathroom and her resin \
+      art which looks great anywhere inside and outside of the home.';
+    const url = this.props.websiteAddress + '/exhibitions/homebuilding';
+    return <>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          title,
+          description,
+          url,
+        }}
+      />
+      <Layout {...layoutProps} />
+    </>
   }
 }
