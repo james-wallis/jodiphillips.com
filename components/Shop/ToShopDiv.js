@@ -8,14 +8,12 @@ class Heading extends React.Component {
     const img = require(`../../images/${imgFolder}/${imgFile}?resize&sizes[]=500&sizes[]=800`);
     return <Row className='no-gutters'>
       <Col xs={{ size: 12, offset: 0 }} md={{size: 4, offset: 4 }} className='to-shop'>
-        <Link href='https://store.artistjodi.com'>
-          <a>
-            <div>
-              <img srcSet={img.srcSet} src={img.src} />
-            </div>
-            <p>See the latest available works</p>
-          </a>
-        </Link>
+        <a href='https://store.artistjodi.com'>
+          <div>
+            <img srcSet={img.srcSet} src={img.src} />
+          </div>
+          <p>See the latest available works</p>
+        </a>
       </Col>
       <style global jsx>{`
       .to-shop {

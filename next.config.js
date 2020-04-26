@@ -18,17 +18,6 @@ const optimizedImageOpts = {
     optimizationLevel: 4,
   },
   pngquant: false,
-  gifsicle: {
-    interlaced: true,
-    optimizationLevel: 3,
-  },
-  svgo: {
-    // enable/disable svgo plugins here
-  },
-  webp: {
-    preset: 'picture',
-    quality: 70,
-  },
   responsive: {
     disable: dev
   }

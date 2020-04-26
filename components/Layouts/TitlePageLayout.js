@@ -1,7 +1,6 @@
 import { Container } from 'reactstrap'
 import Router from 'next/router'
-import NextSeo from 'next-seo';
-import * as gtag from '../../lib/gtag';
+import * as gtag from '../../config/gtag';
 import Head from '../Head';
 import Header from '../Header';
 import HeroCarousel from '../HeroCarousel';
@@ -16,16 +15,6 @@ Router.onRouteChangeComplete =url => gtag.pageview(url)
 class Layout extends React.Component {
   render() {
     return <Container fluid className='container-style'>
-      <NextSeo
-      config={{
-        title: `${this.props.head.title} @ ArtistJodi`,
-        description: this.props.head.description,
-        openGraph: {
-          title: `${this.props.head.title} @ ArtistJodi`,
-          description: this.props.head.description,
-          url: this.props.head.url,
-        }
-      }} />
       <Header />
       <HeroCarousel carousel={this.props.images.carousel} imgDir={this.props.images.directory} />
       <Heading heading={this.props.content.h1} />

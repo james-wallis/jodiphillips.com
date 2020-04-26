@@ -4,10 +4,9 @@
   "description": "A website for the Artist Jodi Phillips written in React.js using the Next.js framework",
   "main": "server.js",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next",
     "build": "NODE_ENV=production next build",
-    "start": "NODE_ENV=production node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=production next start"
   },
   "repository": {
     "type": "git",
@@ -20,30 +19,21 @@
   },
   "homepage": "https://github.com/jamesemwallis/jodiphillips.com#readme",
   "dependencies": {
-    "compression": "^1.7.4",
-    "express": "^4.17.1",
-    "imagemin-gifsicle": "^6.0.1",
-    "imagemin-mozjpeg": "^8.0.0",
-    "imagemin-optipng": "^6.0.0",
-    "imagemin-svgo": "^7.0.0",
-    "lqip-loader": "^2.2.0",
-    "next": "^7.0.3",
+    "next": "^9.3.5",
     "next-compose-plugins": "^2.2.0",
-    "next-optimized-images": "^2.5.1",
-    "next-seo": "^1.11.2",
+    "next-optimized-images": "^2.6.0",
+    "next-seo": "^4.4.0",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "reactstrap": "^6.3.1",
-    "recursive-readdir": "^2.2.2",
-    "responsive-loader": "^1.2.0",
-    "sharp": "^0.22.1",
-    "svg-sprite-loader": "^4.1.6",
-    "webp-loader": "^0.4.0"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "reactstrap": "^8.4.1"
   },
   "devDependencies": {
-    "compress-images": "^1.5.8",
-    "eslint": "^5.16.0",
-    "fs-extra": "^7.0.0"
+    "eslint": "^6.8.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-optipng": "^7.1.0",
+    "lqip-loader": "^2.2.0",
+    "responsive-loader": "^1.2.0",
+    "sharp": "^0.25.2"
   }
 }

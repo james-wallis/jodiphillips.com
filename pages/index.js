@@ -1,13 +1,8 @@
 import React from 'react'
+import { NextSeo } from 'next-seo'
 import Layout from '../components/Layouts/TitlePageLayout'
 
 const layoutProps = {
-  head: {
-    title: 'Home',
-    description: 'Artist Jodi is a British artist who creates pieces for the home, \
-                  jewellery and gifts through acrylic paint and resin. There’s nothing \
-                  quite like a Jodi Phillips piece of art to add a wow factor to your home.'
-  },
   content: {
     h1: 'My passion is to create'
   },
@@ -115,31 +110,42 @@ const layoutProps = {
 }
 
 export default class extends React.Component {
-  static async getInitialProps(context) {
-    const urlPath = context.pathname;
-    return { urlPath }
-  }
   render() {
-    const url = this.props.websiteAddress + this.props.urlPath;
-    layoutProps.head.url = url;
-    return <Layout {...layoutProps}>
-      <div>
-        <p>British artist Jodi Phillips lives in Leverstock Green, Hertfordshire.</p>
-        <p>
-          She has worked professionally as an artist for 21 years using acrylic paint
-          and reproducing her own limited edition, hand embellished giclée prints.
-        </p>
-        <p>
-          Just over a year ago she began using epoxy resin and is now producing
-          functional resin art works, from chopping boards and tableware to
-          jewellery and splashbacks for kitchens and bathrooms.
-        </p>
-        <p>
-          Each piece is unique and can be custom made by commissioning
-          Jodi to produce a bespoke piece in your choice of colour.
-        </p>
-        <p>To see available works for sale pease visit the shop.</p>
-      </div>
+    const title = 'Home @ ArtistJodi';
+    const description = 'Artist Jodi is a British artist who creates pieces for the home, \
+      jewellery and gifts through acrylic paint and resin. There’s nothing \
+      quite like a Jodi Phillips piece of art to add a wow factor to your home.';
+    const url = this.props.websiteAddress + '/';
+    return <>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          title,
+          description,
+          url,
+        }}
+      />
+      <Layout {...layoutProps}>
+        <div>
+          <p>British artist Jodi Phillips lives in Leverstock Green, Hertfordshire.</p>
+          <p>
+            She has worked professionally as an artist for 21 years using acrylic paint
+            and reproducing her own limited edition, hand embellished giclée prints.
+          </p>
+          <p>
+            Just over a year ago she began using epoxy resin and is now producing
+            functional resin art works, from chopping boards and tableware to
+            jewellery and splashbacks for kitchens and bathrooms.
+          </p>
+          <p>
+            Each piece is unique and can be custom made by commissioning
+            Jodi to produce a bespoke piece in your choice of colour.
+          </p>
+          <p>To see available works for sale pease visit the shop.</p>
+        </div>
+      </Layout>
       <style jsx>{`
         div {
           margin: 30px;
@@ -156,6 +162,6 @@ export default class extends React.Component {
           }
         }
       `}</style>
-    </Layout>
+    </>
   }
 }
