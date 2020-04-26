@@ -22,14 +22,14 @@
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.17.1",
-    "imagemin-gifsicle": "^6.0.1",
+    "imagemin-gifsicle": "^7.0.0",
     "imagemin-mozjpeg": "^8.0.0",
-    "imagemin-optipng": "^6.0.0",
-    "imagemin-svgo": "^7.0.0",
+    "imagemin-optipng": "^7.1.0",
+    "imagemin-svgo": "^7.1.0",
     "lqip-loader": "^2.2.0",
     "next": "^9.3.5",
     "next-compose-plugins": "^2.2.0",
-    "next-optimized-images": "^2.5.1",
+    "next-optimized-images": "^2.6.0",
     "next-seo": "^4.4.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -37,9 +37,9 @@
     "reactstrap": "^8.4.1",
     "recursive-readdir": "^2.2.2",
     "responsive-loader": "^1.2.0",
-    "sharp": "^0.22.1",
-    "svg-sprite-loader": "^4.1.6",
-    "webp-loader": "^0.4.0"
+    "sharp": "^0.25.2",
+    "svg-sprite-loader": "^4.2.6",
+    "webp-loader": "^0.6.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0"
