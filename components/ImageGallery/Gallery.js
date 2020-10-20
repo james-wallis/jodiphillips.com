@@ -74,16 +74,16 @@ function ensureHeightIsEqual() {
   function setImgHeight(cols, height) {
     for (let index = 0; index < cols.length; index++) {
       const col = cols[index];
-      const img = col.getElementsByTagName('img')[0];
-      if(img) img.height = height;
+      const img = col.getElementsByClassName('img-video-media')[0];
+      if(img) img.style.height = `${height}px`;
     }
   }
 
   function resetImgHeight(cols) {
     for (let index = 0; index < cols.length; index++) {
       const col = cols[index];
-      const img = col.getElementsByTagName('img')[0];
-      if (img) img.removeAttribute('height');
+      const img = col.getElementsByClassName('img-video-media')[0];
+      if (img) img.style.height = '';
     }
   }
 }

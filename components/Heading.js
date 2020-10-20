@@ -7,7 +7,7 @@ class Heading extends React.Component {
         <h1>{this.props.heading}</h1>
         <p>Scroll to view</p>
       </Col>
-      
+
       <style global jsx>{`
       .heading-container {
         position: absolute !important;

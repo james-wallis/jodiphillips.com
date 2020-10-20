@@ -9,6 +9,8 @@ import Heading from '../Heading';
 import Footer from '../Footer/Footer';
 import Gallery from '../ImageGallery/Gallery';
 import ToShop from '../Shop/ToShopDiv';
+import HeroVideo from '../HeroVideo';
+import Tab from '../Tab';
 
 Router.onRouteChangeComplete =url => gtag.pageview(url)
 
@@ -16,8 +18,10 @@ class Layout extends React.Component {
   render() {
     return <Container fluid className='container-style'>
       <Header />
-      <HeroCarousel carousel={this.props.images.carousel} imgDir={this.props.images.directory} />
-      <Heading heading={this.props.content.h1} />
+      {/* <HeroCarousel carousel={this.props.images.carousel} imgDir={this.props.images.directory} /> */}
+      <HeroVideo />
+      {/* <Heading heading={this.props.content.h1} /> */}
+      <Tab heading={this.props.content.h1}/>
       {this.props.children}
       <ToShop imgFolder={this.props.images.directory} imgFile={this.props.images.shopDiv} />
       <Gallery image_set={this.props.images.gallery} image_directory={this.props.images.directory} />

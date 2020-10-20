@@ -1,5 +1,6 @@
 import { Row, Col } from 'reactstrap'
 import React from 'react';
+import { updateHeroImageHeight } from '../lib/updateHeroHeight';
 
 class Hero extends React.Component {
   render() {
@@ -33,32 +34,12 @@ class Hero extends React.Component {
   }
 
   componentDidMount() {
-    updateHeroHeight();
-    window.addEventListener('resize', updateHeroHeight);
+    updateHeroImageHeight();
+    window.addEventListener('resize', updateHeroImageHeight);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', updateHeroHeight);
-  }
-}
-
-function updateHeroHeight() {
-  const div = document.getElementById('hero-image');
-  if (window.innerWidth < 768) {
-    if (div.style.height) {
-      const currentHeight = div.clientHeight;
-      const viewHeight = window.innerHeight;
-      // const diff = Math.abs(viewHeight - currentHeight);
-      const diff = viewHeight - currentHeight;
-      if (diff > 100 || diff < 0) {
-        div.style.height = `${viewHeight}px`;
-      }
-    } else {
-      const viewHeight = window.innerHeight;
-      div.style.height = `${viewHeight}px`;
-    }
-  } else {
-    div.style.height = '';
+    window.removeEventListener('resize', updateHeroImageHeight);
   }
 }
 
