@@ -1,5 +1,6 @@
 const withPlugins = require('next-compose-plugins');
 const optimizedImages = require('next-optimized-images');
+
 const dev = process.env.NODE_ENV !== 'production';
 if (dev) console.log('Development mode, not optimizing images');
 if (!dev) console.log('Production mode, optimizing images');
@@ -26,7 +27,7 @@ const optimizedImageOpts = {
 console.log(optimizedImageOpts);
 
 module.exports = withPlugins([
-  [optimizedImages, optimizedImageOpts]
+  [optimizedImages, optimizedImageOpts],
 ]);
 
 

@@ -19,7 +19,7 @@ class ImageRow extends React.Component {
           } else if (image.columns == 3) {
             bootstrapCol = '12';
           }
-        } 
+        }
         if (image.shop)
           return (
             <Col className='image-column image-shop-column' xs='12' md={bootstrapCol} key={image.key || `${this.props.dir}/${image.file}`}>

@@ -5,10 +5,10 @@ import Img from './Img';
 
 class ImageWithLink extends React.Component {
   render() {
-    const { dir, file, alt, link } = this.props;
+    const { dir, file, alt, link, isVideo } = this.props;
     return <LinkWrapper link={link}>
         <div className='image-container' style={ (link) ? { cursor: 'pointer !important' } : { cursor: 'default !important' }} >
-          <Img dir={dir} file={file} alt={alt} />
+          <Img dir={dir} file={file} alt={alt} isVideo={isVideo} />
           <div className='image-info'>
             <div className='image-info-inner'>
               <h3 className='image-info-text'>{this.props.name}</h3>
@@ -87,7 +87,6 @@ class ImageWithLink extends React.Component {
               line-height: 26px;
             }
           }
-          
         `}</style>
     </LinkWrapper>
   }
@@ -105,7 +104,7 @@ const LinkWrapper = (props) => {
 const InternalLink = ({ link, children }) => {
   return (
     <Link href={link}>
-      <a>
+      <a style={{ display: 'flex' }}>
         {children}
       </a>
     </Link>

@@ -82,7 +82,7 @@ class HeroCarousel extends React.Component {
         </Carousel>
         <style global jsx>{`
           .carousel {
-            height: 100vh; 
+            height: 100vh;
             width: 100vw;
             margin-bottom: 4px;
           }

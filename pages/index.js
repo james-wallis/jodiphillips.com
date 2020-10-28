@@ -4,7 +4,8 @@ import Layout from '../components/Layouts/TitlePageLayout'
 
 const layoutProps = {
   content: {
-    h1: 'My passion is to create'
+    // h1: 'My passion is to create'
+    h1: 'Artist Jodi'
   },
   tab: {
     fixed: true
@@ -41,8 +42,10 @@ const layoutProps = {
         {
           name: 'Inside the studio',
           file: 'Row1-Middle.jpg',
+          // file: "https://drive.google.com/uc?export=download&id=1udlpkWellA94GkEU2lPEFsP6jc0_uCo8",
           link: '/insidethestudio',
           alt: 'Inside Jodi\'s studio',
+          isVideo: false,
         },
         {
           name: 'Art in spaces',
