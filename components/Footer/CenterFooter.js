@@ -12,8 +12,8 @@ export default class extends React.Component {
         <a href="mailto:jodi@artistjodi.co.uk?Subject=Website%20Enquiry">jodi@artistjodi.co.uk</a>
         <div className='copyright'>
           <p>&copy;2018 Designed by Jodi, Created by <a href='https://wallis.dev' target='_blank' rel='noopener'>James</a></p>
-          <p><a href='https://store.artistjodi.com/pages/terms'>Terms and Conditions</a></p>
-          <p><a href='https://store.artistjodi.com/pages/privacy'>Privacy Notice</a></p>
+          {/* <p><a href='https://store.artistjodi.com/pages/terms'>Terms and Conditions</a></p> */}
+          {/* <p><a href='https://store.artistjodi.com/pages/privacy'>Privacy Notice</a></p> */}
         </div>
       </div>
       <style jsx>{`

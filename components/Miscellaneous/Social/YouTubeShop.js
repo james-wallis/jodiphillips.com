@@ -1,4 +1,5 @@
 import { Row, Col } from 'reactstrap'
+import { SHOP_URL } from '../../../constants';
 
 export default class extends React.Component {
   render() {
@@ -9,7 +10,7 @@ export default class extends React.Component {
         </a>
       </Col>
       <Col xs='6' className='d-flex align-items-center'>
-        <a href='https://store.artistjodi.com'>
+        <a href={SHOP_URL}>
           <img className='shop-logo' src={require(`../../../images/logos/shop-logo-round.png`)} alt='ArtistJodi shop logo' />
         </a>
       </Col>

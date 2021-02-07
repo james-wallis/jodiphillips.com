@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Dropdown from './Dropdown'
 import Hamburger from '../Miscellaneous/Hamburger'
 import Social from '../Miscellaneous/Social/Social'
-import pageLinks from './links.json'
+import { SHOP_URL } from '../../constants';
 
 class NavigationBar extends React.Component {
   render() {
@@ -19,7 +19,7 @@ class NavigationBar extends React.Component {
             </Link>
           </Col>
         </Row>
-        <a href="https://store.artistjodi.com/">Online Store</a>
+        <a href={SHOP_URL}>Online Store</a>
         <Link href="/artsplashbacks">
           <a>Art Splashbacks</a>
         </Link>

@@ -88,26 +88,6 @@ const layoutProps = {
           alt: 'A Splashback in a cloakroom'
         }
       ],
-      [
-        {
-          name: 'YouTube',
-          link: 'https://www.youtube.com/channel/UC848rsbkuahzKYJMkHVkaiA',
-          file: 'Row7-Left.jpg',
-          alt: 'A still from a video of Jodi resining some art'
-        },
-        {
-          name: 'Blog',
-          link: 'https://store.artistjodi.com/blog',
-          file: 'blog.jpg',
-          alt: 'Resin art'
-        },
-        {
-          name: 'Commissions',
-          file: 'Row7-Right.jpg',
-          link: '/commissions',
-          alt: 'Resin art and a colour palette'
-        }
-      ],
     ]
   }
 }

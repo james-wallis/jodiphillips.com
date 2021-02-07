@@ -20,7 +20,7 @@ class Hero extends React.Component {
       </Col>
       <style jsx>{`
         div {
-          height: 100vh; 
+          height: 100vh;
           width: 100vw;
           margin-bottom: 4px;
         }

@@ -1,12 +1,11 @@
-import { Col } from 'reactstrap';
 import PropTypes from 'prop-types';
-import Link from 'next/link';
 import Img from './Img';
+import { SHOP_URL } from '../../constants';
 
 class ImageForShop extends React.Component {
   render() {
     const { dir, file, alt } = this.props;
-    const link = `https://store.artistjodi.com${this.props.link}`;
+    const link = SHOP_URL;
     return <a href={link}>
       <div className='image-container' style={(this.props.link) ? { cursor: 'pointer !important' } : { cursor: 'default !important' }} >
         <Img dir={dir} file={file} alt={alt} />

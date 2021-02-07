@@ -1,6 +1,5 @@
 import { Row, Col } from 'reactstrap'
-import Link from 'next/link';
-
+import { SHOP_URL } from '../../constants'
 
 class Heading extends React.Component {
   render() {
@@ -8,7 +7,7 @@ class Heading extends React.Component {
     const img = require(`../../images/${imgFolder}/${imgFile}?resize&sizes[]=500&sizes[]=800`);
     return <Row className='no-gutters'>
       <Col xs={{ size: 12, offset: 0 }} md={{size: 4, offset: 4 }} className='to-shop'>
-        <a href='https://store.artistjodi.com'>
+        <a href={SHOP_URL}>
           <div>
             <img srcSet={img.srcSet} src={img.src} />
           </div>
