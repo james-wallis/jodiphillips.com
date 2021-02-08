@@ -20,9 +20,6 @@ class NavigationBar extends React.Component {
           </Col>
         </Row>
         <a href={SHOP_URL}>Online Store</a>
-        <Link href="/artsplashbacks">
-          <a>Art Splashbacks</a>
-        </Link>
         <Link href="/resin/art">
           <a>Resin</a>
         </Link>
