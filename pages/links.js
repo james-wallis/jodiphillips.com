@@ -1,5 +1,5 @@
 import { NextSeo } from 'next-seo'
-import { GoMail } from 'react-Icons/go'
+import { GoMail } from 'react-icons/go'
 import { ImFacebook2 } from 'react-icons/im'
 import { FaInstagram, FaTwitterSquare, FaLinkedin, FaYoutube } from 'react-icons/fa'
 import { BsPhone } from 'react-icons/bs'
@@ -67,22 +67,21 @@ const links = [
   },
 ]
 
-const LinksPage = () => {
-  
-  return <div style={{ backgroundColor: 'black', height: '100vh', width: '100vw' }}>
-    {/* <NextSeo
-      title={title}
-      description={description}
-      canonical={url}
+const LinksPage = () => (
+  <div style={{ backgroundColor: 'black', height: '100vh', width: '100vw' }}>
+    <NextSeo
+      title="Artist Jodi Links"
+      description="linktree for ArtistJodi"
+      canonical="http://artistjodi.com/links"
       openGraph={{
-        title,
-        description,
-        url,
+        title: "Artist Jodi Links",
+        description: "linktree for ArtistJodi",
+        url: "http://artistjodi.com/links",
       }}
-    /> */}
+    />
     <div className="link-container">
         {links.map(({ name, url, Icon }) => (
-          <a href={url} className="link" target="_blank">
+          <a key={`link-tree-${name}`} href={url} className="link" target="_blank" rel="noopener noreferrer nofollow">
             <div className="link-icon">
               {Icon}
             </div>
@@ -148,6 +147,6 @@ const LinksPage = () => {
       }
     `}</style>
   </div>
-}
+)
 
 export default LinksPage;
