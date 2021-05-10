@@ -12,7 +12,7 @@ const links = [
   },
   {
     name: 'Email',
-    url: 'mailto:jodi@artistjodi.co.uk?Subject=Website%20Enquiry',
+    url: 'mailto:jodi@artistjodi.co.uk?Subject=Hi%20Jodi',
     Icon: <GoMail style={{ fontSize: '7rem' }} />
   },
   {
