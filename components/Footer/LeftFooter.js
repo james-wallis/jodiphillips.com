@@ -1,3 +1,4 @@
+import React from 'react'
 import { Row, Col } from 'reactstrap'
 import Link from 'next/link'
 
@@ -26,11 +27,6 @@ export default class extends React.Component {
             <li>
               <Link href='/artinspaces'>
                 <a>Art in Spaces</a>
-              </Link>
-            </li>
-            <li>
-              <Link href='/resin/art'>
-                <a>Resin</a>
               </Link>
             </li>
             <li>

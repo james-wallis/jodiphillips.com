@@ -1,18 +1,18 @@
 const url = 'https://www.artistjodi.co.uk';
 
+const description = 'Artist Jodi is a British artist who creates pieces for the home, \
+  jewellery and gifts through acrylic paint. There’s nothing \
+  quite like a Jodi Phillips piece of art to add a wow factor to your home.';
+
 export default {
   title: 'artistjodi',
-  description: 'Artist Jodi is a British artist who creates pieces for the home, \
-                  jewellery and gifts through acrylic paint and resin. There’s nothing \
-                  quite like a Jodi Phillips piece of art to add a wow factor to your home.',
+  description,
   openGraph: {
     type: 'website',
     locale: 'en_IE',
     url: url,
-    title: 'artistjodi.co.uk',
-    description: 'Artist Jodi is a British artist who creates pieces for the home, \
-                  jewellery and gifts through acrylic paint and resin. There’s nothing \
-                  quite like a Jodi Phillips piece of art to add a wow factor to your home.',
+    title: 'artistjodi.com',
+    description,
     defaultImageWidth: 800,
     defaultImageHeight: 800,
     // Multiple Open Graph images is only available in version `7.0.0-canary.0`+ of next (see note top of README.md)
@@ -36,7 +36,7 @@ export default {
         alt: 'Jodi Phillips - Artist Jodi',
       }
     ],
-    site_name: 'artistjodi.co.uk',
+    site_name: 'artistjodi.com',
   },
   twitter: {
     handle: '@artist_jodi',

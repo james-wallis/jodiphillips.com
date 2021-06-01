@@ -1,3 +1,4 @@
+import React from 'react'
 import PropTypes from 'prop-types';
 import Img from './Img';
 import { SHOP_URL } from '../../constants';

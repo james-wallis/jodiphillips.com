@@ -1,3 +1,4 @@
+import React from 'react'
 import ReactPlayer from 'react-player';
 import PropTypes from 'prop-types';
 
@@ -17,6 +18,12 @@ function showImage(dir, file) {
         width: 100%;
         object-fit: cover;
       }
+
+      @media (min-width: 768px) {
+        img {
+          max-height: 25vw;
+        }
+      }
     `}</style>
   </div>
 }
@@ -34,6 +41,12 @@ function showVideo(file) {
     <style jsx>{`
       .img-video-media :global(video) {
         object-fit: cover;
+      }
+
+      @media (min-width: 768px) {
+        .img-video-media :global(video) {
+          max-height: 25vw;
+        }
       }
     `}</style>
   </div>

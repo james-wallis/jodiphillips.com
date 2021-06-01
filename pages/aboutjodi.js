@@ -5,7 +5,7 @@ import Layout from '../components/Layouts/GeneralPageLayout'
 const layoutProps = {
   content: {
     h1: 'About Jodi',
-    introduction: 'I feel the need to create, so I do. Whether it’s paint, resin, digital tools or getting my hands dirty, I love expressing myself through art. \
+    introduction: 'I feel the need to create, so I do. Whether it’s paint, digital tools or getting my hands dirty, I love expressing myself through art. \
   Resin is my latest exploration, I love the fluidity of it and the affect mica powders and glitter add to my work. My studio is where I escape. \
   A place where I feel free, calm and relaxed. A place where magic happens. I hope you enjoy my art as much as I enjoy creating it.'
   },

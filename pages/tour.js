@@ -2,16 +2,16 @@ import { NextSeo } from 'next-seo';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
+import { TOUR_URL, TOUR_INDEX_URL } from '../constants';
 
-const AWS_URL='https://thevecentre.s3.eu-west-2.amazonaws.com/theoldmillhousegallery';
 const title = 'The Old Millhouse Gallery by ArtistJodi';
 const description = 'Virtual gallery tour featuring art and design by British ArtistJodi.';
-const url = `${AWS_URL}/index.htm`;
-const socialThumbnail = `${AWS_URL}/socialThumbnail.jpg`;
-const favicon = `${AWS_URL}/favicon.ico`;
-const manifest = `${AWS_URL}/manifest.json`;
-const browserConfig = `${AWS_URL}/browserconfig.xml`;
-const miscDir = `${AWS_URL}/misc`;
+const url = TOUR_INDEX_URL;
+const socialThumbnail = `${TOUR_URL}/socialThumbnail.jpg`;
+const favicon = `${TOUR_URL}/favicon.ico`;
+const manifest = `${TOUR_URL}/manifest.json`;
+const browserConfig = `${TOUR_URL}/browserconfig.xml`;
+const miscDir = `${TOUR_URL}/misc`;
 
 async function shouldRedirect() {
     // const ua = (function() { return window.navigator.userAgent.toLowerCase(); })();

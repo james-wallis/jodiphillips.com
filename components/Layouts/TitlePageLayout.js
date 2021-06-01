@@ -1,3 +1,4 @@
+import React from 'react'
 import { Container } from 'reactstrap'
 import Router from 'next/router'
 import * as gtag from '../../config/gtag';
@@ -9,7 +10,7 @@ import Heading from '../Heading';
 import Footer from '../Footer/Footer';
 import Gallery from '../ImageGallery/Gallery';
 import ToShop from '../Shop/ToShopDiv';
-import HeroVideo from '../HeroVideo';
+import HeroTour from '../HeroTour';
 import Tab from '../Tab';
 
 Router.onRouteChangeComplete =url => gtag.pageview(url)
@@ -19,11 +20,11 @@ class Layout extends React.Component {
     return <Container fluid className='container-style'>
       <Header />
       {/* <HeroCarousel carousel={this.props.images.carousel} imgDir={this.props.images.directory} /> */}
-      <HeroVideo />
+      <HeroTour />
       {/* <Heading heading={this.props.content.h1} /> */}
-      <Tab heading={this.props.content.h1}/>
+      {/* <Tab heading={this.props.content.h1}/> */}
       {this.props.children}
-      <ToShop imgFolder={this.props.images.directory} imgFile={this.props.images.shopDiv} />
+      <ToShop />
       <Gallery image_set={this.props.images.gallery} image_directory={this.props.images.directory} />
       <Footer />
       <Nav />
