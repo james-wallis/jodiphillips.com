@@ -37,7 +37,7 @@ class HeroVideo extends React.Component {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    height: 15vh;
+                    height: 20vh;
                     flex-direction: column;
                     color: white;
                 }
@@ -51,7 +51,7 @@ class HeroVideo extends React.Component {
                     font-weight: 300 !important;
                 }
                 .tour {
-                    height: 85vh;
+                    height: 80vh;
                 }
 
                 @media (min-width: 768px) {
