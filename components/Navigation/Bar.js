@@ -1,3 +1,4 @@
+import React from 'react'
 import { Row, Col } from 'reactstrap'
 import Link from 'next/link'
 import Dropdown from './Dropdown'
@@ -20,9 +21,6 @@ class NavigationBar extends React.Component {
           </Col>
         </Row>
         <a href={SHOP_URL}>Online Store</a>
-        <Link href="/resin/art">
-          <a>Resin</a>
-        </Link>
         <Link href="/acrylic/art">
           <a>Acrylic</a>
         </Link>

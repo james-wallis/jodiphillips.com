@@ -1,3 +1,4 @@
+import React from 'react'
 import { Row } from 'reactstrap'
 import Left from './LeftFooter.js'
 import Center from './CenterFooter.js'
@@ -22,7 +23,7 @@ class Footer extends React.Component {
           background-color: rgb(45,45,45);
           padding: 40px 0;
           color: white;
-          height: 350px;
+          height: 310px;
           margin: 4px 0;
           margin-bottom: 0;
           z-index: 104;

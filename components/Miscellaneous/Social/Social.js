@@ -1,3 +1,4 @@
+import React from 'react'
 import SocialLinks from './FacebookInstagramTwitter'
 import YouTubeShop from './YouTubeShop'
 
@@ -9,7 +10,7 @@ export default class extends React.Component {
       <style global jsx>{`
           .no-padding .social-links {
             padding-left: 0 !important;
-            padding-right: 0 !important;    
+            padding-right: 0 !important;
           }
           @media (min-width: 768px) {
             .social-links {

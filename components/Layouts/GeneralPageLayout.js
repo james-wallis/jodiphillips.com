@@ -1,3 +1,4 @@
+import React from 'react'
 import { Container } from 'reactstrap';
 import Router from 'next/router';
 import * as gtag from '../../config/gtag';

@@ -1,3 +1,4 @@
+import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { SHOP_URL } from '../../../constants';
 
@@ -24,7 +25,7 @@ export default class extends React.Component {
             text-decoration: none;
           }
           img {
-            width: 90%;
+            width: 80%;
             min-width: 100px;
             max-width: 200px;
             padding: 0 5%;
@@ -32,14 +33,11 @@ export default class extends React.Component {
             margin: 0 auto;
           }
           .shop-logo {
-            width: 70%;
+            width: 60%;
           }
           @media (min-width: 768px) {
             a {
               font-size: 20px;
-            }
-            .img {
-              width: 100%;
             }
           }
         `}</style>

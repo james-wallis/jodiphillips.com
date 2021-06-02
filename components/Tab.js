@@ -1,3 +1,4 @@
+import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
 
 class Tab extends React.Component {

@@ -56,12 +56,6 @@ const layoutProps = {
       ],
       [
         {
-          name: 'Resin',
-          file: 'Row2-Left.jpg',
-          link: '/resin/art',
-          alt: 'Resin Art'
-        },
-        {
           name: 'Acrylic',
           file: 'Row2-Middle.jpg',
           link: '/acrylic/art',
@@ -112,36 +106,38 @@ export default class extends React.Component {
       />
       <Layout {...layoutProps}>
         <div>
-          <p>British artist Jodi Phillips lives in Leverstock Green, Hertfordshire.</p>
-          <p>
-            She has worked professionally as an artist for 21 years using acrylic paint
-            and reproducing her own limited edition, hand embellished giclée prints.
-          </p>
-          <p>
-            Just over a year ago she began using epoxy resin and is now producing
-            functional resin art works, from chopping boards and tableware to
-            jewellery and splashbacks for kitchens and bathrooms.
-          </p>
-          <p>
-            Each piece is unique and can be custom made by commissioning
-            Jodi to produce a bespoke piece in your choice of colour.
-          </p>
-          <p>To see available works for sale pease visit the shop.</p>
+          <p>I am a British artist who has spent the majority of my life based in Hertfordshire.</p>
+          <p>I trained as a graphic designer and after 12 years in industry became an artist in 1999,
+          exploring the freedom of expression through abstract art.</p>
+          <p>The Prince’s Trust aided me by funding and mentoring through my transition into becoming a
+          professional artist selling my work to trade and public.</p>
+          <p>One of the first UK artists to self-publish and hand embellish digital prints,</p>
+          <p>I have worked closely with key trade manufacturers including Epson, Canon, Innova, Adobe, Wacom and Daler-Rowney.</p>
+          <p>20 years later, I am still creating and selling my work, constantly exploring new techniques and mediums.</p>
+          <p>My journey has been, and continues to be, an incredible adventure that has blessed me to work with my passion.</p>
+          <p>My design background combined with abstract art have gained me the skills for both traditional
+          and digital art including digital clay sculpting.</p>
+          <p>My 3D journey started in 2007 SecondLife making and selling virtual reproductions of my physical art.</p>
+          <p>During lockdown I created a virtual gallery tour, showing examples of my physical art and digital models.</p>
         </div>
       </Layout>
       <style jsx>{`
         div {
-          margin: 30px;
+          padding: 2rem 1rem;
         }
         p {
           text-align: center;
           width: 100%;
-          margin-left: auto;
-          margin-right: auto;
+          margin: 1rem auto;
+          color: rgb(80,80,80);
+          font-size: 1.1rem;
         }
         @media (min-width: 768px) {
           p {
-            width: 60%;
+            width: 70%;
+          }
+          div {
+            padding: 3rem;
           }
         }
       `}</style>

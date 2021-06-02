@@ -1,3 +1,4 @@
+import React from 'react'
 import ReactPlayer from 'react-player';
 import PropTypes from 'prop-types';
 
@@ -9,13 +10,19 @@ class Img extends React.Component {
 }
 
 function showImage(dir, file) {
-  const { srcSet, src } = require(`../../images/${dir}/${file}?resize&sizes[]=250&sizes[]=500`);
+  const { srcSet, src } = require(`../../images/${dir}/${file}?resize&sizes[]=400&sizes[]=600`);
   return <div>
     <img className='img-video-media' srcSet={srcSet} src={src} />
     <style jsx>{`
       img {
         width: 100%;
         object-fit: cover;
+      }
+
+      @media (min-width: 768px) {
+        img {
+          max-height: 25vw;
+        }
       }
     `}</style>
   </div>
@@ -34,6 +41,12 @@ function showVideo(file) {
     <style jsx>{`
       .img-video-media :global(video) {
         object-fit: cover;
+      }
+
+      @media (min-width: 768px) {
+        .img-video-media :global(video) {
+          max-height: 25vw;
+        }
       }
     `}</style>
   </div>

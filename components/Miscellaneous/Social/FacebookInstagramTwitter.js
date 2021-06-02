@@ -1,3 +1,4 @@
+import React from 'react'
 import { Row, Col } from 'reactstrap'
 
 export default class extends React.Component {
@@ -6,7 +7,6 @@ export default class extends React.Component {
       facebook: 'https://www.facebook.com/artistjodi/',
       instagram: 'https://www.instagram.com/artistjodi/',
       twitter: 'https://twitter.com/artist_jodi',
-      youtube: '',
     }
     return <Row className='no-gutters social-links'>
       <Col xs='4'>
