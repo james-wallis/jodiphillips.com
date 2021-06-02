@@ -4,7 +4,7 @@ import NavBar from './Bar.js';
 
 class Navigation extends React.Component {
   render() {
-    return <Container id='navigation-container' fluid> 
+    return <Container id='navigation-container' fluid>
       <Row className='no-gutters'>
         <NavBar />
       </Row>
@@ -25,7 +25,7 @@ class Navigation extends React.Component {
           margin: 0;
         }
         #navigation-container * {
-          font-weight: 100 !important;
+          font-weight: 300 !important;
         }
       `}</style>
     </Container>

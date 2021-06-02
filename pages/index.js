@@ -131,6 +131,7 @@ export default class extends React.Component {
           margin: 1rem auto;
           color: rgb(80,80,80);
           font-size: 1.1rem;
+          font-weight: 300 !important;
         }
         @media (min-width: 768px) {
           p {
