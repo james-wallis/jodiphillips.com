@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/jamesemwallis/jodiphillips.com#readme",
   "dependencies": {
-    "next": "^10.2.3",
+    "next": "^11.1.0",
     "next-compose-plugins": "^2.2.1",
     "next-optimized-images": "^2.6.2",
     "next-seo": "^4.23.0",
