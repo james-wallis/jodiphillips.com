@@ -32,4 +32,13 @@ module.exports = withPlugins([
   images: {
     disableStaticImages: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/tour',
+        destination: '/tours/gallery',
+        permanent: true,
+      },
+    ]
+  },
 });

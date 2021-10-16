@@ -22,7 +22,7 @@ const links = [
   },
   {
     name: 'Gallery Tour',
-    url: '/tour',
+    url: '/tours/gallery',
     Icon: <img src='/images/linktree/tour.png' alt='gallery tour' style={{ height: '7rem' }} />
   },
   {
