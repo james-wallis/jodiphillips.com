@@ -37,13 +37,13 @@ const layoutProps = {
           alt: '3 pieces of resin art',
           link: '/projects/snowboard'
         },
-        { 
+        {
           name: 'kitchen splashback',
           file: 'kitchensplashback.jpg',
           alt: '3 pieces of resin art',
           link: '/projects/kitchen'
         },
-        { 
+        {
           name: 'tables',
           file: 'tables.jpg',
           alt: 'Clients looking at resin art',
@@ -75,7 +75,9 @@ const layoutProps = {
   }
 }
 
-export default class extends React.Component {
+class ProjectsPage extends React.Component {
+  static displayName = 'ProjectsPage';
+
   render() {
     const title = 'Client Projects @ ArtistJodi';
     const description = 'ArtistJodi is a specialist when it comes to creating \
@@ -97,3 +99,5 @@ export default class extends React.Component {
     </>
   }
 }
+
+export default ProjectsPage;

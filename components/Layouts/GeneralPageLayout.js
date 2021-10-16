@@ -26,7 +26,7 @@ class Layout extends React.Component {
             imgAlt={this.props.images.hero.alt} />
           : <HeroCarousel carousel={this.props.images.carousel} imgDir={this.props.images.directory} />
       }
-      
+
        {(this.props.content.introduction) ? <HeroParagraph introduction={this.props.content.introduction} /> : null }
       <Tab heading={this.props.content.h1}/>
       {this.props.children}

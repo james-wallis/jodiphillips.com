@@ -1,7 +1,9 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 
-export default class extends React.Component {
+class FacebookInstagramTwitterLinks extends React.Component {
+  static displayName = 'FacebookInstagramTwitterLinks';
+
   render() {
     const links = {
       facebook: 'https://www.facebook.com/artistjodi/',
@@ -10,38 +12,38 @@ export default class extends React.Component {
     }
     return <Row className='no-gutters social-links'>
       <Col xs='4'>
-        <a href={links.facebook} target='_blank' rel='noopener'>
+        <a href={links.facebook} target='_blank' rel='noreferrer'>
           <div className='social-image-container d-flex align-items-center justify-content-center'>
             <img src={require(`../../../images/logos/facebook.png`)} alt='Facebook logo' />
           </div>
         </a>
       </Col>
       <Col xs='4'>
-        <a href={links.instagram} target='_blank' rel='noopener'>
+        <a href={links.instagram} target='_blank' rel='noreferrer'>
           <div className='social-image-container d-flex align-items-center justify-content-center'>
             <img src={require(`../../../images/logos/instagram.png`)} alt='Instagram logo' />
           </div>
         </a>
       </Col>
       <Col xs='4'>
-        <a href={links.twitter} target='_blank' rel='noopener'>
+        <a href={links.twitter} target='_blank' rel='noreferrer'>
           <div className='social-image-container d-flex align-items-center justify-content-center'>
             <img src={require(`../../../images/logos/twitter.png`)} alt='Twitter logo' />
           </div>
         </a>
       </Col>
       <Col xs='4'>
-        <a href={links.facebook} target='_blank' rel='noopener'>
+        <a href={links.facebook} target='_blank' rel='noreferrer'>
           <p>@artistjodi</p>
         </a>
       </Col>
       <Col xs='4'>
-        <a href={links.instagram} target='_blank' rel='noopener'>
+        <a href={links.instagram} target='_blank' rel='noreferrer'>
           <p>@artistjodi</p>
         </a>
       </Col>
       <Col xs='4'>
-        <a href={links.twitter} target='_blank' rel='noopener'>
+        <a href={links.twitter} target='_blank' rel='noreferrer'>
           <p>@artist_jodi</p>
         </a>
       </Col>
@@ -92,3 +94,5 @@ export default class extends React.Component {
     </Row>
   }
 }
+
+export default FacebookInstagramTwitterLinks;

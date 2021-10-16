@@ -86,7 +86,9 @@ const layoutProps = {
   }
 }
 
-export default class extends React.Component {
+class IndexPage extends React.Component {
+  static displayName = 'IndexPage';
+
   render() {
     const title = 'Home @ ArtistJodi';
     const description = 'Artist Jodi is a British artist who creates pieces for the home, \
@@ -145,3 +147,5 @@ export default class extends React.Component {
     </>
   }
 }
+
+export default IndexPage;

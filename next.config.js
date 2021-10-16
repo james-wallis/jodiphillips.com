@@ -28,7 +28,8 @@ console.log(optimizedImageOpts);
 
 module.exports = withPlugins([
   [optimizedImages, optimizedImageOpts],
-]);
-
-
-
+], {
+  images: {
+    disableStaticImages: true,
+  },
+});

@@ -2,7 +2,7 @@ import React from 'react'
 import { Col } from 'reactstrap'
 import Social from '../Miscellaneous/Social/Social'
 
-export default class extends React.Component {
+class RightFooter extends React.Component {
   render() {
     return <Col xs='12' md='4' className='footer-column'>
       <div>
@@ -19,3 +19,5 @@ export default class extends React.Component {
     </Col>
   }
 }
+
+export default RightFooter;

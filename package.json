@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "next",
     "build": "NODE_ENV=production next build",
-    "start": "NODE_ENV=production next start"
+    "start": "NODE_ENV=production next start",
+    "lint": "next lint",
+    "lint:fix": "npm run lint -- --fix"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,7 @@
   },
   "homepage": "https://github.com/jamesemwallis/jodiphillips.com#readme",
   "dependencies": {
-    "next": "^10.2.3",
+    "next": "^11.1.1",
     "next-compose-plugins": "^2.2.1",
     "next-optimized-images": "^2.6.2",
     "next-seo": "^4.23.0",
@@ -32,6 +34,7 @@
   },
   "devDependencies": {
     "eslint": "^7.27.0",
+    "eslint-config-next": "11.1.2",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
     "lqip-loader": "^2.2.1",

@@ -111,7 +111,7 @@ const layoutProps = {
   }
 }
 
-export default class extends React.Component {
+class HomeBuildingPage extends React.Component {
   render() {
     const title = 'Homebuilding & Renovation Show @ ArtistJodi';
     const description = 'ArtistJodi held a stand at the Homebuilding & Renovation Show in the ExCeL centre London \
@@ -134,3 +134,5 @@ export default class extends React.Component {
     </>
   }
 }
+
+export default HomeBuildingPage;

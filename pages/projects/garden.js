@@ -111,7 +111,7 @@ const layoutProps = {
   }
 }
 
-export default class extends React.Component {
+class GardenPage extends React.Component {
   render() {
     const title = 'Garden Art @ ArtistJodi';
     const description = 'Artist Jodi\'s garden art. \
@@ -134,3 +134,5 @@ export default class extends React.Component {
     </>
   }
 }
+
+export default GardenPage;

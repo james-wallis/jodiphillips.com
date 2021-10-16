@@ -2,7 +2,7 @@ import React from 'react'
 import SocialLinks from './FacebookInstagramTwitter'
 import YouTubeShop from './YouTubeShop'
 
-export default class extends React.Component {
+class SocialBar extends React.Component {
   render() {
     return <div>
       <SocialLinks />
@@ -34,3 +34,5 @@ export default class extends React.Component {
     </div>
   }
 }
+
+export default SocialBar;

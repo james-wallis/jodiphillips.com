@@ -111,7 +111,7 @@ const layoutProps = {
   }
 }
 
-export default class extends React.Component {
+class CloakRoomPage extends React.Component {
   render() {
     const title = 'Cloakroom Splashback @ ArtistJodi';
     const description = 'Artist Jodi\'s cloakroom splashback. \
@@ -134,3 +134,5 @@ export default class extends React.Component {
     </>
   }
 }
+
+export default CloakRoomPage;

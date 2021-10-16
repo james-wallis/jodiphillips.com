@@ -107,7 +107,9 @@ const layoutProps = {
   }
 }
 
-export default class extends React.Component {
+class CommissionsPage extends React.Component {
+  static displayName = 'CommissionsPage';
+
   render() {
     const title = 'Commissions @ ArtistJodi';
     const description = 'When it comes to your commissions, \
@@ -132,3 +134,5 @@ export default class extends React.Component {
     </>
   }
 }
+
+export default CommissionsPage;

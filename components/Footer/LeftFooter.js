@@ -2,12 +2,12 @@ import React from 'react'
 import { Row, Col } from 'reactstrap'
 import Link from 'next/link'
 
-export default class extends React.Component {
+class LeftFooter extends React.Component {
   render() {
     return <Col xs='12' md='4' className='footer-column'>
       <Row>
         <Col xs='3'>
-          <Link href='/'>
+          <Link href='/' passHref>
             <img src={require(`../../images/icons/home.png`)} alt='Navigate to home page' />
           </Link>
         </Col>
@@ -72,3 +72,5 @@ export default class extends React.Component {
     </Col>
   }
 }
+
+export default LeftFooter;

@@ -108,7 +108,9 @@ const layoutProps = {
   }
 }
 
-export default class extends React.Component {
+class ArtistJodiPage extends React.Component {
+  static displayName = 'AboutJodiPage';
+
   render() {
     const title = 'About Jodi @ ArtistJodi';
     const description = 'Jodi Phillips is a British artist \
@@ -132,3 +134,5 @@ export default class extends React.Component {
     </>
   }
 }
+
+export default ArtistJodiPage;

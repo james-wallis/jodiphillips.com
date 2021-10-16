@@ -8,7 +8,7 @@ const links = [
   {
     name: 'Website',
     url: 'https://artistjodi.com',
-    Icon: <img src="/images/linktree/round-logo.png" alt="artistjodi" style={{ height: '8rem' }} />
+    Icon: <img src='/images/linktree/round-logo.png' alt='artistjodi' style={{ height: '8rem' }} />
   },
   {
     name: 'Email',
@@ -23,17 +23,17 @@ const links = [
   {
     name: 'Gallery Tour',
     url: '/tour',
-    Icon: <img src="/images/linktree/tour.png" alt="gallery tour" style={{ height: '7rem' }} />
+    Icon: <img src='/images/linktree/tour.png' alt='gallery tour' style={{ height: '7rem' }} />
   },
   {
     name: 'OpenSea NFTs',
     url: 'https://opensea.io/accounts/ArtistJodi',
-    Icon: <img src="/images/linktree/opensea.png" alt="opensea nft" style={{ height: '7rem' }} />
+    Icon: <img src='/images/linktree/opensea.png' alt='opensea nft' style={{ height: '7rem' }} />
   },
   {
     name: 'Shop',
     url: 'https://artistjodi.square.site',
-    Icon: <img src="/images/linktree/shop-logo-round.png" alt="artistjodi shop" style={{ height: '8rem' }} />
+    Icon: <img src='/images/linktree/shop-logo-round.png' alt='artistjodi shop' style={{ height: '8rem' }} />
   },
   {
     name: 'Instagram',
@@ -48,7 +48,7 @@ const links = [
   {
     name: 'Clubhouse',
     url: 'https://www.joinclubhouse.com/@artistjodi',
-    Icon: <img src="/images/linktree/clubhouse.png" alt="clubhouse" style={{ height: '5rem' }} />
+    Icon: <img src='/images/linktree/clubhouse.png' alt='clubhouse' style={{ height: '5rem' }} />
   },
   {
     name: 'LinkedIn',
@@ -70,22 +70,22 @@ const links = [
 const LinksPage = () => (
   <div style={{ backgroundColor: 'black', height: '100vh', width: '100vw' }}>
     <NextSeo
-      title="Artist Jodi Links"
-      description="linktree for ArtistJodi"
-      canonical="http://artistjodi.com/links"
+      title='Artist Jodi Links'
+      description='linktree for ArtistJodi'
+      canonical='http://artistjodi.com/links'
       openGraph={{
         title: "Artist Jodi Links",
         description: "linktree for ArtistJodi",
         url: "http://artistjodi.com/links",
       }}
     />
-    <div className="link-container">
+    <div className='link-container'>
         {links.map(({ name, url, Icon }) => (
-          <a key={`link-tree-${name}`} href={url} className="link" target="_blank" rel="noopener noreferrer nofollow">
-            <div className="link-icon">
+          <a key={`link-tree-${name}`} href={url} className='link' target='_blank' rel='noopener noreferrer nofollow'>
+            <div className='link-icon'>
               {Icon}
             </div>
-            <p className="link-name">
+            <p className='link-name'>
               {name}
             </p>
           </a>

@@ -36,9 +36,9 @@ class Navigation extends React.Component {
     // Reset navContainer
     navContainer.style.height = '0px';
     navContainer.style.opacity = 0;
-    navContainer.addEventListener('webkitTransitionEnd', hideNavigationContainer); 
+    navContainer.addEventListener('webkitTransitionEnd', hideNavigationContainer);
     navContainer.addEventListener('mozTransitionEnd', hideNavigationContainer);
-    navContainer.addEventListener('oTransitionEnd', hideNavigationContainer); 
+    navContainer.addEventListener('oTransitionEnd', hideNavigationContainer);
     navContainer.addEventListener('transitionend', hideNavigationContainer);
     navContainer.addEventListener('click', closeNavigation);
 
@@ -91,7 +91,7 @@ function hideNavigationContainer() {
     navContainer.style.height = '0px';
     // reset scroll
     navContainer.scrollTop = 0;
-    // Close open dropdown menus 
+    // Close open dropdown menus
     const dropdownMenus = document.getElementsByClassName('dropdown-items');
     for (let index = 0; index < dropdownMenus.length; index++) {
       const element = dropdownMenus[index];

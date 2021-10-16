@@ -4,7 +4,7 @@ import { TOUR_INDEX_URL } from '../constants';
 
 class HeroVideo extends React.Component {
     render() {
-        return <div className="tour-container">
+        return <div className='tour-container'>
             <Row className='no-gutters'>
                 <Col xs={{ order: 'last', size: 12 }} md={{ order: 'first', size: 1 }}>
                     <div className='rotated-text'>
@@ -15,13 +15,13 @@ class HeroVideo extends React.Component {
                 <Col xs='12' md='10'>
                     <div className='tour'>
                         <iframe
-                            width="100%"
-                            height="100%"
+                            width='100%'
+                            height='100%'
                             src={TOUR_INDEX_URL}
-                            scrolling="auto"
-                            frameBorder="0"
+                            scrolling='auto'
+                            frameBorder='0'
                             allowFullScreen
-                            allow="fullscreen; accelerometer; gyroscope; magnetometer; vr"
+                            allow='fullscreen; accelerometer; gyroscope; magnetometer; vr'
                         />
                     </div>
                 </Col>

@@ -15,27 +15,27 @@ class NavigationBar extends React.Component {
             <Hamburger id='hamburger-button-close' />
           </Col>
           <Col xs='6' md='12'>
-            <Link href='/'>
+            <Link href='/' passHref>
               <img src={require(`../../images/icons/home.png`)} alt='Navigate to home page' />
             </Link>
           </Col>
         </Row>
         <a href={SHOP_URL}>Online Store</a>
-        <Link href="/acrylic/art">
+        <Link href='/acrylic/art'>
           <a>Acrylic</a>
         </Link>
-        <Link href="/aboutjodi">
+        <Link href='/aboutjodi'>
           <a>About Artist Jodi</a>
         </Link>
-        <Link href="/projects">
+        <Link href='/projects'>
           <a>Client Projects</a>
         </Link>
         <Dropdown name={'Contact'} >
           <p className='dropdown-contact'>Call, Text or Message</p>
-          <a className='dropdown-contact' href="tel:+441442 257226">+44(0)1442 257226</a>
-          <a className='dropdown-contact' href="tel:+447832 359209">+44(0)7832 359209</a>
-          <a className='dropdown-contact' href="mailto:mish@artistjodi.co.uk?Subject=Website%20Enquiry">mish@artistjodi.co.uk</a>
-          <a className='dropdown-contact' href="mailto:jodi@artistjodi.co.uk?Subject=Website%20Enquiry">jodi@artistjodi.co.uk</a>
+          <a className='dropdown-contact' href='tel:+441442 257226'>+44(0)1442 257226</a>
+          <a className='dropdown-contact' href='tel:+447832 359209'>+44(0)7832 359209</a>
+          <a className='dropdown-contact' href='mailto:mish@artistjodi.co.uk?Subject=Website%20Enquiry'>mish@artistjodi.co.uk</a>
+          <a className='dropdown-contact' href='mailto:jodi@artistjodi.co.uk?Subject=Website%20Enquiry'>jodi@artistjodi.co.uk</a>
         </Dropdown>
         <Dropdown name={'Social'} >
           <div className='social no-padding'>
