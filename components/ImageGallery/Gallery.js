@@ -37,7 +37,7 @@ class Gallery extends React.Component {
      * So the page doesn't display rows with images of different heights
      */
 function ensureHeightIsEqual() {
-  // Only ensure the height if the window width is bootstrap md 
+  // Only ensure the height if the window width is bootstrap md
   if (window.innerWidth >= 768) {
     const gallery = document.getElementById('image-gallery');
     const rows = gallery.getElementsByClassName('row');
@@ -65,7 +65,7 @@ function ensureHeightIsEqual() {
       const img = col.getElementsByTagName('img')[0];
       if (img) {
         const height = img.getBoundingClientRect().height;
-        if (height && height > 0 && height < minImageHeight || minImageHeight === null) minImageHeight = height; 
+        if (height && height > 0 && height < minImageHeight || minImageHeight === null) minImageHeight = height;
       }
     }
     return minImageHeight;

@@ -14,7 +14,7 @@ class ImageWithText extends React.Component {
             <h3 className='image-info-text'>{this.props.name}</h3>
             {(this.props.desc) ? <p className='desc image-info-text' >{this.props.desc}</p> : null }
             {(this.props.material) ? <p className='image-info-text'>{this.props.material}</p> : null }
-            {(this.props.size && this.props.size.height && this.props.size.width) ? 
+            {(this.props.size && this.props.size.height && this.props.size.width) ?
                 <p className='image-info-text'>{`${this.props.size.height}cm x ${this.props.size.width}cm`}</p> : null }
             </div>
         </div>

@@ -32,17 +32,17 @@ const S3Tour = ({ title, description, baseUrl, indexUrl }) => {
   }, [])
 
   return (
-      <div className="w-screen" style={{ height: iframeHeight }}>
+      <div className='w-screen' style={{ height: iframeHeight }}>
           <Head>
-              <link rel="shortcut icon" href={favicon} />
-              <link rel="icon" sizes="48x48 32x32 16x16" href={favicon} />
-              <link rel="apple-touch-icon" type="image/png" sizes="180x180" href={`${miscDir}/icon180.png`} />
-              <link rel="icon" type="image/png" sizes="16x16" href={`${miscDir}/icon16.png`} />
-              <link rel="icon" type="image/png" sizes="32x32" href={`${miscDir}/icon32.png`} />
-              <link rel="icon" type="image/png" sizes="192x192" href={`${miscDir}/icon192.png`} />
-              <link rel="manifest" href={manifest} />
-              <meta name="msapplication-TileColor" content="#333333" />
-            <meta name="msapplication-config" content={browserConfig} />
+              <link rel='shortcut icon' href={favicon} />
+              <link rel='icon' sizes='48x48 32x32 16x16' href={favicon} />
+              <link rel='apple-touch-icon' type='image/png' sizes='180x180' href={`${miscDir}/icon180.png`} />
+              <link rel='icon' type='image/png' sizes='16x16' href={`${miscDir}/icon16.png`} />
+              <link rel='icon' type='image/png' sizes='32x32' href={`${miscDir}/icon32.png`} />
+              <link rel='icon' type='image/png' sizes='192x192' href={`${miscDir}/icon192.png`} />
+              <link rel='manifest' href={manifest} />
+              <meta name='msapplication-TileColor' content='#333333' />
+            <meta name='msapplication-config' content={browserConfig} />
           </Head>
           <NextSeo
               title={title}
@@ -65,13 +65,13 @@ const S3Tour = ({ title, description, baseUrl, indexUrl }) => {
           />
           {/* https://beta.3dvista.com/en/wiki/how-to-customize-the-url-of-your-tours-to-your-own-domain/ */}
           <iframe
-              width="100%"
-              height="100%"
+              width='100%'
+              height='100%'
               src={url}
-              scrolling="auto"
-              frameBorder="0"
+              scrolling='auto'
+              frameBorder='0'
               allowFullScreen
-              allow="fullscreen; accelerometer; gyroscope; magnetometer; vr"
+              allow='fullscreen; accelerometer; gyroscope; magnetometer; vr'
           />
       </div>
   )

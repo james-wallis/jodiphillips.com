@@ -11,13 +11,13 @@ class HeroVideo extends React.Component {
       <Col xs='12'>
         <div id='hero-video' >
             <ReactPlayer
-                url="https://www.youtube.com/watch?v=EA6qWHcUcaE"
+                url='https://www.youtube.com/watch?v=EA6qWHcUcaE'
                 playing
                 loop
                 volume={0}
-                height="100vh"
-                width="100vw"
-                className="video-background"
+                height='100vh'
+                width='100vw'
+                className='video-background'
             />
         </div>
       </Col>

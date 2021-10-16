@@ -10,7 +10,7 @@ class Tab extends React.Component {
             <h1>{this.props.heading}</h1>
             <p>Scroll to view</p>
           </div>
-        </Col>      
+        </Col>
         <style jsx>{`
           div {
             background-color: rgba(45,45,45,0.8);
@@ -52,7 +52,7 @@ class Tab extends React.Component {
     updateHeadingTabWidth();
     window.addEventListener('resize', updateHeadingTabWidth);
 
-    // On mobile, hide the heading tab after it passes the first image 
+    // On mobile, hide the heading tab after it passes the first image
     window.addEventListener('scroll', toggleHeadingTabOnScroll);
     window.addEventListener('resize', toggleHeadingTabOnScroll);
   }
