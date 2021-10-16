@@ -1,7 +1,9 @@
 import React from 'react'
 import { Col } from 'reactstrap'
 
-export default class extends React.Component {
+class CenterFooter extends React.Component {
+  static displayName = 'CenterFooter';
+
   render() {
     return <Col xs='12' md='4' className='text-center footer-column'>
       <div>
@@ -12,7 +14,7 @@ export default class extends React.Component {
         <a href="mailto:mish@artistjodi.co.uk?Subject=Website%20Enquiry">mish@artistjodi.co.uk</a>
         <a href="mailto:jodi@artistjodi.co.uk?Subject=Website%20Enquiry">jodi@artistjodi.co.uk</a>
         <div className='copyright'>
-          <p>&copy;2018 Designed by Jodi, Created by <a href='https://wallis.dev' target='_blank' rel='noopener'>James</a></p>
+          <p>&copy;2018 Designed by Jodi, Created by <a href='https://wallis.dev' target='_blank' rel="noreferrer">James</a></p>
           {/* <p><a href='https://store.artistjodi.com/pages/terms'>Terms and Conditions</a></p> */}
           {/* <p><a href='https://store.artistjodi.com/pages/privacy'>Privacy Notice</a></p> */}
         </div>
@@ -54,7 +56,7 @@ export default class extends React.Component {
         }
       `}</style>
     </Col>
-
-      
   }
 }
+
+export default CenterFooter;

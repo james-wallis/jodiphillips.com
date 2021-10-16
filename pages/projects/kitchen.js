@@ -110,7 +110,7 @@ const layoutProps = {
   }
 }
 
-export default class extends React.Component {
+class KitchenPage extends React.Component {
   render() {
     const title = 'Kitchen Splashback @ ArtistJodi';
     const description = 'Artist Jodi\'s kitchen splashback. \
@@ -133,3 +133,5 @@ export default class extends React.Component {
     </>
   }
 }
+
+export default KitchenPage;

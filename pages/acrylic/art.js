@@ -150,7 +150,7 @@ const layoutProps = {
   }
 }
 
-export default class extends React.Component {
+class AcrylicArtPage extends React.Component {
   render() {
     const title = 'Acrylic @ ArtistJodi';
     const description = 'Artist Jodi\'s acrylic art. \
@@ -173,3 +173,5 @@ export default class extends React.Component {
     </>
   }
 }
+
+export default AcrylicArtPage;

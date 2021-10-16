@@ -2,11 +2,13 @@ import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { SHOP_URL } from '../../../constants';
 
-export default class extends React.Component {
+class YouTubeShop extends React.Component {
+  static displayName = 'YouTubeShop';
+
   render() {
     return <Row style={{marginTop: '10px'}} className='social-links no-gutters'>
       <Col xs='6' className='d-flex align-items-center'>
-        <a href='https://www.youtube.com/channel/UC848rsbkuahzKYJMkHVkaiA' target='_blank' rel='noopener'>
+        <a href='https://www.youtube.com/channel/UC848rsbkuahzKYJMkHVkaiA' target='_blank' rel='noreferrer'>
           <img src={require(`../../../images/logos/youtube.png`)} alt='Handmade at Amazon logo' />
         </a>
       </Col>
@@ -44,3 +46,5 @@ export default class extends React.Component {
     </Row>
   }
 }
+
+export default YouTubeShop;

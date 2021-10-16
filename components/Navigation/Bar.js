@@ -15,7 +15,7 @@ class NavigationBar extends React.Component {
             <Hamburger id='hamburger-button-close' />
           </Col>
           <Col xs='6' md='12'>
-            <Link href='/'>
+            <Link href='/' passHref>
               <img src={require(`../../images/icons/home.png`)} alt='Navigate to home page' />
             </Link>
           </Col>

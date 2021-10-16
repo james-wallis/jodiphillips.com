@@ -114,7 +114,7 @@ const InternalLink = ({ link, children }) => {
 
 const ExternalLink = ({ link, children }) => {
   return (
-    <a target='_blank' rel='noopener' href={link}>
+    <a target='_blank' rel='noreferrer' href={link}>
       {children}
     </a>
   )

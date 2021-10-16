@@ -110,7 +110,7 @@ const layoutProps = {
   }
 }
 
-export default class extends React.Component {
+class TablesPage extends React.Component {
   render() {
     const title = 'Tables @ ArtistJodi';
     const description = 'Artist Jodi\'s bespoke resin tables. \
@@ -133,3 +133,5 @@ export default class extends React.Component {
     </>
   }
 }
+
+export default TablesPage;

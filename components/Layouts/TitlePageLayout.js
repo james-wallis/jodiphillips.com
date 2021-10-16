@@ -2,16 +2,12 @@ import React from 'react'
 import { Container } from 'reactstrap'
 import Router from 'next/router'
 import * as gtag from '../../config/gtag';
-import Head from '../Head';
 import Header from '../Header';
-import HeroCarousel from '../HeroCarousel';
 import Nav from '../Navigation/Navigation';
-import Heading from '../Heading';
 import Footer from '../Footer/Footer';
 import Gallery from '../ImageGallery/Gallery';
 import ToShop from '../Shop/ToShopDiv';
 import HeroTour from '../HeroTour';
-import Tab from '../Tab';
 
 Router.onRouteChangeComplete =url => gtag.pageview(url)
 

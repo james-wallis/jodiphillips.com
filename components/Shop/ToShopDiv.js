@@ -30,9 +30,9 @@ const ToShopDiv = () => {
       {
         links.map(({ text, image, href }) => (
           <Col xs={{ size: 12, offset: 0 }} md={{ size: 4 }} key={text} className='to-shop'>
-            <a href={href} target="_blank">
+            <a href={href} target='_blank' rel='noreferrer'>
               <div>
-                <img srcSet={image.srcSet} src={image.src} />
+                <img srcSet={image.srcSet} src={image.src} alt={text} />
               </div>
               <p>{text}</p>
             </a>

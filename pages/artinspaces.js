@@ -111,7 +111,9 @@ const layoutProps = {
   }
 }
 
-export default class extends React.Component {
+class ArtInSpacesPage extends React.Component {
+  static displayName = 'ArtInSpacesPages';
+
   render() {
     const title = 'Art in Spaces @ ArtistJodi';
     const description = 'Artist Jodi\'s art in spaces. \
@@ -133,3 +135,5 @@ export default class extends React.Component {
     </>
   }
 }
+
+export default ArtInSpacesPage;

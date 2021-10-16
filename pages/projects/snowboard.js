@@ -110,7 +110,7 @@ const layoutProps = {
   }
 }
 
-export default class extends React.Component {
+class SnowboardPage extends React.Component {
   render() {
     const title = 'Snowboard @ ArtistJodi';
     const description = 'Artist Jodi\'s resin snowboard. \
@@ -135,3 +135,5 @@ export default class extends React.Component {
     </>
   }
 }
+
+export default SnowboardPage;

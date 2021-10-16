@@ -48,6 +48,7 @@ class ImageRow extends React.Component {
         else
           return (
           <Col className='image-column' xs='12' md={bootstrapCol} key={image.key || `${this.props.dir}/${image.file}`}>
+            {/* eslint-disable-next-line jsx-a11y/alt-text */}
             <Image {...image} dir={this.props.dir} />
           </Col>
           )

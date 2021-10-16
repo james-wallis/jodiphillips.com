@@ -12,6 +12,7 @@ class Img extends React.Component {
 function showImage(dir, file) {
   const { srcSet, src } = require(`../../images/${dir}/${file}?resize&sizes[]=400&sizes[]=600`);
   return <div>
+    {/* eslint-disable-next-line jsx-a11y/alt-text */}
     <img className='img-video-media' srcSet={srcSet} src={src} />
     <style jsx>{`
       img {

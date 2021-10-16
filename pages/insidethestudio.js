@@ -111,7 +111,9 @@ const layoutProps = {
   }
 }
 
-export default class extends React.Component {
+class InsideTheStudioPage extends React.Component {
+  static displayName = 'InsideTheStudioPage';
+
   render() {
     const title = 'Inside the studio @ ArtistJodi';
     const description = 'Take a look inside the studio! Artist Jodi \
@@ -134,3 +136,5 @@ export default class extends React.Component {
     </>
   }
 }
+
+export default InsideTheStudioPage;
