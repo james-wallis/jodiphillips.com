@@ -4,7 +4,7 @@
     "destination": "/tours/gallery",
     "permanent": true
   }],
-  "rewrite": [
+  "rewrites": [
     [{ "source": "/paintx/:match*", "destination": "https://artistjodi-paintx.vercel.app/:match*" }]
   ]
 }
