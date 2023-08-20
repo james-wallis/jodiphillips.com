@@ -1,16 +1,16 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  async redirects() {
-    return [
-      {
-        source: '/tour',
-        destination: '/tours/gallery',
-        permanent: true,
-      },
-    ]
-  },
-  // output: 'export',
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/tour',
+  //       destination: '/tours/gallery',
+  //       permanent: true,
+  //     },
+  //   ]
+  // },
+  output: 'export',
   images: {
     loader: "custom",
     // imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
