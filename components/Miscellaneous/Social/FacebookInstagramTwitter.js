@@ -1,5 +1,10 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
+import FacebookLogo from "../../../public/images/art/logos/facebook.png"
+import InstagramLogo from "../../../public/images/art/logos/instagram.png"
+import TwitterLogo from "../../../public/images/art/logos/twitter.png"
+import ExportedImage from 'next-image-export-optimizer'
+
 
 class FacebookInstagramTwitterLinks extends React.Component {
   static displayName = 'FacebookInstagramTwitterLinks';
@@ -14,21 +19,21 @@ class FacebookInstagramTwitterLinks extends React.Component {
       <Col xs='4'>
         <a href={links.facebook} target='_blank' rel='noreferrer'>
           <div className='social-image-container d-flex align-items-center justify-content-center'>
-            <img src={require(`../../../images/logos/facebook.png`)} alt='Facebook logo' />
+            <ExportedImage src={FacebookLogo} alt='Facebook logo' height={50} />
           </div>
         </a>
       </Col>
       <Col xs='4'>
         <a href={links.instagram} target='_blank' rel='noreferrer'>
           <div className='social-image-container d-flex align-items-center justify-content-center'>
-            <img src={require(`../../../images/logos/instagram.png`)} alt='Instagram logo' />
+            <ExportedImage src={InstagramLogo} alt='Instagram logo' height={50} />
           </div>
         </a>
       </Col>
       <Col xs='4'>
         <a href={links.twitter} target='_blank' rel='noreferrer'>
           <div className='social-image-container d-flex align-items-center justify-content-center'>
-            <img src={require(`../../../images/logos/twitter.png`)} alt='Twitter logo' />
+            <ExportedImage src={TwitterLogo} alt='Twitter logo' height={50} />
           </div>
         </a>
       </Col>

@@ -1,37 +1,6 @@
-const withPlugins = require('next-compose-plugins');
-const optimizedImages = require('next-optimized-images');
+/** @type {import('next').NextConfig} */
 
-const dev = process.env.NODE_ENV !== 'production';
-if (dev) console.log('Development mode, not optimizing images');
-if (!dev) console.log('Production mode, optimizing images');
-
-const optimizedImageOpts = {
-  // these are the default values so you don't have to provide them if they are good enough for your use-case.
-  // but you can overwrite them here with any valid value you want.
-  inlineImageLimit: 8192,
-  imagesFolder: 'images',
-  imagesName: '[name]-[hash].[ext]',
-  optimizeImagesInDev: false,
-  mozjpeg: {
-    quality: 80,
-  },
-  optipng: {
-    optimizationLevel: 4,
-  },
-  pngquant: false,
-  responsive: {
-    disable: dev
-  }
-}
-
-console.log(optimizedImageOpts);
-
-module.exports = withPlugins([
-  [optimizedImages, optimizedImageOpts],
-], {
-  images: {
-    disableStaticImages: true,
-  },
+const nextConfig = {
   async redirects() {
     return [
       {
@@ -41,4 +10,27 @@ module.exports = withPlugins([
       },
     ]
   },
-});
+  // output: 'export',
+  images: {
+    loader: "custom",
+    // imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    // deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [64, 128, 384],
+    deviceSizes: [640, 1080, 1920, 3840]
+  },
+  transpilePackages: ["next-image-export-optimizer"],
+  env: {
+    nextImageExportOptimizer_imageFolderPath: "public/images/art",
+    nextImageExportOptimizer_exportFolderPath: "out",
+    nextImageExportOptimizer_quality: 75,
+    nextImageExportOptimizer_storePicturesInWEBP: true,
+    nextImageExportOptimizer_exportFolderName: "nextImageExportOptimizer",
+
+    // If you do not want to use blurry placeholder images, then you can set
+    // nextImageExportOptimizer_generateAndUseBlurImages to false and pass
+    // `placeholder="empty"` to all <ExportedImage> components.
+    nextImageExportOptimizer_generateAndUseBlurImages: true,
+  },
+}
+
+module.exports = (nextConfig);

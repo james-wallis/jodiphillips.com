@@ -1,17 +1,19 @@
 import React from 'react'
 import Link from 'next/link'
+import ExportedImage from 'next-image-export-optimizer';
+import DownArrowLogo from "../../public/images/art/icons/downarrow.png";
 
 class DropdownNavigation extends React.Component {
   render() {
     return <div className='dropdown-container' onClick={this.toggleDropdown}>
       <div className='dropdown-button'>
         <p>{this.props.name}</p>
-        <img className='dropdown-icon' src={require(`../../images/icons/downarrow.png`)} alt='Drop down menu icon' />
+        <ExportedImage src={DownArrowLogo} alt='Drop down menu icon' className='dropdown-icon' height={17} />
       </div>
       <div className='dropdown-items'>
         {/* Add the links into the page. If there are no links then use props.children. */}
         {(this.props.links) ? this.props.links.map((currentLink, index) =>
-            <Link href={currentLink.href || '/'} key={index}><a>{currentLink.name}</a></Link>) : this.props.children }
+            <Link href={currentLink.href || '/'} key={index}>{currentLink.name}</Link>) : this.props.children }
       </div>
       <style jsx>{`
         .dropdown-container {
@@ -22,6 +24,7 @@ class DropdownNavigation extends React.Component {
         .dropdown-button {
           display: flex;
           align-items: center;
+          justify-content: space-between;
         }
         .dropdown-button p {
           display: inline-block;

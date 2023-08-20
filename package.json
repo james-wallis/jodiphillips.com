@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "next",
-    "build": "NODE_ENV=production next build",
-    "start": "NODE_ENV=production next start",
+    "export": "next build && next export && next-image-export-optimizer",
     "lint": "next lint",
     "lint:fix": "npm run lint -- --fix"
   },
@@ -21,24 +20,18 @@
   },
   "homepage": "https://github.com/jamesemwallis/jodiphillips.com#readme",
   "dependencies": {
-    "next": "^11.1.1",
-    "next-compose-plugins": "^2.2.1",
-    "next-optimized-images": "^2.6.2",
-    "next-seo": "^4.23.0",
+    "next": "^13.4.19",
+    "next-image-export-optimizer": "^1.8.3",
+    "next-seo": "^6.1.0",
     "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.2.0",
     "react-player": "^2.9.0",
     "reactstrap": "^8.9.0"
   },
   "devDependencies": {
     "eslint": "^7.27.0",
-    "eslint-config-next": "11.1.2",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-optipng": "^8.0.0",
-    "lqip-loader": "^2.2.1",
-    "responsive-loader": "^1.2.0",
-    "sharp": "^0.28.3"
+    "eslint-config-next": "13.4.19"
   }
 }

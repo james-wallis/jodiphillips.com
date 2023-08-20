@@ -5,6 +5,8 @@ import Dropdown from './Dropdown'
 import Hamburger from '../Miscellaneous/Hamburger'
 import Social from '../Miscellaneous/Social/Social'
 import { SHOP_URL } from '../../constants';
+import HomeIcon from "./../../public/images/art/icons/home.png"
+import ExportedImage from 'next-image-export-optimizer'
 
 class NavigationBar extends React.Component {
   render() {
@@ -14,20 +16,18 @@ class NavigationBar extends React.Component {
           <Col xs='6' className='d-md-none'>
             <Hamburger id='hamburger-button-close' />
           </Col>
-          <Col xs='6' md='12'>
-            <Link href='/' passHref>
-              <img src={require(`../../images/icons/home.png`)} alt='Navigate to home page' />
-            </Link>
-          </Col>
         </Row>
+        <Link href='/acrylic/art' legacyBehavior>
+          <a>Home</a>
+        </Link>
         <a href={SHOP_URL}>Online Store</a>
-        <Link href='/acrylic/art'>
+        <Link href='/acrylic/art' legacyBehavior>
           <a>Acrylic</a>
         </Link>
-        <Link href='/aboutjodi'>
+        <Link href='/aboutjodi' legacyBehavior>
           <a>About Artist Jodi</a>
         </Link>
-        <Link href='/projects'>
+        <Link href='/projects' legacyBehavior>
           <a>Client Projects</a>
         </Link>
         <Dropdown name={'Contact'} >

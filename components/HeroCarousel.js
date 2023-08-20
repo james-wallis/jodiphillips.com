@@ -4,6 +4,7 @@ import {
   CarouselIndicators
 } from 'reactstrap';
 import React from 'react';
+import ExportedImage from 'next-image-export-optimizer';
 
 const carouselRotationTimeout = 3000;
 
@@ -55,14 +56,15 @@ class HeroCarousel extends React.Component {
       return (
         <CarouselItem tag='div' key={item.id} onExiting={this.onExiting} onExited={this.onExited}>
           {/* <img src={require(`../images/${this.props.imgDir}/${item.src}`)} alt={this.props.imgAlt} /> */}
-          <picture>
+          {/* <picture>
             <source media='(max-width: 767px)' srcSet={
               (item.mobileSrc && item.mobileSrc != '')
                 ? require(`../images/${this.props.imgDir}/${item.mobileSrc}`)
                 : require(`../images/${this.props.imgDir}/${item.src}`)
               } type='image/jpeg' />
             <img src={require(`../images/${this.props.imgDir}/${item.src}`)} alt={this.props.imgAlt} />
-          </picture>
+          </picture> */}
+          <ExportedImage src={`images/art/${this.props.imgDir}/${item.src}`} alt={this.props.imgAlt} width={1920} height={1080} />
         </CarouselItem>
       );
     });
@@ -85,6 +87,7 @@ class HeroCarousel extends React.Component {
             height: 100vh;
             width: 100vw;
             margin-bottom: 4px;
+            overflow: hidden;
           }
           .carousel-inner, .carousel-item {
             height: 100%;
@@ -150,7 +153,3 @@ function updateHeroHeight() {
 }
 
 export default HeroCarousel
-
-
-
-

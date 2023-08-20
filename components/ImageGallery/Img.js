@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactPlayer from 'react-player';
 import PropTypes from 'prop-types';
+import ExportedImage from 'next-image-export-optimizer';
 
 class Img extends React.Component {
   render() {
@@ -10,23 +11,25 @@ class Img extends React.Component {
 }
 
 function showImage(dir, file) {
-  const { srcSet, src } = require(`../../images/${dir}/${file}?resize&sizes[]=400&sizes[]=600`);
-  return <div>
-    {/* eslint-disable-next-line jsx-a11y/alt-text */}
-    <img className='img-video-media' srcSet={srcSet} src={src} />
-    <style jsx>{`
-      img {
-        width: 100%;
-        object-fit: cover;
-      }
+  const path = `images/art/${dir}/${file}`;
+  return <>
+  <div style={{ overflow: "hidden"}}>
+    <ExportedImage src={path}
+      alt={file}
+      width={500}
+      style={{ objectFit: "cover", width: "100%", overflow: "hidden" }}
+      height={500}
+    />
+    </div>
 
+    <style jsx>{`
       @media (min-width: 768px) {
-        img {
+        div {
           max-height: 25vw;
         }
       }
     `}</style>
-  </div>
+  </>
 }
 
 function showVideo(file) {
