@@ -17,28 +17,28 @@ class LeftFooter extends React.Component {
           <h2>Explore the site</h2>
           <ul>
             <li>
-              <Link href='/aboutjodi'>
-                About Jodi
+              <Link href='/aboutjodi' legacyBehavior>
+                <a>About Jodi</a>
               </Link>
             </li>
             <li>
-              <Link href='/insidethestudio'>
-                Inside the Studio
+              <Link href='/insidethestudio' legacyBehavior>
+                <a>Inside the Studio</a>
               </Link>
             </li>
             <li>
-              <Link href='/artinspaces'>
-                Art in Spaces
+              <Link href='/artinspaces' legacyBehavior>
+                <a>Art in Spaces</a>
               </Link>
             </li>
             <li>
-              <Link href='/acrylic/art'>
-                Acrylic
+              <Link href='/acrylic/art' legacyBehavior>
+                <a>Acrylic</a>
               </Link>
             </li>
             <li>
-              <Link href='/commissions'>
-                Commissions
+              <Link href='/commissions' legacyBehavior>
+                <a>Commissions</a>
               </Link>
             </li>
           </ul>

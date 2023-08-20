@@ -1,0 +1,10 @@
+{
+  "redirects": [{
+    "source": "/tour",
+    "destination": "/tours/gallery",
+    "permanent": true
+  }],
+  "rewrite": [
+    [{ "source": "/paintx/:match*", "destination": "https://artistjodi-paintx.vercel.app/:match*" }]
+  ]
+}
