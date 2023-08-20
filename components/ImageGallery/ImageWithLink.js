@@ -50,7 +50,7 @@ class ImageWithLink extends React.Component {
             .image-info-text:last-child {
               padding-bottom: 10px;
             }
-          
+
           h3 {
             margin: 0;
             font-size: 30px;
@@ -104,10 +104,8 @@ const LinkWrapper = (props) => {
 
 const InternalLink = ({ link, children }) => {
   return (
-    <Link href={link}>
-      <a style={{ display: 'flex' }}>
-        {children}
-      </a>
+    <Link href={link} style={{ display: "flex "}}>
+      {children}
     </Link>
   )
 }

@@ -1,10 +1,11 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { SHOP_URL, SHOP_NFT_URL, SHOP_3D_URL } from '../../constants'
+import ExportedImage from 'next-image-export-optimizer'
 
-const shopImg = require('../../images/logos/shop-logo-round.png?resize&sizes[]=500&sizes[]=800');
-const nftImg = require('../../images/logos/opensea.png?resize&sizes[]=500&sizes[]=800');
-const dImg = require('../../images/logos/sjetchfablogo.png?resize&sizes[]=500&sizes[]=800');
+import shopImg from "/public/images/art/logos/shop-logo-round.png";
+import nftImg from "/public/images/art/logos/opensea.png";
+import dImg from "/public/images/art/logos/sjetchfablogo.png";
 
 const links = [
   {
@@ -32,7 +33,12 @@ const ToShopDiv = () => {
           <Col xs={{ size: 12, offset: 0 }} md={{ size: 4 }} key={text} className='to-shop'>
             <a href={href} target='_blank' rel='noreferrer'>
               <div>
-                <img srcSet={image.srcSet} src={image.src} alt={text} />
+                <ExportedImage
+                  src={image}
+                  alt={text}
+                  width={100}
+                  height={100}
+                />
               </div>
               <p>{text}</p>
             </a>
@@ -62,9 +68,6 @@ const ToShopDiv = () => {
         height: 100px;
         text-align: center;
         margin: 0 auto;
-      }
-      .to-shop img {
-        height: 100%;
       }
       .to-shop p {
         text-align: center;

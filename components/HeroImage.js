@@ -1,21 +1,23 @@
 import { Row, Col } from 'reactstrap'
 import React from 'react';
 import { updateHeroImageHeight } from '../lib/updateHeroHeight';
+import ExportedImage from 'next-image-export-optimizer';
 
 class Hero extends React.Component {
   render() {
     // Desktop images should be the default to what is available
-    const desktopSrc = require(`../images/${this.props.imgDir}/${this.props.imgSrc}`);
-    let mobileSrc = desktopSrc;
-    if (this.props.imgMobileSrc && this.props.imgMobileSrc != '')
-      mobileSrc = require(`../images/${this.props.imgDir}/${this.props.imgMobileSrc}`);
+    // const desktopSrc = require(`../images/${this.props.imgDir}/${this.props.imgSrc}`);
+    // let mobileSrc = desktopSrc;
+    // if (this.props.imgMobileSrc && this.props.imgMobileSrc != '')
+    //   mobileSrc = require(`../images/${this.props.imgDir}/${this.props.imgMobileSrc}`);
     return <Row className='no-gutters'>
       <Col xs='12'>
         <div id='hero-image'>
-          <picture>
+          {/* <picture>
             <source media='(max-width: 767px)' srcSet={mobileSrc} type='image/jpeg' />
             <img src={desktopSrc} alt={this.props.imgSrc} />
-          </picture>
+          </picture> */}
+          <ExportedImage src={`images/art/${this.props.imgDir}/${this.props.imgSrc}`} alt={this.props.imgSrc} width={1920} height={1080} />
         </div>
       </Col>
       <style jsx>{`
@@ -23,6 +25,7 @@ class Hero extends React.Component {
           height: 100vh;
           width: 100vw;
           margin-bottom: 4px;
+          overflow: hidden;
         }
         img, picture, source {
           width: 100%;
