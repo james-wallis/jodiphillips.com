@@ -72,11 +72,11 @@ const LinksPage = () => (
     <NextSeo
       title='Artist Jodi Links'
       description='linktree for ArtistJodi'
-      canonical='http://artistjodi.com/links'
+      canonical='https://artistjodi.com/links'
       openGraph={{
         title: "Artist Jodi Links",
         description: "linktree for ArtistJodi",
-        url: "http://artistjodi.com/links",
+        url: "https://artistjodi.com/links",
       }}
     />
     <div className='link-container'>
