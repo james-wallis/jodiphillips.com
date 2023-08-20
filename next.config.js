@@ -1,15 +1,15 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  async redirects() {
-    return [
-      {
-        source: '/tour',
-        destination: '/tours/gallery',
-        permanent: true,
-      },
-    ]
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/tour',
+  //       destination: '/tours/gallery',
+  //       permanent: true,
+  //     },
+  //   ]
+  // },
   output: 'export',
   images: {
     loader: "custom",
