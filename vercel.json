@@ -10,7 +10,7 @@
   "rewrites": [
     {
       "source": "/paintx/:match*",
-      "destination": "https://artistjodi-paintx.vercel.app/:match*"
+      "destination": "https://artistjodi-paintx.vercel.app/paintx/:match*"
     }
   ]
 }
