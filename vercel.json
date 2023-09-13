@@ -9,8 +9,12 @@
   ],
   "rewrites": [
     {
-      "source": "/paintx:match*",
-      "destination": "https://artistjodi-paintx.vercel.app/paintx:match*"
+      "source": "/paintx",
+      "destination": "https://artistjodi-paintx.vercel.app/paintx"
+    },
+    {
+      "source": "/paintx/:match*",
+      "destination": "https://artistjodi-paintx.vercel.app/paintx/:match*"
     }
   ]
 }
