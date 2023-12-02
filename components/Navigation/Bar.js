@@ -20,6 +20,9 @@ class NavigationBar extends React.Component {
         <Link href='/acrylic/art' legacyBehavior>
           <a>Home</a>
         </Link>
+        <Link href='/paintx' legacyBehavior>
+          <a>PaintX Collection</a>
+        </Link>
         <a href={SHOP_URL}>Online Store</a>
         <Link href='/acrylic/art' legacyBehavior>
           <a>Acrylic</a>
